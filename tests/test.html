@@ -1,0 +1,119 @@
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。</canvas>
+
+<script>
+    var DEG2ARC = Math.PI / 180;
+    var screenSize = {
+        width : 1080 / 2,
+        height : 1920 / 2
+    };
+    var c=document.getElementById("myCanvas");
+    c.width = screenSize.width;
+    c.height = screenSize.height;
+    var g = gl =c.getContext("2d");
+    var egret = {};
+    function rgbToHex(r, g, b) { return ((r << 16) | (g << 8) | b).toString(16); }
+    g.clearScreen = function(r,g,b) {
+        gl.fillStyle = "#" + rgbToHex(r,g,b);
+        gl.fillRect(0,0,c.width, c.height);
+    }
+    egret.Graphics = g;
+    egret.rastergl = g;
+
+    function glDrawBackground() {
+        var size = 20;
+        var gl = egret.rastergl;
+        gl.beginPath();
+        egret.Graphics.clearScreen(0,0,40);
+        gl.strokeStyle = "#7f007f";//"#7FFF00FF";
+        gl.lineWidth = 1;
+        for (var i = 0; i < screenSize.width; i += size) {
+            gl.moveTo(i, 0);
+            gl.lineTo(i, screenSize.height);
+        }
+        for (var i = 0; i < screenSize.height; i += size) {
+            gl.moveTo(0, i);
+            gl.lineTo(screenSize.width, i);
+        }
+        gl.stroke();
+        gl.beginPath();
+    };
+    glDrawBackground();
+    //
+    function test() {
+        // 20
+        var crossMark = function(x,y,w,h) {
+            gl.strokeStyle="#828282";
+            gl.lineWidth = 5;
+            gl.beginPath();
+            gl.moveTo(x,y);
+            gl.lineTo(x+w, y+h);
+            gl.moveTo(x+w, y);
+            gl.lineTo(x, y+h);
+            gl.stroke();
+            gl.beginPath();
+        }
+        x=20, y=20;
+        crossMark(x,y,200,40);
+        gl.strokeStyle = "#ff7f7f";
+        gl.lineWidth = 5;
+        gl.strokeStyle="";
+        gl.strokeRect(x,y,200,40);
+        y += 60;
+
+        crossMark(x,y,200,40);
+        gl.strokeStyle = "#ff7f7f";
+        gl.lineWidth = 5;
+        gl.strokeStyle="123";
+        gl.strokeRect(x,y,200,40);
+        y += 60;
+
+        crossMark(x,y,200,40);
+        gl.strokeStyle = "#ff7f7f";
+        gl.lineWidth = 5;
+        gl.strokeStyle = 112233;
+        gl.strokeRect(x,y,200,40);
+        y += 60;
+
+        crossMark(x,y,200,40);
+        gl.strokeStyle = "#ff7f7f";
+        gl.lineWidth = 5;
+        gl.strokeStyle = "112233";
+        gl.strokeRect(x,y,200,40);
+        y += 60;
+
+        crossMark(x,y,200,40);
+        gl.strokeStyle = "#ff7f7f";
+        gl.lineWidth = 5;
+        gl.strokeStyle = "#112233";
+        gl.strokeRect(x,y,200,40);
+        y += 60;
+
+        crossMark(x,y,200,40);
+        gl.strokeStyle = "#ff7f7f";
+        gl.lineWidth = 5;
+        gl.strokeStyle = null;
+        gl.strokeRect(x,y,200,40);
+        y += 60;
+
+        crossMark(x,y,200,40);
+        gl.strokeStyle = "#ff7f7f";
+        gl.lineWidth = 5;
+        var myGradient = gl.createLinearGradient(x,y,x+200, y+40);
+        myGradient.addColorStop(0, "#000000");
+        myGradient.addColorStop(1, "#00ffff");
+        gl.strokeStyle = myGradient;
+        gl.strokeRect(x,y,200,40);
+        myGradient = null;
+    }
+    test();
+
+
+    //
+</script>
+
+</body>
+</html>
