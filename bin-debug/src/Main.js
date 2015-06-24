@@ -35,12 +35,7 @@ var Main = (function (_super) {
     function Main() {
         _super.call(this);
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-        egret.Profiler.getInstance().run();
     }
-    Main.prototype._onAddToStage = function () {
-        _super.prototype._onAddToStage.call(this);
-        console.log(this);
-    };
     Main.prototype.onAddToStage = function (event) {
         //设置加载进度界面
         this.loadingView = new LoadingUI();
@@ -72,8 +67,8 @@ var Main = (function (_super) {
         }
     };
     /**
-     * 资源组加载出错
-     */
+    * 资源组加载出错
+    */
     Main.prototype.onResourceLoadError = function (event) {
         //TODO
         console.warn("Group:" + event.groupName + " has failed to load");
@@ -92,54 +87,51 @@ var Main = (function (_super) {
      * 创建游戏场景
      */
     Main.prototype.createGameScene = function () {
-        //var pgame = new egret_native.EgretGameTriangle();
-        //pgame.initialize();
-        //egret_native.EgretGameTriangle.test();
-
-        //箭头
-        //var shape_38 = new CreateJSGraphics(  );
-        //shape_38.graphics.beginLinearGradientFill(["#00FFEE", "#00AAFF"], [0.494, 1], -28.6, 0, 28.8, 0).beginStroke().moveTo(28.7, -44.7).lineTo(28.7, 44.7).lineTo(-28.7, -0).closePath();
-        //shape_38.setTransform(100 + 27.6, 100);
-        //this.addChild(shape_38);
-
-        var gametri = new MeshPrimitiveSample();
-        //var n = gametri.pgame.num;
-        //gametri.pgame.num = 100;
-        gametri.initialize();
-
-    };
-    Main.prototype.parseRGBA = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var a = parseInt((arr[3] * 255)).toString(16);
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(a) + fill(r) + fill(g) + fill(b);
-        return str;
-    };
-    Main.prototype.parseRGB = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(r) + fill(g) + fill(b);
-        return str;
+        var sky = this.createBitmapByName("bgImage");
+        this.addChild(sky);
+        var stageW = this.stage.stageWidth;
+        var stageH = this.stage.stageHeight;
+        sky.width = stageW;
+        sky.height = stageH;
+        var topMask = new egret.Shape();
+        topMask.graphics.beginFill(0x000000, 0.5);
+        topMask.graphics.drawRect(0, 0, stageW, stageH);
+        topMask.graphics.endFill();
+        topMask.width = stageW;
+        topMask.height = stageH;
+        this.addChild(topMask);
+        var icon = this.createBitmapByName("egretIcon");
+        icon.anchorX = icon.anchorY = 0.5;
+        this.addChild(icon);
+        icon.x = stageW / 2;
+        icon.y = stageH / 2 - 60;
+        icon.scaleX = 0.55;
+        icon.scaleY = 0.55;
+        var colorLabel = new egret.TextField();
+        colorLabel.x = stageW / 2;
+        colorLabel.y = stageH / 2 + 50;
+        colorLabel.anchorX = colorLabel.anchorY = 0.5;
+        colorLabel.textColor = 0xffffff;
+        colorLabel.textAlign = "center";
+        colorLabel.text = "Hello Egret";
+        colorLabel.size = 20;
+        this.addChild(colorLabel);
+        var textContainer = new egret.Sprite();
+        textContainer.anchorX = textContainer.anchorY = 0.5;
+        this.addChild(textContainer);
+        textContainer.x = stageW / 2;
+        textContainer.y = stageH / 2 + 100;
+        textContainer.alpha = 0;
+        this.textContainer = textContainer;
+        //根据name关键字，异步获取一个json配置文件，name属性请参考resources/resource.json配置文件的内容。
+        RES.getResAsync("description", this.startAnimation, this);
+        this.addChild(new Mask());
+        var p = new Test();
+        var magic = this.createBitmapByName("magic");
+        p.source = magic;
+        p.ac();
+        p.x = p.y = 200;
+        this.addChild(p);
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。

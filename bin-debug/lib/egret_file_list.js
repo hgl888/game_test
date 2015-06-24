@@ -101,6 +101,5 @@ var egret_file_list = [
 	"core/extension/resource/analyzer/FontAnalyzer.js",
 	"core/extension/resource/analyzer/SoundAnalyzer.js",
 	"core/extension/resource/analyzer/XMLAnalyzer.js",
-	"core/extension/resource/Resource.js",
-	"createjs-graphics/Graphics.js"
+	"core/extension/resource/Resource.js"
 ];
