@@ -7,11 +7,24 @@ var window = {};
 console.log = function (message) {
     egtlog(message);
 }
-console.warn = function(message){
+console.warn = function (message) {
+    egtlog(message);
+}
+console.error = function (message) {
+    egtlog(message);
+}
+console.debug = function (message) {
+    egtlog(message);
+}
+console.timeEnd = function (message) {
+    egtlog(message);
+}
+console.time = function (message) {
     egtlog(message);
 }
 
 egret_native.setSearchPaths([""]);
+egret_native.Texture.setCompressTo565(true);
 
 egret_native.requireFiles = function () {
     require("bin-debug/lib/egret_file_list.js");
@@ -28,8 +41,6 @@ egret_native.requireFiles = function () {
 };
 
 egret_native.egretInit = function () {
-    window.nativeCtx = egret_native.rastergl;
-    //此变量用于加载文件判断，请勿修改此处
     var needCompile = false;
     if (!needCompile) {
         egret_native.requireFiles();
@@ -43,20 +54,33 @@ egret_native.egretInit = function () {
     egret.dom.drawAsCanvas = function () {
     };
 
+    egret.MainContext.type = egret.MainContext.TYPE_NATIVE;
     var context = egret.MainContext.instance;
     context.rendererContext = new egret.NativeRendererContext();
     context.netContext = new egret.NativeNetContext();
     context.touchContext = new egret.NativeTouchContext();
     context.deviceContext = new egret.NativeDeviceContext();
 
-    egret.StageDelegate.getInstance().setDesignSize(480, 800);
+    egret.StageDelegate.getInstance().setDesignSize(2304, 1536);
     context.stage = new egret.Stage();
-    context.stage.scaleMode = egret.StageScaleMode.SHOW_ALL;
+    egret.Stage.registerScaleMode(egret.StageScaleMode.NO_BORDER, new egret.FixedHeight(), true);
+    context.stage.scaleMode = egret.StageScaleMode.NO_BORDER;
 
-    egret.RendererContext.texture_scale_factor = 1;
+    egret.MainContext.instance.rendererContext.texture_scale_factor = 2304/720;
 
     context.run();
 };
+
+egret_native.loadStartVersion = function () {
+    var runtime = true;
+    if (runtime) {
+        egret_native.loadVersion(egret_native.egretStart);
+    }
+    else {
+        egret_native.loadVersion(egret_native.loadAllChange);
+    }
+};
+
 
 egret_native.loadVersion = function (completeCall) {
     var ctr = egret.MainContext.instance.netContext._versionCtr;
@@ -82,15 +106,15 @@ egret_native.loadVersion = function (completeCall) {
 
 egret_native.egretStart = function () {
 
-    Object.defineProperty(egret.DisplayObject.prototype, "cacheAsBitmap", {
-        get: function () {
-            return false;
-        },
-        set: function (bool) {
-        },
-        enumerable: true,
-        configurable: true
-    });
+//    Object.defineProperty(egret.DisplayObject.prototype, "cacheAsBitmap", {
+//        get: function () {
+//            return false;
+//        },
+//        set: function (bool) {
+//        },
+//        enumerable: true,
+//        configurable: true
+//    });
 
     var document_class = "Main";
     var rootClass;

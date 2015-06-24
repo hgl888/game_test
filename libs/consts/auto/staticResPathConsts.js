@@ -1,0 +1,20 @@
+var res;
+(function (res) {
+    res.logo_jpg = 'static/bg/logo.jpg';
+    res.defaultHero_png = 'static/common/defaultHero.png';
+    res.levelNum_png = 'static/common/levelNum.png';
+    res.pageOff_png = 'static/common/pageOff.png';
+    res.pageOn_png = 'static/common/pageOn.png';
+    res.FrozenShader_fsh = 'static/shader/FrozenShader.fsh';
+    res.FrozenShader_vsh = 'static/shader/FrozenShader.vsh';
+    res.GaussianBlur_fsh = 'static/shader/GaussianBlur.fsh';
+    res.GaussianBlur_vsh = 'static/shader/GaussianBlur.vsh';
+    res.GrayScalingShader_fsh = 'static/shader/GrayScalingShader.fsh';
+    res.GrayScalingShader_vsh = 'static/shader/GrayScalingShader.vsh';
+    res.MirrorShader_fsh = 'static/shader/MirrorShader.fsh';
+    res.MirrorShader_vsh = 'static/shader/MirrorShader.vsh';
+    res.PoisonShader_fsh = 'static/shader/PoisonShader.fsh';
+    res.PoisonShader_vsh = 'static/shader/PoisonShader.vsh';
+    res.StoneShader_fsh = 'static/shader/StoneShader.fsh';
+    res.StoneShader_vsh = 'static/shader/StoneShader.vsh';
+})(res || (res = {}));

@@ -1,0 +1,100 @@
+{"frames": [
+
+{
+	"filename": "btn_purchase.png",
+	"frame": {"x":742,"y":51,"w":44,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":22},
+	"sourceSize": {"w":44,"h":22}
+},
+{
+	"filename": "copy_btn_continue.png",
+	"frame": {"x":270,"y":2,"w":204,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":204,"h":64},
+	"sourceSize": {"w":204,"h":64}
+},
+{
+	"filename": "copy_btn_noraids.png",
+	"frame": {"x":843,"y":2,"w":98,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":30},
+	"sourceSize": {"w":98,"h":30}
+},
+{
+	"filename": "copy_btn_raids.png",
+	"frame": {"x":788,"y":34,"w":98,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":30},
+	"sourceSize": {"w":98,"h":30}
+},
+{
+	"filename": "copy_btn_raids1.png",
+	"frame": {"x":743,"y":2,"w":98,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":30},
+	"sourceSize": {"w":98,"h":30}
+},
+{
+	"filename": "copy_star.png",
+	"frame": {"x":694,"y":2,"w":47,"h":47},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":47},
+	"sourceSize": {"w":47,"h":47}
+},
+{
+	"filename": "copy_star_gray.png",
+	"frame": {"x":645,"y":2,"w":47,"h":47},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":47},
+	"sourceSize": {"w":47,"h":47}
+},
+{
+	"filename": "copy_under_stars.png",
+	"frame": {"x":476,"y":2,"w":167,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":167,"h":50},
+	"sourceSize": {"w":167,"h":50}
+},
+{
+	"filename": "raids_under_vipbouns.png",
+	"frame": {"x":2,"y":2,"w":266,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":266,"h":68},
+	"sourceSize": {"w":266,"h":68}
+},
+{
+	"filename": "raids_vipbouns.png",
+	"frame": {"x":476,"y":54,"w":264,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":264,"h":23},
+	"sourceSize": {"w":264,"h":23}
+},
+{
+	"filename": "redcorner.png",
+	"frame": {"x":888,"y":34,"w":70,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":28},
+	"sourceSize": {"w":70,"h":28}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "ui_copyInfo.png",
+	"format": "RGBA8888",
+	"size": {"w":960,"h":79},
+	"scale": "0.3125",
+	"smartupdate": "$TexturePacker:SmartUpdate:228f0233b6960f4720eeb170852b9c9f:1/1$"
+}
+}

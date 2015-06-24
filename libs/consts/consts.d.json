@@ -1,0 +1,19 @@
+{
+	"file_list": [
+		"auto/c_formula.js",
+		"auto/c_prop.js",
+		"auto/cfgConsts.js",
+		"auto/dsConsts.js",
+		"auto/frameName.js",
+		"auto/idKeyConsts.js",
+		"auto/iface.js",
+		"auto/staticResPathConsts.js",
+		"auto/t_copyBelong.js",
+		"auto/uiPathConsts.js",
+		"src/gEventType.js",
+		"src/c_heroTid.js",
+		"src/FightConsts.js",
+		"src/resConsts.js",
+		"src/colorTrans.js"
+	]
+}

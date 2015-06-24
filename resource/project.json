@@ -1,0 +1,52 @@
+{
+    "package" : "com.lightyeargame.uw",
+    "projName" : "uw",
+    "appName" : "叫我恶魔大人",
+    "checkUpdateUrl" : "http://123.59.33.151:15100/?r=h.c.a&a=%7B%7D",
+
+    "logLvl" : {
+    },
+    "renderMode" : 0,
+    "showFPS" : false,
+    "frameRate" : 60,
+
+    "version" : "0.1.7",
+
+    "channelId" : 0,
+
+    "httpHost" : "112.124.106.143",
+    "httpPort" : "7100",
+    "logServer" : true,
+
+    "isDev" : false,
+    "isUglifyJs" : false,
+    "isScatterMode" : false,
+
+    "device" : {
+        "width" : 720,
+        "height" : 480
+    },
+
+    "design" : {
+        "width" : 2304,
+        "height" : 1536
+    },
+
+    "resolution" : {
+        "width" : 720,
+        "height" : 480
+    },
+
+    "resLimit" : 100,
+    "audioEnabled" : true,
+    "guideEnabled" : true,
+    "fightSimulateEnabled" : true,
+    "isSandBox" : true,
+    "isValidIAP" : false,
+    "armatureDemoEnabled" : 0,
+    "fightAreaEnabled" : false,
+    "ccaContentScale" : 0.85,
+
+    "fightDebugMode" : false,
+    "openRecharge" : false
+}

@@ -1,0 +1,14 @@
+{
+	"file_list": [
+		"res.js",
+		"recycler4URLLoader.js",
+		"resMgr.js",
+		"dynamicResHelper.js",
+		"parser/ResParser.js",
+		"parser/TextParser.js",
+		"parser/JsonParser.js",
+		"parser/ImageParser.js",
+		"parser/AudioParser.js",
+		"parser/SheetParser.js"
+	]
+}

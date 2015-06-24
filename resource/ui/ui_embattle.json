@@ -1,0 +1,100 @@
+{"frames": [
+
+{
+	"filename": "blk_redskills.png",
+	"frame": {"x":2,"y":317,"w":175,"h":298},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":175,"h":298},
+	"sourceSize": {"w":175,"h":298}
+},
+{
+	"filename": "blk_redskills2new.png",
+	"frame": {"x":2,"y":2,"w":176,"h":313},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":313},
+	"sourceSize": {"w":176,"h":313}
+},
+{
+	"filename": "blk_redunder.png",
+	"frame": {"x":2,"y":771,"w":94,"h":78},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":78},
+	"sourceSize": {"w":94,"h":78}
+},
+{
+	"filename": "copy_buzhen.png",
+	"frame": {"x":2,"y":900,"w":197,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":197,"h":48},
+	"sourceSize": {"w":197,"h":48}
+},
+{
+	"filename": "copy_dibang.png",
+	"frame": {"x":205,"y":2,"w":31,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":31},
+	"sourceSize": {"w":31,"h":31}
+},
+{
+	"filename": "copy_gezihong1.png",
+	"frame": {"x":153,"y":713,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+{
+	"filename": "copy_lang.png",
+	"frame": {"x":153,"y":617,"w":94,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":94},
+	"sourceSize": {"w":94,"h":94}
+},
+{
+	"filename": "copy_under_raids.png",
+	"frame": {"x":2,"y":617,"w":149,"h":152},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":149,"h":152},
+	"sourceSize": {"w":149,"h":152}
+},
+{
+	"filename": "copy_xian.png",
+	"frame": {"x":180,"y":2,"w":23,"h":334},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":334},
+	"sourceSize": {"w":23,"h":334}
+},
+{
+	"filename": "pat_battle.png",
+	"frame": {"x":2,"y":851,"w":223,"h":47},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":223,"h":47},
+	"sourceSize": {"w":223,"h":47}
+},
+{
+	"filename": "pat_power.png",
+	"frame": {"x":98,"y":801,"w":90,"h":47},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":90,"h":47},
+	"sourceSize": {"w":90,"h":47}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "ui_embattle.png",
+	"format": "RGBA8888",
+	"size": {"w":249,"h":950},
+	"scale": "0.3125",
+	"smartupdate": "$TexturePacker:SmartUpdate:6b364b0b653c6be529e9409cdfb34c8b:1/1$"
+}
+}

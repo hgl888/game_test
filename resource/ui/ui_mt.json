@@ -1,0 +1,68 @@
+{"frames": [
+
+{
+	"filename": "blk_level_open.png",
+	"frame": {"x":2,"y":2,"w":161,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":161,"h":128},
+	"sourceSize": {"w":161,"h":128}
+},
+{
+	"filename": "ico_lvl_0.png",
+	"frame": {"x":487,"y":128,"w":159,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":159,"h":124},
+	"sourceSize": {"w":159,"h":124}
+},
+{
+	"filename": "ico_lvl_1.png",
+	"frame": {"x":326,"y":128,"w":159,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":159,"h":124},
+	"sourceSize": {"w":159,"h":124}
+},
+{
+	"filename": "ico_lvl_2.png",
+	"frame": {"x":487,"y":2,"w":159,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":159,"h":124},
+	"sourceSize": {"w":159,"h":124}
+},
+{
+	"filename": "ico_lvl_3.png",
+	"frame": {"x":326,"y":2,"w":159,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":159,"h":124},
+	"sourceSize": {"w":159,"h":124}
+},
+{
+	"filename": "ico_lvl_4.png",
+	"frame": {"x":165,"y":128,"w":159,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":159,"h":124},
+	"sourceSize": {"w":159,"h":124}
+},
+{
+	"filename": "ico_lvl_5.png",
+	"frame": {"x":165,"y":2,"w":159,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":159,"h":124},
+	"sourceSize": {"w":159,"h":124}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker ",
+	"version": "1.0",
+	"image": "ui_mt.png",
+	"format": "RGBA8888",
+	"size": {"w":648,"h":254},
+	"scale": "0.3125",
+	"smartupdate": "$TexturePacker:SmartUpdate:66eeca5b29fe7f6561c77e8aa17727b8:1/1$"
+}
+}
