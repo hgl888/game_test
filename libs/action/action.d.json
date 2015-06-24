@@ -1,0 +1,14 @@
+{
+	"file_list": [
+		"Manager.js",
+		"Action.js",
+		"ActionInstant.js",
+		"ActionInterval.js",
+		"Move.js",
+		"Scale.js",
+		"Skew.js",
+		"Jump.js",
+		"Fade.js",
+		"Rotate.js"
+	]
+}

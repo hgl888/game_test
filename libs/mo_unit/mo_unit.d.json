@@ -1,0 +1,12 @@
+{
+	"file_list": [
+		"node/unit_Node.js",
+		"egret-action/unit_ActionClone.js",
+		"egret-action/unit_ActionReverse.js",
+		"gui/widget/unit_UIWidget.js",
+		"gui/widget/unit_UIPanel.js",
+		"gui/widget/unit_UIText.js",
+		"gui/widget/unit_UIImage.js",
+		"armature/unit_Armature.js"
+	]
+}

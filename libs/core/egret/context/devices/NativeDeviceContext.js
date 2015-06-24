@@ -24,12 +24,6 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
 var egret;
 (function (egret) {
     /**
@@ -45,21 +39,20 @@ var egret;
          */
         function NativeDeviceContext() {
             _super.call(this);
-            this.callback = null;
-            this.thisObject = null;
             egret.TextField.default_fontFamily = "/system/fonts/DroidSansFallback.ttf";
         }
+        var __egretProto__ = NativeDeviceContext.prototype;
         /**
          * @method egret.NativeDeviceContext#executeMainLoop
          * @param callback {Function}
          * @param thisObject {any}
          */
-        NativeDeviceContext.prototype.executeMainLoop = function (callback, thisObject) {
+        __egretProto__.executeMainLoop = function (callback, thisObject) {
             this.callback = callback;
             this.thisObject = thisObject;
             egret_native.executeMainLoop(this.onEnterFrame, this);
         };
-        NativeDeviceContext.prototype.onEnterFrame = function (advancedTime) {
+        __egretProto__.onEnterFrame = function (advancedTime) {
             this.callback.call(this.thisObject, advancedTime);
         };
         return NativeDeviceContext;
@@ -105,11 +98,13 @@ var egret_native_external_interface;
 egret_native_external_interface.init();
 var egret_native_sound;
 (function (egret_native_sound) {
+    egret_native_sound.currentPath = "";
     function play(loop) {
         if (typeof loop == "undefined") {
             loop = false;
         }
         if (this.type == egret.Sound.MUSIC) {
+            egret_native_sound.currentPath = this.path;
             egret_native.Audio.playBackgroundMusic(this.path, loop);
         }
         else if (this.type == egret.Sound.EFFECT) {
@@ -119,7 +114,9 @@ var egret_native_sound;
     egret_native_sound.play = play;
     function pause() {
         if (this.type == egret.Sound.MUSIC) {
-            egret_native.Audio.stopBackgroundMusic(false);
+            if (this.path == egret_native_sound.currentPath) {
+                egret_native.Audio.stopBackgroundMusic(false);
+            }
         }
         else if (this.type == egret.Sound.EFFECT) {
             if (this.effect_id) {
@@ -132,13 +129,40 @@ var egret_native_sound;
     function load() {
     }
     egret_native_sound.load = load;
-    function preload(type) {
+    function destroy() {
+        if (this.type == egret.Sound.EFFECT) {
+            egret_native.Audio.unloadEffect(this.path);
+        }
+        else if (egret_native_sound.currentPath == this.path) {
+            egret_native.Audio.stopBackgroundMusic(true);
+        }
+    }
+    egret_native_sound.destroy = destroy;
+    function preload(type, callback, thisObj) {
+        if (callback === void 0) { callback = null; }
+        if (thisObj === void 0) { thisObj = null; }
         this.type = type;
         if (this.type == egret.Sound.MUSIC) {
             egret_native.Audio.preloadBackgroundMusic(this.path);
+            if (callback) {
+                callback.call(thisObj);
+            }
         }
         else if (this.type == egret.Sound.EFFECT) {
-            egret_native.Audio.preloadEffect(this.path);
+            if (egret.NativeNetContext.__use_asyn) {
+                var promise = new egret.PromiseObject();
+                promise.onSuccessFunc = function (soundId) {
+                    if (callback) {
+                        callback.call(thisObj);
+                    }
+                };
+                egret_native.Audio.preloadEffectAsync(this.path, promise);
+            }
+            else {
+                if (callback) {
+                    callback.call(thisObj);
+                }
+            }
         }
     }
     egret_native_sound.preload = preload;
@@ -227,6 +251,9 @@ egret.ContentStrategy.prototype.setEgretSize = function (w, h, styleW, styleH, l
     egret_native.EGTView.setVisibleRect(left, top, styleW, styleH);
     egret_native.EGTView.setDesignSize(w, h);
 };
+egret.Logger.openLogByType = function (logType) {
+    egret_native.loglevel(logType);
+};
 egret_native.pauseApp = function () {
     egret.MainContext.instance.stage.dispatchEvent(new egret.Event(egret.Event.DEACTIVATE));
 };
@@ -239,6 +266,7 @@ egret.RenderTexture.prototype.setSize = function (width, height) {
     //todo 复用
     this.dispose();
     this._bitmapData = new egret_native.RenderTexture(width, height);
+    this._bitmapData["avaliable"] = true;
     this.renderContext = new egret.NativeRendererContext();
 };
 egret.RenderTexture.prototype.begin = function () {
@@ -253,4 +281,8 @@ egret.RenderTexture.prototype.dispose = function () {
         this.renderContext = null;
         this._bitmapData = null;
     }
+};
+egret.getOption = function (key) {
+    console.log("egret_native.getOption");
+    return egret_native.getOption(key);
 };

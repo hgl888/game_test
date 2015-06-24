@@ -1,0 +1,48 @@
+{
+    "package" : "com.lightyeargame.unit",
+    "projName" : "unit",
+    "appName" : "单元测试",
+
+    "debugMode" : 1,
+    "renderMode" : 0,
+    "showFPS" : true,
+    "frameRate" : 60,
+
+    "version" : "0.1.0",
+
+    "assetsHost" : "112.124.106.143",
+    "assetsPort" : "6100",
+    "httpHost" : "112.124.106.143",
+    "httpPort" : "7100",
+    "logServer" : true,
+
+    "isDev" : false,
+    "isUglifyJs" : false,
+    "isScatterMode" : false,
+
+    "device" : {
+        "width" : 720,
+        "height" : 480
+    },
+
+    "design" : {
+        "width" : 2304,
+        "height" : 1536
+    },
+
+    "resolution" : {
+        "width" : 720,
+        "height" : 480
+    },
+
+    "audioEnabled" : true,
+    "guideEnabled" : true,
+    "fightSimulateEnabled" : true,
+    "isSandBox" : true,
+    "isValidIAP" : false,
+    "armatureDemoEnabled" : 0,
+    "fightAreaEnabled" : false,
+    "ccaContentScale" : 0.85,
+
+    "channel" : "9999"
+}

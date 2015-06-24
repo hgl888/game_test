@@ -24,12 +24,6 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
 var egret;
 (function (egret) {
     /**
@@ -49,13 +43,6 @@ var egret;
          */
         function Bitmap(texture) {
             _super.call(this);
-            this._texture = null;
-            /**
-             * 矩形区域，它定义位图对象的九个缩放区域。此属性仅当fillMode为BitmapFillMode.SCALE时有效。
-             * scale9Grid的x、y、width、height分别代表九宫图中中间那块的左上点的x、y以及中间方块的宽高。
-             * @member {egret.Rectangle} egret.Bitmap#scale9Grid
-             */
-            this.scale9Grid = null;
             /**
              * 确定位图填充尺寸的方式。
              * 设置为 BitmapFillMode.REPEAT时，位图将重复以填充区域；BitmapFillMode.SCALE时，位图将拉伸以填充区域。
@@ -69,7 +56,8 @@ var egret;
             }
             this.needDraw = true;
         }
-        Object.defineProperty(Bitmap.prototype, "texture", {
+        var __egretProto__ = Bitmap.prototype;
+        Object.defineProperty(__egretProto__, "texture", {
             /**
              * 渲染纹理
              * @member {egret.Texture} egret.Bitmap#texture
@@ -87,7 +75,7 @@ var egret;
             enumerable: true,
             configurable: true
         });
-        Bitmap.prototype._render = function (renderContext) {
+        __egretProto__._render = function (renderContext) {
             var texture = this._texture;
             if (!texture) {
                 this._texture_to_render = null;
@@ -211,7 +199,7 @@ var egret;
          * @returns {egret.Rectangle}
          * @private
          */
-        Bitmap.prototype._measureBounds = function () {
+        __egretProto__._measureBounds = function () {
             var texture = this._texture;
             if (!texture) {
                 return _super.prototype._measureBounds.call(this);

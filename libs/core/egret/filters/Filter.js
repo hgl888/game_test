@@ -31,8 +31,8 @@ var egret;
      */
     var Filter = (function () {
         function Filter() {
-            this.type = null;
         }
+        var __egretProto__ = Filter.prototype;
         return Filter;
     })();
     egret.Filter = Filter;

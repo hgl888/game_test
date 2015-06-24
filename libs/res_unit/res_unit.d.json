@@ -1,0 +1,11 @@
+{
+	"file_list": [
+		"parser/unit_AudioParser.js",
+		"parser/unit_ImageParser.js",
+		"parser/unit_JsonParser.js",
+		"parser/unit_ResParser.js",
+		"parser/unit_SheetParser.js",
+		"parser/unit_TextParser.js",
+		"unit_res.js"
+	]
+}

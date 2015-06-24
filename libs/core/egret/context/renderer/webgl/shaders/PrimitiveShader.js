@@ -31,22 +31,13 @@ var egret;
      */
     var PrimitiveShader = (function () {
         function PrimitiveShader(gl) {
-            this.gl = null;
-            this.program = null;
-            this.projectionVector = null;
-            this.offsetVector = null;
-            this.tintColor = null;
-            this.aVertexPosition = null;
-            this.colorAttribute = null;
-            this.attributes = null;
-            this.translationMatrix = null;
-            this.alpha = null;
             this.fragmentSrc = "precision mediump float;\n" + "varying vec4 vColor;\n" + "void main(void) {\n" + "   gl_FragColor = vColor;\n" + "}";
             this.vertexSrc = "attribute vec2 aVertexPosition;\n" + "attribute vec4 aColor;\n" + "uniform mat3 translationMatrix;\n" + "uniform vec2 projectionVector;\n" + "uniform vec2 offsetVector;\n" + "uniform float alpha;\n" + "uniform vec3 tint;\n" + "varying vec4 vColor;\n" + "void main(void) {\n" + "   vec3 v = translationMatrix * vec3(aVertexPosition , 1.0);\n" + "   v -= offsetVector.xyx;\n" + "   gl_Position = vec4( v.x / projectionVector.x -1.0, v.y / -projectionVector.y + 1.0 , 0.0, 1.0);\n" + "   vColor = aColor * vec4(tint * alpha, alpha);\n" + "}";
             this.gl = gl;
             this.init();
         }
-        PrimitiveShader.prototype.init = function () {
+        var __egretProto__ = PrimitiveShader.prototype;
+        __egretProto__.init = function () {
             var gl = this.gl;
             var program = egret.WebGLUtils.compileProgram(gl, this.vertexSrc, this.fragmentSrc);
             gl.useProgram(program);

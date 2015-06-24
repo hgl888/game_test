@@ -1,0 +1,11 @@
+{
+	"file_list": [
+		"events/unit_EventDispatcher.js",
+		"events/unit_TouchEvent.js",
+		"unit_DisplayObject.js",
+		"unit_Bitmap.js",
+		"unit_Shape.js",
+		"unit_Get.js",
+		"unit_Blur.js"
+	]
+}

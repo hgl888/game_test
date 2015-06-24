@@ -32,14 +32,12 @@ var egret;
     var EgretShader = (function () {
         function EgretShader(gl) {
             this.defaultVertexSrc = "attribute vec2 aVertexPosition;\n" + "attribute vec2 aTextureCoord;\n" + "attribute vec2 aColor;\n" + "uniform vec2 projectionVector;\n" + "uniform vec2 offsetVector;\n" + "varying vec2 vTextureCoord;\n" + "varying vec4 vColor;\n" + "const vec2 center = vec2(-1.0, 1.0);\n" + "void main(void) {\n" + "   gl_Position = vec4( ((aVertexPosition + offsetVector) / projectionVector) + center , 0.0, 1.0);\n" + "   vTextureCoord = aTextureCoord;\n" + "   vColor = vec4(aColor.x, aColor.x, aColor.x, aColor.x);\n" + "}";
-            this.gl = null;
-            this.program = null;
             this.fragmentSrc = "precision lowp float;\n" + "varying vec2 vTextureCoord;\n" + "varying vec4 vColor;\n" + "uniform sampler2D uSampler;\n" + "void main(void) {\n" + "gl_FragColor = texture2D(uSampler, vTextureCoord) * vColor ;\n" + "}";
-            this.uniforms = null;
             this.gl = gl;
             this.init();
         }
-        EgretShader.prototype.init = function () {
+        var __egretProto__ = EgretShader.prototype;
+        __egretProto__.init = function () {
             var gl = this.gl;
             var program = egret.WebGLUtils.compileProgram(gl, this.defaultVertexSrc, this.fragmentSrc);
             gl.useProgram(program);
@@ -60,7 +58,7 @@ var egret;
             this.initUniforms();
             this.program = program;
         };
-        EgretShader.prototype.initUniforms = function () {
+        __egretProto__.initUniforms = function () {
             if (!this.uniforms) {
                 return;
             }
@@ -99,7 +97,7 @@ var egret;
                 }
             }
         };
-        EgretShader.prototype.syncUniforms = function () {
+        __egretProto__.syncUniforms = function () {
             if (!this.uniforms) {
                 return;
             }

@@ -24,12 +24,6 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
 var egret;
 (function (egret) {
     /**
@@ -42,8 +36,10 @@ var egret;
         __extends(HTML5NetContext, _super);
         function HTML5NetContext() {
             _super.call(this);
+            egret.Texture.createBitmapData = egret.Texture._createBitmapDataForCanvasAndWebGl;
         }
-        HTML5NetContext.prototype.proceed = function (loader) {
+        var __egretProto__ = HTML5NetContext.prototype;
+        __egretProto__.proceed = function (loader) {
             if (loader.dataFormat == egret.URLLoaderDataFormat.TEXTURE) {
                 this.loadTexture(loader);
                 return;
@@ -108,7 +104,7 @@ var egret;
                 egret.__callAsync(egret.Event.dispatchEvent, egret.Event, loader, egret.Event.COMPLETE);
             }
         };
-        HTML5NetContext.prototype.loadSound = function (loader) {
+        __egretProto__.loadSound = function (loader) {
             var request = loader._request;
             var audio = new Audio(request.url);
             audio["__timeoutId"] = egret.setTimeout(soundPreloadCanplayHandler, this, 100);
@@ -158,7 +154,7 @@ var egret;
         //                IOErrorEvent.dispatchIOErrorEvent(loader);
         //            }
         //        }
-        HTML5NetContext.prototype.getXHR = function () {
+        __egretProto__.getXHR = function () {
             if (window["XMLHttpRequest"]) {
                 return new window["XMLHttpRequest"]();
             }
@@ -166,7 +162,7 @@ var egret;
                 return new ActiveXObject("MSXML2.XMLHTTP");
             }
         };
-        HTML5NetContext.prototype.setResponseType = function (xhr, responseType) {
+        __egretProto__.setResponseType = function (xhr, responseType) {
             switch (responseType) {
                 case egret.URLLoaderDataFormat.TEXT:
                 case egret.URLLoaderDataFormat.VARIABLES:
@@ -180,26 +176,18 @@ var egret;
                     break;
             }
         };
-        HTML5NetContext.prototype.loadTexture = function (loader) {
+        __egretProto__.loadTexture = function (loader) {
             var request = loader._request;
-            var image = new Image();
-            //            image.crossOrigin = "Anonymous";
-            image.onload = onImageComplete;
-            image.onerror = onLoadError;
-            image.src = request.url;
-            function onImageComplete(event) {
-                image.onerror = null;
-                image.onload = null;
+            egret.Texture.createBitmapData(request.url, function (code, bitmapData) {
+                if (code != 0) {
+                    egret.IOErrorEvent.dispatchIOErrorEvent(loader);
+                    return;
+                }
                 var texture = new egret.Texture();
-                texture._setBitmapData(image);
+                texture._setBitmapData(bitmapData);
                 loader.data = texture;
                 egret.__callAsync(egret.Event.dispatchEvent, egret.Event, loader, egret.Event.COMPLETE);
-            }
-            function onLoadError(event) {
-                image.onerror = null;
-                image.onload = null;
-                egret.IOErrorEvent.dispatchIOErrorEvent(loader);
-            }
+            });
         };
         return HTML5NetContext;
     })(egret.NetContext);
