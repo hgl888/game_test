@@ -1,0 +1,23 @@
+{
+	"file_list": [
+		"BaseData.js",
+		"Bitmap.js",
+		"DisplayObjectContainer.js",
+		"Flash.js",
+		"MovieClip.js",
+		"MovieDataSet.js",
+		"Shape.js",
+		"Sprite.js",
+		"Timeline.js",
+		"Tween.js",
+		"G.js",
+		"TimerManager.js",
+		"MovieLib.js",
+		"Text.js",
+		"Graphics.js",
+		"Text.js",
+		"game/CardView.js",
+		"game/MaterialView.js",
+		"game/MonsterView.js"
+	]
+}

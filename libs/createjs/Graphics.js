@@ -240,8 +240,17 @@ this.createjs = this.createjs||{};
          **/
         this._storeIndex = 0;
 
+        //bounds
+        this._firstCheck = true;
+        this._minX = 0;
+        this._minY = 0;
+        this._maxX = 0;
+        this._maxY = 0;
+
         // setup:
         this.clear();
+
+
     }
     var p = Graphics.prototype;
     var G = Graphics; // shortcut
@@ -475,6 +484,7 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.moveTo = function(x, y) {
+        this.checkPoint(x, y);
         return this.append(new G.MoveTo(x,y), true);
     };
 
@@ -492,6 +502,7 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.lineTo = function(x, y) {
+        this.checkPoint(x,y);
         return this.append(new G.LineTo(x,y));
     };
 
@@ -509,6 +520,8 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.arcTo = function(x1, y1, x2, y2, radius) {
+        this.checkPoint(x1,y1);
+        this.checkPoint(x2,y2);
         return this.append(new G.ArcTo(x1, y1, x2, y2, radius));
     };
 
@@ -548,6 +561,8 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.quadraticCurveTo = function(cpx, cpy, x, y) {
+        this.checkPoint(cpx,cpy);
+        this.checkPoint(x,y);
         return this.append(new G.QuadraticCurveTo(cpx, cpy, x, y));
     };
 
@@ -567,6 +582,9 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.bezierCurveTo = function(cp1x, cp1y, cp2x, cp2y, x, y) {
+        this.checkPoint(cp1x,cp1y);
+        this.checkPoint(cp2x,cp2y);
+        this.checkPoint(x,y);
         return this.append(new G.BezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y));
     };
 
@@ -584,6 +602,7 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.rect = function(x, y, w, h) {
+        this.checkRect(x,y,w,h);
         return this.append(new G.Rect(x, y, w, h));
     };
 
@@ -611,6 +630,11 @@ this.createjs = this.createjs||{};
         this._instructions.length = this._activeInstructions.length = this._commitIndex = 0;
         this._strokeStyle = this._oldStrokeStyle = this._stroke = this._fill = this._strokeDash = this._oldStrokeDash = null;
         this._dirty = this._strokeIgnoreScale = false;
+        this._minX = 0;
+        this._minY = 0;
+        this._maxX = 0;
+        this._maxY = 0;
+        this._firstCheck = true;
         return this;
     };
 
@@ -888,6 +912,7 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.drawRoundRect = function(x, y, w, h, radius) {
+        this.checkRect(x,y,w,h);
         return this.drawRoundRectComplex(x, y, w, h, radius, radius, radius, radius);
     };
 
@@ -907,6 +932,7 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.drawRoundRectComplex = function(x, y, w, h, radiusTL, radiusTR, radiusBR, radiusBL) {
+        this.checkRect(x,y,w,h);
         return this.append(new G.RoundRect(x, y, w, h, radiusTL, radiusTR, radiusBR, radiusBL));
     };
 
@@ -935,6 +961,7 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.drawCircle = function(x, y, radius) {
+        this.checkRect(x - radius, y - radius, 2 * radius, 2 * radius);
         return this.append(new G.Circle(x, y, radius));
     };
 
@@ -953,6 +980,7 @@ this.createjs = this.createjs||{};
      * @chainable
      **/
     p.drawEllipse = function(x, y, w, h) {
+        this.checkRect(x - w, y - h, 2 * w, 2 * h);
         return this.append(new G.Ellipse(x, y, w, h));
     };
 
@@ -1925,7 +1953,10 @@ this.createjs = this.createjs||{};
      * @method exec
      * @param {CanvasRenderingContext2D} ctx
      */
-    p = (G.Fill = function(style, matrix) {
+     p = (G.Fill = function(style, matrix) {
+        if(style && egret.MainContext.runtimeType == egret.MainContext.RUNTIME_NATIVE) {
+            style = this.fixColors([style])[0];
+        }
         this.style = style;
         this.matrix = matrix;
     }).prototype;
@@ -2421,6 +2452,43 @@ this.createjs = this.createjs||{};
     // docced above.
     Graphics.beginCmd = new G.BeginPath(); // so we don't have to instantiate multiple instances.
 
+
+    //计算bounds
+    Graphics.prototype.checkRect = function (x, y, w, h) {
+        if (this._firstCheck) {
+            this._firstCheck = false;
+            this._minX = x;
+            this._minY = y;
+            this._maxX = x + w;
+            this._maxY = y + h;
+        }
+        else {
+            this._minX = Math.min(this._minX, x);
+            this._minY = Math.min(this._minY, y);
+            this._maxX = Math.max(this._maxX, x + w);
+            this._maxY = Math.max(this._maxY, y + h);
+        }
+    };
+    Graphics.prototype.checkPoint = function (x, y) {
+        if (this._firstCheck) {
+            this._firstCheck = false;
+            this._minX = x;
+            this._minY = y;
+            this._maxX = x;
+            this._maxY = y;
+        }
+        else {
+            this._minX = Math.min(this._minX, x);
+            this._minY = Math.min(this._minY, y);
+            this._maxX = Math.max(this._maxX, x);
+            this._maxY = Math.max(this._maxY, y);
+        }
+        this._lastX = x;
+        this._lastY = y;
+    };
+    Graphics.prototype._measureBounds = function () {
+        return egret.Rectangle.identity.initialize(this._minX, this._minY, this._maxX - this._minX, this._maxY - this._minY);
+    };
 
     createjs.Graphics = Graphics;
 }());

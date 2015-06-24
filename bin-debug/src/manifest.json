@@ -1,5 +1,5 @@
 [
-	"CreateJSGraphics.ts",
 	"LoadingUI.ts",
+	"libmap.ts",
 	"Main.ts"
 ]

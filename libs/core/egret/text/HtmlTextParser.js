@@ -105,11 +105,9 @@ var egret;
             }
             switch (valueArr[0].toLowerCase()) {
                 case "color":
-                    valueArr[1] = valueArr[1].replace(/#/, "0x");
                     info.textColor = parseInt(valueArr[1]);
                     break;
                 case "strokecolor":
-                    valueArr[1] = valueArr[1].replace(/#/, "0x");
                     info.strokeColor = parseInt(valueArr[1]);
                     break;
                 case "stroke":
@@ -124,7 +122,7 @@ var egret;
                 case "size":
                     info.size = parseInt(valueArr[1]);
                     break;
-                case "fontfamily":
+                case "fontFamily":
                     info.fontFamily = valueArr[1];
                     break;
                 case "href":

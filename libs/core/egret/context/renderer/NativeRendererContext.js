@@ -174,7 +174,7 @@ var egret;
             if (style === void 0) { style = null; }
             style = style || {};
             var size = style["size"] == null ? textField._size : style["size"];
-            egret_native.Label.createLabel(egret.TextField.default_fontFamily, size, "", 0);
+            egret_native.Label.createLabel(egret.TextField.default_fontFamily, size, "");
         };
         /**
          * 测量文本
