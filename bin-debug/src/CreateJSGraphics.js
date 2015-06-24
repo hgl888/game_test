@@ -8,7 +8,6 @@ var CreateJSGraphics = (function (_super) {
     __extends(CreateJSGraphics, _super);
     function CreateJSGraphics() {
         _super.apply(this, arguments);
-        //this.pgame = pgame;
     }
     Object.defineProperty(CreateJSGraphics.prototype, "graphics", {
         get: function () {
@@ -55,7 +54,6 @@ var CreateJSGraphics = (function (_super) {
                 this._graphics.draw(ctx);
             }
         }
-        //this.pgame.render( 10 );
     };
     return CreateJSGraphics;
 })(egret.DisplayObject);
