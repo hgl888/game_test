@@ -210,7 +210,6 @@ var egret;
          * @param value {egret.ContentStrategy} 适配模式
          * @param override {boolean} 是否覆盖
          * @method egret.Stage#registerScaleMode
-         * @private
          */
         Stage.registerScaleMode = function (key, value, override) {
             if (Stage.SCALE_MODE_ENUM[key] && !override) {
