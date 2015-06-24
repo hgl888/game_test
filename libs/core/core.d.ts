@@ -3767,7 +3767,6 @@ declare module egret {
          * @param value {egret.ContentStrategy} 适配模式
          * @param override {boolean} 是否覆盖
          * @method egret.Stage#registerScaleMode
-         * @private
          */
         static registerScaleMode(key: string, value: ContentStrategy, override?: boolean): void;
     }
@@ -4152,7 +4151,7 @@ declare module egret {
          * @member {string} egret.BitmapText#text
          */
         text: string;
-        _font: BitmapFont;
+        private _font;
         private _fontChanged;
         /**
          * BitmapFont对象，缓存了所有文本的位图纹理
@@ -4160,7 +4159,7 @@ declare module egret {
          */
         font: BitmapFont;
         _setSizeDirty(): void;
-        static EMPTY_FACTOR: number;
+        private static EMPTY_FACTOR;
         _render(renderContext: RendererContext): void;
         _measureBounds(): egret.Rectangle;
         private _textWidth;
@@ -4169,8 +4168,8 @@ declare module egret {
         private _textOffsetY;
         private textLinesChange;
         private _textLines;
-        _lineHeights: Array<number>;
-        _getTextLines(): Array<string>;
+        private _lineHeights;
+        private getTextLines();
     }
 }
 /**
@@ -6379,6 +6378,7 @@ declare module egret {
  */
 declare module egret {
     /**
+     * @private
      */
     class ExternalInterface {
         constructor();
@@ -6921,10 +6921,7 @@ declare module egret {
         private passive;
         /**
          * 激活一个对象，对其添加 Tween 动画
-         * @param target {any} 要激活 Tween 的对象
-         * @param props {any} 参数，例如：{loop:true}
-         * @param pluginData {any} 暂未实现
-         * @param override {boolean} 是否移除对象之前添加的tween，默认值false
+         * @param target 要激活的对象
          */
         static get(target: any, props?: any, pluginData?: any, override?: boolean): Tween;
         /**
@@ -6951,7 +6948,6 @@ declare module egret {
         static removeAllTweens(): void;
         /**
          * 创建一个 egret.Tween 对象
-         * @private
          */
         constructor(target: any, props: any, pluginData: any);
         private initialize(target, props, pluginData);

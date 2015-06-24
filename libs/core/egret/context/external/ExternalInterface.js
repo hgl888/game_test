@@ -27,6 +27,7 @@
 var egret;
 (function (egret) {
     /**
+     * @private
      */
     var ExternalInterface = (function () {
         function ExternalInterface() {

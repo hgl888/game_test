@@ -388,7 +388,7 @@ this.createjs = this.createjs||{};
         }
     }
     else {
-        Graphics._ctx = egret_native.rastergl;
+        Graphics._ctx = egret_native.Graphics;
     }
 
 
@@ -1950,9 +1950,6 @@ this.createjs = this.createjs||{};
      * @return {Fill} Returns this Fill object for chaining or assignment.
      */
     p.linearGradient = function(colors, ratios, x0, y0, x1, y1) {
-        if(egret.MainContext.runtimeType == egret.MainContext.RUNTIME_NATIVE) {
-            colors = this.fixColors(colors);
-        }
         var o = this.style =  Graphics._ctx.createLinearGradient(x0, y0, x1, y1);
         for (var i=0, l=colors.length; i<l; i++) { o.addColorStop(ratios[i], colors[i]); }
         o.props = {colors:colors, ratios:ratios, x0:x0, y0:y0, x1:x1, y1:y1, type:"linear"};
@@ -1973,54 +1970,10 @@ this.createjs = this.createjs||{};
      * @return {Fill} Returns this Fill object for chaining or assignment.
      */
     p.radialGradient = function(colors, ratios, x0, y0, r0, x1, y1, r1) {
-        if(egret.MainContext.runtimeType == egret.MainContext.RUNTIME_NATIVE) {
-            colors = this.fixColors(colors);
-        }
         var o = this.style =  Graphics._ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
         for (var i=0, l=colors.length; i<l; i++) { o.addColorStop(ratios[i], colors[i]); }
         o.props = {colors:colors, ratios:ratios, x0:x0, y0:y0, r0:r0, x1:x1, y1:y1, r1:r1, type:"radial"};
         return this;
-    };
-    p.fixColors = function(colors) {
-        var result = [];
-        for (var i=0, l=colors.length; i<l; i++) {
-            var color = colors[i];
-            if(color.indexOf("rgba") != -1) {
-                color = this.parseRGBA(color);
-            }
-            else if(color.indexOf("rgb") != -1) {
-                color = this.parseRGB(color);
-            }
-            result.push(color);
-        }
-        return result;
-    };
-    p.fill = function (s) {
-        if(s.length < 2) {
-            s = "0" + s;
-        }
-        return s;
-    };
-    p.parseRGBA = function(str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var a = parseInt(arr[3] * 255).toString(16);
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        str = "#" + this.fill(a) + this.fill(r) + this.fill(g) + this.fill(b);
-        return str;
-    };
-    p.parseRGB = function(str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        str = "#" + this.fill(r) + this.fill(g) + this.fill(b);
-        return str;
     };
     /**
      * Creates a bitmap fill style and assigns it to the {{#crossLink "Fill/style:property"}}{{/crossLink}}.

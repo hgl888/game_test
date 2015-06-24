@@ -8,7 +8,6 @@ var CreateJSGraphics = (function (_super) {
     __extends(CreateJSGraphics, _super);
     function CreateJSGraphics() {
         _super.apply(this, arguments);
-        //this.pgame = pgame;
     }
     Object.defineProperty(CreateJSGraphics.prototype, "graphics", {
         get: function () {
@@ -21,25 +20,6 @@ var CreateJSGraphics = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    CreateJSGraphics.prototype.setTransform = function (x, y, scaleX, scaleY, rotation, skewX, skewY, regX, regY) {
-        if (scaleX === void 0) { scaleX = 1; }
-        if (scaleY === void 0) { scaleY = 1; }
-        if (rotation === void 0) { rotation = 0; }
-        if (skewX === void 0) { skewX = 0; }
-        if (skewY === void 0) { skewY = 0; }
-        if (regX === void 0) { regX = 0; }
-        if (regY === void 0) { regY = 0; }
-        this.x = x || 0;
-        this.y = y || 0;
-        this.scaleX = scaleX == null ? 1 : scaleX;
-        this.scaleY = scaleY == null ? 1 : scaleY;
-        this.rotation = rotation || 0;
-        this.skewX = skewX || 0;
-        this.skewY = skewY || 0;
-        this.anchorX = (regX || 0) / this.width;
-        this.anchorY = (regY || 0) / this.height;
-        return this;
-    };
     CreateJSGraphics.prototype._render = function (renderContext) {
         if (this._graphics) {
             var ctx;
@@ -51,11 +31,16 @@ var CreateJSGraphics = (function (_super) {
                 this._graphics.draw(ctx);
             }
             else {
-                ctx = window["nativeCtx"];
-                this._graphics.draw(ctx);
+                //ctx = egret_native.rastergl;
+                egret_native.rastergl.beginPath();
+                egret_native.rastergl.lineWidth = 5;
+                egret_native.rastergl.strokeStyle = "#ff00ff";
+                egret_native.rastergl.rect(10,10,100,100);
+                egret_native.rastergl.stroke();
+                //egret_native.rastergl.fill();
+                //this._graphics.draw(ctx);
             }
         }
-        //this.pgame.render( 10 );
     };
     return CreateJSGraphics;
 })(egret.DisplayObject);

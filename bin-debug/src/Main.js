@@ -35,12 +35,7 @@ var Main = (function (_super) {
     function Main() {
         _super.call(this);
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-        egret.Profiler.getInstance().run();
     }
-    Main.prototype._onAddToStage = function () {
-        _super.prototype._onAddToStage.call(this);
-        console.log(this);
-    };
     Main.prototype.onAddToStage = function (event) {
         //设置加载进度界面
         this.loadingView = new LoadingUI();
@@ -72,8 +67,8 @@ var Main = (function (_super) {
         }
     };
     /**
-     * 资源组加载出错
-     */
+    * 资源组加载出错
+    */
     Main.prototype.onResourceLoadError = function (event) {
         //TODO
         console.warn("Group:" + event.groupName + " has failed to load");
@@ -92,54 +87,21 @@ var Main = (function (_super) {
      * 创建游戏场景
      */
     Main.prototype.createGameScene = function () {
-        //var pgame = new egret_native.EgretGameTriangle();
-        //pgame.initialize();
-        //egret_native.EgretGameTriangle.test();
-
-        //箭头
-        //var shape_38 = new CreateJSGraphics(  );
-        //shape_38.graphics.beginLinearGradientFill(["#00FFEE", "#00AAFF"], [0.494, 1], -28.6, 0, 28.8, 0).beginStroke().moveTo(28.7, -44.7).lineTo(28.7, 44.7).lineTo(-28.7, -0).closePath();
-        //shape_38.setTransform(100 + 27.6, 100);
-        //this.addChild(shape_38);
-
-        var gametri = new MeshPrimitiveSample();
-        //var n = gametri.pgame.num;
-        //gametri.pgame.num = 100;
-        gametri.initialize();
-
-    };
-    Main.prototype.parseRGBA = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var a = parseInt((arr[3] * 255)).toString(16);
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(a) + fill(r) + fill(g) + fill(b);
-        return str;
-    };
-    Main.prototype.parseRGB = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(r) + fill(g) + fill(b);
-        return str;
+        var sky = this.createBitmapByName("bgImage");
+        this.addChild(sky);
+        var stageW = this.stage.stageWidth;
+        var stageH = this.stage.stageHeight;
+        sky.width = stageW;
+        sky.height = stageH;
+        
+        //根据name关键字，异步获取一个json配置文件，name属性请参考resources/resource.json配置文件的内容。
+        var g = new CreateJSGraphics();
+        g.x = g.y = 100;
+        g.blendMode = egret.BlendMode.ERASE_REVERSE;
+        g.graphics.beginFill("#ff0000");
+        g.graphics.drawRect(0, 0, 100, 100);
+        g.graphics.endFill();
+        this.addChild(g);
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
