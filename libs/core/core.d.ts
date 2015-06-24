@@ -3767,7 +3767,6 @@ declare module egret {
          * @param value {egret.ContentStrategy} 适配模式
          * @param override {boolean} 是否覆盖
          * @method egret.Stage#registerScaleMode
-         * @private
          */
         static registerScaleMode(key: string, value: ContentStrategy, override?: boolean): void;
     }
@@ -6921,10 +6920,7 @@ declare module egret {
         private passive;
         /**
          * 激活一个对象，对其添加 Tween 动画
-         * @param target {any} 要激活 Tween 的对象
-         * @param props {any} 参数，例如：{loop:true}
-         * @param pluginData {any} 暂未实现
-         * @param override {boolean} 是否移除对象之前添加的tween，默认值false
+         * @param target 要激活的对象
          */
         static get(target: any, props?: any, pluginData?: any, override?: boolean): Tween;
         /**
@@ -6951,7 +6947,6 @@ declare module egret {
         static removeAllTweens(): void;
         /**
          * 创建一个 egret.Tween 对象
-         * @private
          */
         constructor(target: any, props: any, pluginData: any);
         private initialize(target, props, pluginData);
@@ -6986,7 +6981,7 @@ declare module egret {
          * @param ease {egret.Ease} 缓动算法
          * @returns {egret.Tween} Tween对象本身
          */
-        to(props: any, duration: number, ease?: Function): Tween;
+        to(props: any, duration?: number, ease?: Function): Tween;
         /**
          * 执行回调函数
          * @method egret.Tween#call
