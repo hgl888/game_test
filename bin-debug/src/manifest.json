@@ -1,5 +1,5 @@
 [
-	"CreateJSGraphics.ts",
 	"LoadingUI.ts",
+	"as3/BitmapData.ts",
 	"Main.ts"
 ]

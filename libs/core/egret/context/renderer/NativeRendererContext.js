@@ -1,35 +1,31 @@
-/**
- * Copyright (c) 2014,Egret-Labs.org
- * All rights reserved.
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- *     * Redistributions of source code must retain the above copyright
- *       notice, this list of conditions and the following disclaimer.
- *     * Redistributions in binary form must reproduce the above copyright
- *       notice, this list of conditions and the following disclaimer in the
- *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of the Egret-Labs.org nor the
- *       names of its contributors may be used to endorse or promote products
- *       derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY EGRET-LABS.ORG AND CONTRIBUTORS "AS IS" AND ANY
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL EGRET-LABS.ORG AND CONTRIBUTORS BE LIABLE FOR ANY
- * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2014-2015, Egret Technology Inc.
+//  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//     * Redistributions of source code must retain the above copyright
+//       notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above copyright
+//       notice, this list of conditions and the following disclaimer in the
+//       documentation and/or other materials provided with the distribution.
+//     * Neither the name of the Egret nor the
+//       names of its contributors may be used to endorse or promote products
+//       derived from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
+//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//////////////////////////////////////////////////////////////////////////////////////
 var egret;
 (function (egret) {
     /**
@@ -48,8 +44,11 @@ var egret;
             _super.call(this);
             this.currentAlpha = NaN;
             this.currentBlendMode = null;
+            egret.Texture.prototype.draw = egret.Texture.prototype._drawForNative;
+            egret.Texture.prototype.dispose = egret.Texture.prototype._disposeForNative;
         }
-        NativeRendererContext.prototype._setTextureScaleFactor = function (value) {
+        var __egretProto__ = NativeRendererContext.prototype;
+        __egretProto__._setTextureScaleFactor = function (value) {
             _super.prototype._setTextureScaleFactor.call(this, value);
             if (egret_native.Graphics.setTextureScaleFactor != null) {
                 egret_native.Graphics.setTextureScaleFactor(value);
@@ -59,7 +58,7 @@ var egret;
          * @method egret.NativeRendererContext#clearScreen
          * @private
          */
-        NativeRendererContext.prototype.clearScreen = function () {
+        __egretProto__.clearScreen = function () {
             egret_native.Graphics.clearScreen(0, 0, 0);
         };
         /**
@@ -70,7 +69,7 @@ var egret;
          * @param w {number}
          * @param h {numbe}
          */
-        NativeRendererContext.prototype.clearRect = function (x, y, w, h) {
+        __egretProto__.clearRect = function (x, y, w, h) {
         };
         /**
          * 绘制图片
@@ -86,15 +85,9 @@ var egret;
          * @param destHeigh {any}
          * @param repeat {string}
          */
-        NativeRendererContext.prototype.drawImage = function (texture, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, repeat) {
+        __egretProto__.drawImage = function (texture, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, repeat) {
             if (repeat === void 0) { repeat = undefined; }
-            if (repeat !== undefined) {
-                this.drawRepeatImage(texture, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, repeat);
-                return;
-            }
-            else {
-                egret_native.Graphics.drawImage(texture._bitmapData, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
-            }
+            texture.draw(egret_native.Graphics, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, repeat);
             _super.prototype.drawImage.call(this, texture, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, repeat);
         };
         /**
@@ -110,7 +103,7 @@ var egret;
          * @param destWidth {any}
          * @param destHeigh {any}
          */
-        NativeRendererContext.prototype.drawImageScale9 = function (texture, sourceX, sourceY, sourceWidth, sourceHeight, offX, offY, destWidth, destHeight, rect) {
+        __egretProto__.drawImageScale9 = function (texture, sourceX, sourceY, sourceWidth, sourceHeight, offX, offY, destWidth, destHeight, rect) {
             if (egret_native.Graphics.drawImageScale9 != null) {
                 egret_native.Graphics.drawImageScale9(texture._bitmapData, sourceX, sourceY, sourceWidth, sourceHeight, offX, offY, destWidth, destHeight, rect.x, rect.y, rect.width, rect.height);
                 this._addOneDraw();
@@ -118,7 +111,7 @@ var egret;
             }
             return false;
         };
-        NativeRendererContext.prototype.drawRepeatImage = function (texture, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, repeat) {
+        __egretProto__.drawRepeatImage = function (texture, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight, repeat) {
             var texture_scale_factor = egret.MainContext.instance.rendererContext._texture_scale_factor;
             sourceWidth = sourceWidth * texture_scale_factor;
             sourceHeight = sourceHeight * texture_scale_factor;
@@ -136,7 +129,7 @@ var egret;
          * @param matrix {egret.Matrix}
          * @stable A
          */
-        NativeRendererContext.prototype.setTransform = function (matrix) {
+        __egretProto__.setTransform = function (matrix) {
             egret_native.Graphics.setTransform(matrix.a, matrix.b, matrix.c, matrix.d, matrix.tx, matrix.ty);
         };
         /**
@@ -146,14 +139,14 @@ var egret;
          * @stable A
          * @param blendMode {egret.BlendMode}
          */
-        NativeRendererContext.prototype.setAlpha = function (value, blendMode) {
+        __egretProto__.setAlpha = function (value, blendMode) {
             //if (this.currentAlpha != value) {
             egret_native.Graphics.setGlobalAlpha(value);
             //this.currentAlpha = value;
             //}
             this.setBlendMode(blendMode);
         };
-        NativeRendererContext.prototype.setBlendMode = function (blendMode) {
+        __egretProto__.setBlendMode = function (blendMode) {
             if (!blendMode) {
                 blendMode = egret.BlendMode.NORMAL;
             }
@@ -170,11 +163,19 @@ var egret;
          * @method egret.NativeRendererContext#setupFont
          * @param textField {TextField}
          */
-        NativeRendererContext.prototype.setupFont = function (textField, style) {
+        __egretProto__.setupFont = function (textField, style) {
             if (style === void 0) { style = null; }
             style = style || {};
-            var size = style["size"] == null ? textField._size : style["size"];
-            egret_native.Label.createLabel(egret.TextField.default_fontFamily, size, "", 0);
+            var properties = textField._TF_Props_;
+            var size = style.size == null ? properties._size : style.size;
+            var outline;
+            if (style.stroke != null) {
+                outline = style.stroke;
+            }
+            else {
+                outline = properties._stroke;
+            }
+            egret_native.Label.createLabel(egret.TextField.default_fontFamily, size, "", outline);
         };
         /**
          * 测量文本
@@ -182,7 +183,7 @@ var egret;
          * @param text {string}
          * @returns {number}
          */
-        NativeRendererContext.prototype.measureText = function (text) {
+        __egretProto__.measureText = function (text) {
             return egret_native.Label.getTextSize(text)[0];
         };
         /**
@@ -194,42 +195,37 @@ var egret;
          * @param y {number}
          * @param maxWidth {numbe}
          */
-        NativeRendererContext.prototype.drawText = function (textField, text, x, y, maxWidth, style) {
+        __egretProto__.drawText = function (textField, text, x, y, maxWidth, style) {
             if (style === void 0) { style = null; }
             this.setupFont(textField, style);
             style = style || {};
+            var properties = textField._TF_Props_;
             var textColor;
             if (style.textColor != null) {
                 textColor = style.textColor;
             }
             else {
-                textColor = textField._textColor;
+                textColor = properties._textColor;
             }
             var strokeColor;
             if (style.strokeColor != null) {
-                strokeColor = egret.toColorString(style.strokeColor);
+                strokeColor = style.strokeColor;
             }
             else {
-                strokeColor = textField._strokeColorString;
-            }
-            var outline;
-            if (style.stroke != null) {
-                outline = style.stroke;
-            }
-            else {
-                outline = textField._stroke;
+                strokeColor = properties._strokeColor;
             }
             egret_native.Label.setTextColor(textColor);
+            egret_native.Label.setStrokeColor(strokeColor);
             egret_native.Label.drawText(text, x, y - 2);
             _super.prototype.drawText.call(this, textField, text, x, y, maxWidth, style);
         };
-        NativeRendererContext.prototype.pushMask = function (mask) {
+        __egretProto__.pushMask = function (mask) {
             egret_native.Graphics.pushClip(mask.x, mask.y, mask.width, mask.height);
         };
-        NativeRendererContext.prototype.popMask = function () {
+        __egretProto__.popMask = function () {
             egret_native.Graphics.popClip();
         };
-        NativeRendererContext.prototype.setGlobalColorTransform = function (colorTransformMatrix) {
+        __egretProto__.setGlobalColorTransform = function (colorTransformMatrix) {
             if (colorTransformMatrix) {
                 egret_native.Graphics.setGlobalColorTransformEnabled(true);
                 egret_native.Graphics.setGlobalColorTransform(colorTransformMatrix);
@@ -238,7 +234,7 @@ var egret;
                 egret_native.Graphics.setGlobalColorTransformEnabled(false);
             }
         };
-        NativeRendererContext.prototype.setGlobalFilter = function (filterData) {
+        __egretProto__.setGlobalFilter = function (filterData) {
             egret_native.Graphics.setGlobalShader(filterData);
         };
         return NativeRendererContext;
@@ -268,7 +264,7 @@ var egret_native_graphics;
             egret_native.Graphics.lineTo(x, y + height);
             egret_native.Graphics.lineTo(x, y);
         }, this, arguments));
-        this.checkRect(x, y, width, height);
+        this._checkRect(x, y, width, height);
     }
     egret_native_graphics.drawRect = drawRect;
     function drawCircle(x, y, r) {
@@ -284,13 +280,15 @@ var egret_native_graphics;
         this.commandQueue.push(new Command(function (x, y) {
             egret_native.Graphics.lineTo(x, y);
         }, this, arguments));
-        this.checkPoint(this.lineX, this.lineY);
+        this._checkPoint(this.lineX, this.lineY);
         this.lineX = x;
         this.lineY = y;
-        this.checkPoint(x, y);
+        this._checkPoint(x, y);
     }
     egret_native_graphics.lineTo = lineTo;
     function curveTo(controlX, controlY, anchorX, anchorY) {
+    }
+    function cubicCurveTo(controlX1, controlY1, controlX2, controlY2, anchorX, anchorY) {
     }
     egret_native_graphics.curveTo = curveTo;
     function moveTo(x, y) {
@@ -309,6 +307,7 @@ var egret_native_graphics;
         this._maxX = 0;
         this._maxY = 0;
         this._firstCheck = true;
+        this._dirty = true;
     }
     egret_native_graphics.clear = clear;
     function endFill() {
@@ -341,4 +340,28 @@ var egret_native_graphics;
     }
     egret_native_graphics.init = init;
 })(egret_native_graphics || (egret_native_graphics = {}));
-egret_native_graphics.init();
+if (egret_native.rastergl) {
+    egret.Graphics.prototype._setupDraw = function (renderContext) {
+        var self = this;
+        self._renderContext = egret_native.rastergl;
+    };
+    egret.Graphics.prototype._parseColor = function (color, alpha) {
+        var fill = function (s) {
+            if (s.length < 2) {
+                s = "0" + s;
+            }
+            return s;
+        };
+        var _colorBlue = color & 0x0000FF;
+        var _colorGreen = (color & 0x00ff00) >> 8;
+        var _colorRed = color >> 16;
+        var a = parseInt((alpha * 255)).toString(16);
+        var r = _colorRed.toString(16);
+        var g = _colorGreen.toString(16);
+        var b = _colorBlue.toString(16);
+        return "#" + fill(a) + fill(r) + fill(g) + fill(b);
+    };
+}
+else {
+    egret_native_graphics.init();
+}

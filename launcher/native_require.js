@@ -1,15 +1,4 @@
-/**
- * Created by huanghaiying on 14/12/5.
- */
-var console = {};
 var window = {};
-
-console.log = function (message) {
-    egtlog(message);
-}
-console.warn = function(message){
-    egtlog(message);
-}
 
 egret_native.setSearchPaths([""]);
 
@@ -28,8 +17,8 @@ egret_native.requireFiles = function () {
 };
 
 egret_native.egretInit = function () {
-    window.nativeCtx = egret_native.rastergl;
     //此变量用于加载文件判断，请勿修改此处
+    //This variable is used to load the file judgement, please do not change it
     var needCompile = false;
     if (!needCompile) {
         egret_native.requireFiles();
@@ -59,7 +48,17 @@ egret_native.egretInit = function () {
 };
 
 egret_native.loadVersion = function (completeCall) {
-    var ctr = egret.MainContext.instance.netContext._versionCtr;
+    //版本控制自动修改 请勿更改
+    //This variable is used to load the file judgement, please do not change it
+    var egretNeedVersionCtr = false;
+    if (!egretNeedVersionCtr) {
+        completeCall();
+        return;
+    }
+
+    var ctr = new egret.NativeVersionController();
+    egret.MainContext.instance.netContext.initVersion(ctr);
+
     ctr.addEventListener(egret.IOErrorEvent.IO_ERROR, loadError, this);
     ctr.addEventListener(egret.Event.COMPLETE, loadComplete, this);
     ctr.fetchVersion();
@@ -68,7 +67,7 @@ egret_native.loadVersion = function (completeCall) {
         ctr.removeEventListener(egret.IOErrorEvent.IO_ERROR, loadError, this);
         ctr.removeEventListener(egret.Event.COMPLETE, loadComplete, this);
 
-        console.log("版本控制文件加载失败，请检查");
+        console.log("Version control file loading failed. Please check");
         completeCall();
     }
 
@@ -104,11 +103,11 @@ egret_native.egretStart = function () {
             context.stage.addChild(rootContainer);
         }
         else {
-            throw new Error("文档类必须是egret.DisplayObjectContainer的子类!");
+            throw new Error("Document Class must be the subclass to egret.DisplayObjectContainer!");
         }
     }
     else {
-        throw new Error("找不到文档类！");
+        throw new Error("not found document class！");
     }
 };
 

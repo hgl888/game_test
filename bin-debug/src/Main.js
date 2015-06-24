@@ -1,58 +1,53 @@
-/**
- * Copyright (c) 2014,Egret-Labs.org
- * All rights reserved.
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions are met:
- *
- *     * Redistributions of source code must retain the above copyright
- *       notice, this list of conditions and the following disclaimer.
- *     * Redistributions in binary form must reproduce the above copyright
- *       notice, this list of conditions and the following disclaimer in the
- *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of the Egret-Labs.org nor the
- *       names of its contributors may be used to endorse or promote products
- *       derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY EGRET-LABS.ORG AND CONTRIBUTORS "AS IS" AND ANY
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL EGRET-LABS.ORG AND CONTRIBUTORS BE LIABLE FOR ANY
- * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
-};
+//////////////////////////////////////////////////////////////////////////////////////
+//
+//  Copyright (c) 2014-2015, Egret Technology Inc.
+//  All rights reserved.
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are met:
+//
+//     * Redistributions of source code must retain the above copyright
+//       notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above copyright
+//       notice, this list of conditions and the following disclaimer in the
+//       documentation and/or other materials provided with the distribution.
+//     * Neither the name of the Egret nor the
+//       names of its contributors may be used to endorse or promote products
+//       derived from this software without specific prior written permission.
+//
+//  THIS SOFTWARE IS PROVIDED BY EGRET AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+//  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+//  OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+//  IN NO EVENT SHALL EGRET AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+//  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;LOSS OF USE, DATA,
+//  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+//  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+//  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+//  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//
+//////////////////////////////////////////////////////////////////////////////////////
 var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         _super.call(this);
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-        egret.Profiler.getInstance().run();
     }
-    Main.prototype._onAddToStage = function () {
-        _super.prototype._onAddToStage.call(this);
-        console.log(this);
-    };
-    Main.prototype.onAddToStage = function (event) {
+    var __egretProto__ = Main.prototype;
+    __egretProto__.onAddToStage = function (event) {
         //设置加载进度界面
+        //Config to load process interface
         this.loadingView = new LoadingUI();
         this.stage.addChild(this.loadingView);
         //初始化Resource资源加载库
+        //initiate Resource loading library
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.loadConfig("resource/resource.json", "resource/");
     };
     /**
      * 配置文件加载完成,开始预加载preload资源组。
+     * configuration file loading is completed, start to pre-load the preload resource group
      */
-    Main.prototype.onConfigComplete = function (event) {
+    __egretProto__.onConfigComplete = function (event) {
         RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
@@ -61,8 +56,9 @@ var Main = (function (_super) {
     };
     /**
      * preload资源组加载完成
+     * Preload resource group is loaded
      */
-    Main.prototype.onResourceLoadComplete = function (event) {
+    __egretProto__.onResourceLoadComplete = function (event) {
         if (event.groupName == "preload") {
             this.stage.removeChild(this.loadingView);
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
@@ -73,78 +69,66 @@ var Main = (function (_super) {
     };
     /**
      * 资源组加载出错
+     *  The resource group loading failed
      */
-    Main.prototype.onResourceLoadError = function (event) {
+    __egretProto__.onResourceLoadError = function (event) {
         //TODO
         console.warn("Group:" + event.groupName + " has failed to load");
         //忽略加载失败的项目
+        //Ignore the loading failed projects
         this.onResourceLoadComplete(event);
     };
     /**
      * preload资源组加载进度
+     * Loading process of preload resource group
      */
-    Main.prototype.onResourceProgress = function (event) {
+    __egretProto__.onResourceProgress = function (event) {
         if (event.groupName == "preload") {
             this.loadingView.setProgress(event.itemsLoaded, event.itemsTotal);
         }
     };
     /**
      * 创建游戏场景
+     * Create a game scene
      */
-    Main.prototype.createGameScene = function () {
-        //var pgame = new egret_native.EgretGameTriangle();
-        //pgame.initialize();
-        //egret_native.EgretGameTriangle.test();
+    __egretProto__.createGameScene = function () {
+        var sky = this.createBitmapByName("bgImage");
+        this.addChild(sky);
+        var stageW = this.stage.stageWidth;
+        var stageH = this.stage.stageHeight;
+        sky.width = stageW;
+        sky.height = stageH;
 
-        //箭头
-        //var shape_38 = new CreateJSGraphics(  );
-        //shape_38.graphics.beginLinearGradientFill(["#00FFEE", "#00AAFF"], [0.494, 1], -28.6, 0, 28.8, 0).beginStroke().moveTo(28.7, -44.7).lineTo(28.7, 44.7).lineTo(-28.7, -0).closePath();
-        //shape_38.setTransform(100 + 27.6, 100);
-        //this.addChild(shape_38);
-
-        var gametri = new MeshPrimitiveSample();
-        //var n = gametri.pgame.num;
-        //gametri.pgame.num = 100;
-        gametri.initialize();
-
-    };
-    Main.prototype.parseRGBA = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var a = parseInt((arr[3] * 255)).toString(16);
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(a) + fill(r) + fill(g) + fill(b);
-        return str;
-    };
-    Main.prototype.parseRGB = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(r) + fill(g) + fill(b);
-        return str;
+        var icon = this.createBitmapByName("egretIcon");
+        icon.anchorX = icon.anchorY = 0.5;
+        this.addChild(icon);
+        icon.x = stageW / 2;
+        icon.y = stageH / 2 - 60;
+        icon.scaleX = 0.55;
+        icon.scaleY = 0.55;
+        icon.filter = new egret.BlurFilter(5, 5);
+        return;
+   
+        var bitmapData = new as3.BitmapData(200, 200, false, 0xffff0000);
+        var bitmapData2 = new as3.BitmapData(100, 100, false, 0x4400ff00);
+        bitmapData.copyPixels(RES.getRes("egretIcon"), new egret.Rectangle(0, 0, 140, 140), new egret.Point(30, 30));
+        var bitmap = new egret.Bitmap(bitmapData);
+        this.addChild(bitmap);
+        //for(var i:number = 0 ; i < 20 ; i++) {
+        //    for(var j:number = 0 ; j < 20 ; j++) {
+        //        bitmapData.setPixel(i,100 + j,0x0000ff);
+        //    }
+        //}
+        var shape = new egret.Shape();
+        shape.graphics.beginFill(0xff0000, 0xaa / 255);
+        shape.graphics.drawRect(220, 0, 100, 100);
+        this.addChild(shape);
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
+     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
      */
-    Main.prototype.createBitmapByName = function (name) {
+    __egretProto__.createBitmapByName = function (name) {
         var result = new egret.Bitmap();
         var texture = RES.getRes(name);
         result.texture = texture;
@@ -152,43 +136,38 @@ var Main = (function (_super) {
     };
     /**
      * 描述文件加载成功，开始播放动画
+     * Description file loading is successful, start to play the animation
      */
-    Main.prototype.startAnimation = function (result) {
-        var textContainer = this.textContainer;
-        var count = -1;
+    __egretProto__.startAnimation = function (result) {
         var self = this;
+        var parser = new egret.HtmlTextParser();
+        var textflowArr = [];
+        for (var i = 0; i < result.length; i++) {
+            textflowArr.push(parser.parser(result[i]));
+        }
+        var textfield = self.textfield;
+        var count = -1;
         var change = function () {
             count++;
-            if (count >= result.length) {
+            if (count >= textflowArr.length) {
                 count = 0;
             }
-            var lineArr = result[count];
-            self.changeDescription(textContainer, lineArr);
-            var tw = egret.Tween.get(textContainer);
+            var lineArr = textflowArr[count];
+            self.changeDescription(textfield, lineArr);
+            var tw = egret.Tween.get(textfield);
             tw.to({ "alpha": 1 }, 200);
             tw.wait(2000);
             tw.to({ "alpha": 0 }, 200);
-            tw.call(change, this);
+            tw.call(change, self);
         };
         change();
     };
     /**
      * 切换描述内容
+     * Switch to described content
      */
-    Main.prototype.changeDescription = function (textContainer, lineArr) {
-        textContainer.removeChildren();
-        var w = 0;
-        for (var i = 0; i < lineArr.length; i++) {
-            var info = lineArr[i];
-            var colorLabel = new egret.TextField();
-            colorLabel.x = w;
-            colorLabel.anchorX = colorLabel.anchorY = 0;
-            colorLabel.textColor = parseInt(info["textColor"]);
-            colorLabel.text = info["text"];
-            colorLabel.size = 40;
-            textContainer.addChild(colorLabel);
-            w += colorLabel.width;
-        }
+    __egretProto__.changeDescription = function (textfield, textFlow) {
+        textfield.textFlow = textFlow;
     };
     return Main;
 })(egret.DisplayObjectContainer);
