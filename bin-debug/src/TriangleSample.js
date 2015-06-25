@@ -82,7 +82,8 @@ var TriangleSample = (function (_super) {
 
     TriangleSample.prototype.onTouchesBegin = function()
     {
-
+        this._spinDirection *= -1.0;
+        console.log("-------------->" + this._spinDirection );
     }
 
     TriangleSample.prototype.onTouchesEnd = function() {

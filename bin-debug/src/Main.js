@@ -13,6 +13,7 @@ var Main = (function (_super) {
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
         egret.Profiler.getInstance().run();
         this.gamesample = new TriangleSample();
+
     }
     Main.prototype._onAddToStage = function () {
         _super.prototype._onAddToStage.call(this);
@@ -22,6 +23,23 @@ var Main = (function (_super) {
         //设置加载进度界面
         this.loadingView = new LoadingUI();
         this.stage.addChild(this.loadingView);
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function (){
+            console.log( "egret.TouchEvent.TOUCH_BEGIN" );
+            this.gamesample.onTouchesBegin();
+        }, this);
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_END, function (){
+            console.log( "egret.TouchEvent.TOUCH_END" );
+            this.gamesample.onTouchesEnd();
+        }, this);
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, function (){
+            console.log( "egret.TouchEvent.TOUCH_MOVE" );
+        }, this);
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, function (){
+            console.log( "egret.TouchEvent.TOUCH_TAP" );
+        }, this);
+
+
+
         //初始化Resource资源加载库
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.loadConfig("resource/resource.json", "resource/");
@@ -101,6 +119,8 @@ var Main = (function (_super) {
     Main.prototype.onTouchesCancel = function() {
         console.log( "onTouchesCancel" );
     };
+
+
 
     Main.prototype.parseRGBA = function (str) {
         var index = str.indexOf("(");
