@@ -12,7 +12,7 @@ var Main = (function (_super) {
         _super.call(this);
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
         egret.Profiler.getInstance().run();
-        this.gamesample = new TriangleSample();
+        this.gamesample = new MeshPrimitiveSample();
 
     }
     Main.prototype._onAddToStage = function () {
@@ -23,15 +23,15 @@ var Main = (function (_super) {
         //设置加载进度界面
         this.loadingView = new LoadingUI();
         this.stage.addChild(this.loadingView);
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function (){
-            console.log( "egret.TouchEvent.TOUCH_BEGIN" );
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function ( e ){
+            console.log( "egret.TouchEvent.TOUCH_BEGIN  " + e.stageX + "  " + e.stageY  );
             this.gamesample.onTouchesBegin();
         }, this);
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_END, function (){
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_END, function ( x, y ){
             console.log( "egret.TouchEvent.TOUCH_END" );
             this.gamesample.onTouchesEnd();
         }, this);
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, function (){
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, function ( x, y ){
             console.log( "egret.TouchEvent.TOUCH_MOVE" );
         }, this);
         this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, function (){

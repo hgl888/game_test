@@ -69,6 +69,7 @@ var egret_native;
             var id = ids[i];
             var x = xs_array[i];
             var y = ys_array[i];
+            //console.log("-------->" + x + " " + y);
             callback.call(egret.MainContext.instance.touchContext, x, y, id);
         }
     }

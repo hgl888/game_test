@@ -203,10 +203,16 @@ var MeshPrimitiveSample = (function (_super) {
         this._lines.getMaterial().getParameter("u_worldViewProjectionMatrix").setValue( m );
         this._lines.draw();
 
-//////////////////////////////////
-        //this.materialPara.setValue( this._viewProjectionMatrix);
-        //this._model.draw();
     };
+
+    MeshPrimitiveSample.prototype.onTouchesBegin = function()
+    {
+        //this._touchPoint.set()
+    }
+
+    MeshPrimitiveSample.prototype.onTouchesEnd = function() {
+
+    }
 
     return MeshPrimitiveSample;
 })(egret.DisplayObject);
