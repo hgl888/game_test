@@ -25,14 +25,15 @@ var Main = (function (_super) {
         this.stage.addChild(this.loadingView);
         this.stage.addEventListener(egret.TouchEvent.TOUCH_BEGIN, function ( e ){
             console.log( "egret.TouchEvent.TOUCH_BEGIN  " + e.stageX + "  " + e.stageY  );
-            this.gamesample.onTouchesBegin();
+            this.gamesample.onTouchesBegin(e);
         }, this);
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_END, function ( x, y ){
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_END, function ( e ){
             console.log( "egret.TouchEvent.TOUCH_END" );
-            this.gamesample.onTouchesEnd();
+            this.gamesample.onTouchesEnd(e);
         }, this);
-        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, function ( x, y ){
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, function ( e ){
             console.log( "egret.TouchEvent.TOUCH_MOVE" );
+            this.gamesample.onTouchesMove(e);
         }, this);
         this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, function (){
             console.log( "egret.TouchEvent.TOUCH_TAP" );

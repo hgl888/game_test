@@ -205,13 +205,25 @@ var MeshPrimitiveSample = (function (_super) {
 
     };
 
-    MeshPrimitiveSample.prototype.onTouchesBegin = function()
+    MeshPrimitiveSample.prototype.onTouchesBegin = function(e)
     {
-        //this._touchPoint.set()
+        this._touchPoint.set(e.stageX, e.stageY);
     }
 
-    MeshPrimitiveSample.prototype.onTouchesEnd = function() {
+    MeshPrimitiveSample.prototype.onTouchesEnd = function(e) {
+        this._touchPoint.set( -1.0, -1.0 );
+    }
 
+    MeshPrimitiveSample.prototype.onTouchesMove  = function(e)
+    {
+        if( this._touchPoint.x > 0.0 && this._touchPoint.y > 0.0 )
+        {
+            var deltaX = e.stageX - this._touchPoint.x;
+            var deltaY = e.stageY - this._touchPoint.y;
+            this._tilt.x -= deltaX;
+            this._tilt.y += deltaY;
+            this._touchPoint.set(e.stageX, e.stageY );
+        }
     }
 
     return MeshPrimitiveSample;
