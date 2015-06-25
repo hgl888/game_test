@@ -102,7 +102,7 @@ var Main = (function (_super) {
         //shape_38.setTransform(100 + 27.6, 100);
         //this.addChild(shape_38);
 
-        var gametri = new MeshPrimitiveSample();
+        var gametri = new TriangleSample();
         //var n = gametri.pgame.num;
         //gametri.pgame.num = 100;
         gametri.initialize();

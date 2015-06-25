@@ -9,6 +9,7 @@ var TriangleSample = (function (_super) {
     function TriangleSample() {
         //this.pgame = new egret_native.TriangleSample();
         _super.apply(this, arguments);
+        this._spinDirection = -1.0;
     }
     Object.defineProperty(TriangleSample.prototype, "TriangleSample", {
         get: function () {
@@ -60,6 +61,10 @@ var TriangleSample = (function (_super) {
         egret.Ticker.getInstance().unregister( this._render_1, this );
     };
 
+    TriangleSample.prototype.update  = function( elapsedTime) {
+        this._worldViewProjectionMatrix.rotateZ(this._spinDirection * egret3d.MATH_PI * elapsedTime * 0.001 );
+    }
+
     TriangleSample.prototype._render_1 = function ( dt )
     {
        //console.log( "----" + this.pgame.num );
@@ -68,6 +73,7 @@ var TriangleSample = (function (_super) {
        // material.test();
        // var para = material.getParameter("u_worldViewProjectionMatrix");
        // para.setValue( this._worldViewProjectionMatrix);
+        this.update( dt );
         this.materialPara.setValue( this._worldViewProjectionMatrix);
         this._model.draw();
        //this.pgame.update( dt );
