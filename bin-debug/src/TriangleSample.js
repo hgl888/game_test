@@ -80,6 +80,15 @@ var TriangleSample = (function (_super) {
        //this.pgame.render( dt );
     };
 
+    TriangleSample.prototype.onTouchesBegin = function()
+    {
+
+    }
+
+    TriangleSample.prototype.onTouchesEnd = function() {
+
+    }
+
     return TriangleSample;
 })(egret.DisplayObject);
 TriangleSample.prototype.__class__ = "TriangleSample";
