@@ -12,7 +12,6 @@ var Main = (function (_super) {
         _super.call(this);
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
         egret.Profiler.getInstance().run();
-        this.gamesample = new MeshPrimitiveSample();
 
     }
     Main.prototype._onAddToStage = function () {
@@ -93,11 +92,12 @@ var Main = (function (_super) {
         //egret_native.EgretGameTriangle.test();
 
         //箭头
-        //var shape_38 = new CreateJSGraphics(  );
-        //shape_38.graphics.beginLinearGradientFill(["#00FFEE", "#00AAFF"], [0.494, 1], -28.6, 0, 28.8, 0).beginStroke().moveTo(28.7, -44.7).lineTo(28.7, 44.7).lineTo(-28.7, -0).closePath();
-        //shape_38.setTransform(100 + 27.6, 100);
-        //this.addChild(shape_38);
+        var shape_38 = new CreateJSGraphics(  );
+        shape_38.graphics.beginLinearGradientFill(["#00FFEE", "#00AAFF"], [0.494, 1], -28.6, 0, 28.8, 0).beginStroke().moveTo(28.7, -44.7).lineTo(28.7, 44.7).lineTo(-28.7, -0).closePath();
+        shape_38.setTransform(100 + 27.6, 100);
+        this.addChild(shape_38);
 
+        this.gamesample = new MeshBatchSample();
         //var n = gametri.pgame.num;
         //gametri.pgame.num = 100;
         this.gamesample.initialize();
