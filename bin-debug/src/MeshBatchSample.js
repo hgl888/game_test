@@ -53,6 +53,7 @@ var MeshBatchSample = (function (_super) {
         var eleFormat = new egret3d.VertexFormat( elements, elementsCount );
         var meshBatch = egret3d.MeshBatch.create( eleFormat, primitiveType,  material, false);
         material.release();
+        material = null;
         return meshBatch;
     }
 
@@ -105,6 +106,7 @@ var MeshBatchSample = (function (_super) {
         m.transformPoint( p1, p1);
         m.transformPoint( p2, p2);
         m.transformPoint( p3, p3);
+        console.log("------>x:"+ p1.x + "; y:" + p1.y + "; z:" + p1.z );
 
         this._vertices.push(p1.x);
         this._vertices.push(p1.y);
@@ -112,6 +114,7 @@ var MeshBatchSample = (function (_super) {
         this._vertices.push(egret3d.MATH_RANDOM_0_1());
         this._vertices.push(egret3d.MATH_RANDOM_0_1());
         this._vertices.push(egret3d.MATH_RANDOM_0_1());
+
 
         this._vertices.push(p2.x);
         this._vertices.push(p2.y);
