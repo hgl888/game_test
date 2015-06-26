@@ -41,7 +41,7 @@ var TextureSample = (function (_super) {
             sampler.setFilterMode(egret3d.Texture.LINEAR_MIPMAP_LINEAR, egret3d.Texture.LINEAR);
         else
             sampler.setFilterMode(egret3d.Texture.LINEAR, egret3d.Texture.LINEAR);
-        sampler.setWrapMode(egret3.Texture.CLAMP, egret3d.Texture.CLAMP);
+        sampler.setWrapMode(egret3d.Texture.CLAMP, egret3d.Texture.CLAMP);
         material.getStateBlock().setCullFace(true);
         material.getStateBlock().setDepthTest(true);
         material.getStateBlock().setDepthWrite(true);
@@ -59,31 +59,34 @@ var TextureSample = (function (_super) {
         this._scene.setActiveCamera( camera );
         cameraNode.translate( 0, 0, 50);
         var fontSize = 18.0;
-        var cubeSzie = 10.0;
+        var cubeSize = 10.0;
 
         var x = 0, y = 0, textWidth = 0;
-        this._scene.getActiveCamera().project(egret3d.getViewport(), new egret3d.Vector3(cubeSize, 0, 0), x, y);
-        textWidth = x - (getWidth() >> 1);
-        // Textured quad mesh
+        var rect1 = egret3d.getViewport();
+        var vec31 = new egret3d.Vector3(cubeSize, 0, 0);
+        this._scene.getActiveCamera().project( rect1, vec31, x, y);
+        textWidth = x - (egret3d.getWidth() >> 1);
         {
-            var node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize);
-            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            var node = this.addQuadModeAndNode_1(this._scene, 0, 0, cubeSize, cubeSize, 0.0, 0.0, 1.0, 1.0 );
+            this.setTextureUnlitMaterial(new egret3d.Model(node.getDrawable()), "res/png/color-wheel.png");
             node.setTranslation(-25, cubeSize, 0);
-            this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+            var rect = egret3d.getViewport();
+            var vec3 = node.getTranslationWorld();
+            this._scene.getActiveCamera().project(rect, vec3, x, y);
         }
 
         {
             var mesh = egret3d.Mesh.createQuad(new egret3d.Vector3(0, cubeSize, 0), new egret3d.Vector3(0, 0, 0), new egret3d.Vector3(cubeSize, cubeSize, 0), new egret3d.Vector3(cubeSize, 0, 0));
-            node = egret3d.addQuadModelAndNode(this._scene, mesh);
+            node = this.addQuadModeAndNode(this._scene, mesh);
             mesh.release();
-            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            this.setTextureUnlitMaterial(new egret3d.Model(node.getDrawable()), "res/png/color-wheel.png");
             node.setTranslation(-14, cubeSize, 0);
             this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
         }
 
         {
-            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize, -1, -1, 2, 2);
-            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            node = this.addQuadModeAndNode_1(this._scene, 0, 0, cubeSize, cubeSize, -1, -1, 2, 2);
+            this.setTextureUnlitMaterial(new egret3d.Model(node.getDrawable()), "res/png/color-wheel.png");
             node.setId("clamp");
             node.setTranslation(-3, cubeSize, 0);
             this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
@@ -91,10 +94,11 @@ var TextureSample = (function (_super) {
 
 
         {
-            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize, -1, -1, 2, 2);
-            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            node = this.addQuadModeAndNode_1(this._scene, 0, 0, cubeSize, cubeSize, -1, -1, 2, 2);
+            var model = new egret3d.Model( node.getDrawable());
+            this.setTextureUnlitMaterial(model, "res/png/color-wheel.png");
             node.setId("repeat");
-            var sampler = node.getDrawable().getMaterial().getParameter("u_diffuseTexture").getSampler();
+            var sampler = model.getMaterial().getParameter("u_diffuseTexture").getSampler();
             if (sampler)
             {
                 sampler.setWrapMode(egret3d.Texture.REPEAT, egret3d.Texture.REPEAT);
@@ -104,8 +108,8 @@ var TextureSample = (function (_super) {
         }
 
         {
-            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize);
-            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/logo.png", false);
+            node = this.addQuadModeAndNode_1(this._scene, 0, 0, cubeSize, cubeSize, 0.0, 0.0, 1.0, 1.0 );
+            this.setTextureUnlitMaterial(new egret3d.Model(node.getDrawable()), "res/png/logo.png", false);
             node.setId("mipmap off");
             node.setTranslation(-25.5, -2.5, 0);
             this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
@@ -113,11 +117,11 @@ var TextureSample = (function (_super) {
 
 
         {
-            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize);
-            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/logo.png");
+            node = this.addQuadModeAndNode_1(this._scene, 0, 0, cubeSize, cubeSize, 0.0, 0.0, 1.0, 1.0 );
+            this.setTextureUnlitMaterial(new egret3d.Model(node.getDrawable()), "res/png/logo.png");
             node.setId("mipmap on");
             node.setTranslation(-5.5, -2.5, 0);
-            _scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+            this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
 
         }
         //////////
@@ -147,12 +151,12 @@ var TextureSample = (function (_super) {
         this._scene.visit( this, this.VisitDrawNode);
     };
 
-    TextureSample.prototype.visitDrawNode( node )
+    TextureSample.prototype.visitDrawNode = function( node )
     {
-        var drawable = node.getDrawable();
-        if( drawable )
-            drawable.draw();
-        return true;
+//        var drawable = node.getDrawable();
+//        if( drawable )
+//            drawable.draw();
+//        return true;
     };
 
 
