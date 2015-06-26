@@ -97,7 +97,7 @@ var Main = (function (_super) {
         shape_38.setTransform(100 + 27.6, 100);
         this.addChild(shape_38);
 
-        this.gamesample = new MeshBatchSample();
+        this.gamesample = new TextureSample();
         //var n = gametri.pgame.num;
         //gametri.pgame.num = 100;
         this.gamesample.initialize();

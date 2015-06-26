@@ -5,5 +5,6 @@ var game_file_list = [
     "MeshPrimitiveSample.js",
     "CharacterGame.js",
 	"LoadingUI.js",
+    "TextureSample.js",
 	"Main.js"
 ];
