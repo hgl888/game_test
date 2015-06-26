@@ -47,7 +47,8 @@ var TextureSample = (function (_super) {
     };
 
     TextureSample.prototype.addQuadModeAndNode_1 = function( scene, x, y, width, height,
-        s1, t1, s2, t2,){
+                                                             s1, t1, s2, t2 )
+    {
         var mesh = egret3d.Mesh.createQuad( x, y, width, height, s1, t1, s2, t2 );
         var node = this.addQuadModeAndNode( scene, mesh );
         mesh.release();
@@ -70,6 +71,7 @@ var TextureSample = (function (_super) {
         material.getStateBlock().setDepthWrite(true);
         return material;
     };
+
 
 
     TextureSample.prototype.createMaterial = function()
