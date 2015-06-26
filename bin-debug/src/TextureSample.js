@@ -11,30 +11,6 @@ var TextureSample = (function (_super) {
     __extends(TextureSample, _super);
     function TextureSample() {
         _super.apply(this, arguments);
-        this._touchPoint = new egret3d.Vector2();
-        this._tilt = new egret3d.Vector2();
-
-        this._vertices = [];
-        this._vertices.push(0);
-        this._vertices.push(50);
-        this._vertices.push(0);
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-
-        this._vertices.push(-50);
-        this._vertices.push(-50);
-        this._vertices.push(0);
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-
-        this._vertices.push(50);
-        this._vertices.push(-50);
-        this._vertices.push(0);
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
 
     }
 
@@ -73,118 +49,127 @@ var TextureSample = (function (_super) {
     };
 
 
-
-    TextureSample.prototype.createMaterial = function()
-    {
-        return egret3d.Material.create("res/shaders/colored.vert", "res/shaders/colored.frag", "VERTEX_COLOR");
-    };
-
-    TextureSample.prototype.createMeshBatch  = function( primitiveType){
-        var material = this.createMaterial();
-        var ele1 = new egret3d.VertexFormat.Element(egret3d.VertexFormat.POSITION, 3);
-        var ele2 = new egret3d.VertexFormat.Element(egret3d.VertexFormat.COLOR, 3);
-        var elements =[ ele1, ele2 ];
-        var elementsCount = elements.length;
-        var eleFormat = new egret3d.VertexFormat( elements, elementsCount );
-        var meshBatch = egret3d.MeshBatch.create( eleFormat, primitiveType,  material, false);
-        material.release();
-        material = null;
-        return meshBatch;
-    };
-
     TextureSample.prototype.initialize = function () {
         this._font = egret3d.Font.create( "res/ui/arial.gpb" );
+        this._scene = egret3d.Scene.create();
 
-        var width = egret3d.getWidth();
-        var height = egret3d.getHeight();
-        this._worldViewProjectionMatrix = new egret3d.EGMatrix();
-        egret3d.EGMatrix.createOrthographic( width, height, -1, 1, this._worldViewProjectionMatrix);
-        this._meshBatch = this.createMeshBatch( egret3d.Mesh.TRIANGLES );
+        var camera = egret3d.Camera.createPerspective( 45.0, egret3d.getAspectRatio(), 1, 1000);
+        var cameraNode = this._scene.addNode("camera");
+        cameraNode.setCamera( camera);
+        this._scene.setActiveCamera( camera );
+        cameraNode.translate( 0, 0, 50);
+        var fontSize = 18.0;
+        var cubeSzie = 10.0;
 
+        var x = 0, y = 0, textWidth = 0;
+        this._scene.getActiveCamera().project(egret3d.getViewport(), new egret3d.Vector3(cubeSize, 0, 0), x, y);
+        textWidth = x - (getWidth() >> 1);
+        // Textured quad mesh
+        {
+            var node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize);
+            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            node.setTranslation(-25, cubeSize, 0);
+            this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+        }
+
+        {
+            var mesh = egret3d.Mesh.createQuad(new egret3d.Vector3(0, cubeSize, 0), new egret3d.Vector3(0, 0, 0), new egret3d.Vector3(cubeSize, cubeSize, 0), new egret3d.Vector3(cubeSize, 0, 0));
+            node = egret3d.addQuadModelAndNode(this._scene, mesh);
+            mesh.release();
+            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            node.setTranslation(-14, cubeSize, 0);
+            this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+        }
+
+        {
+            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize, -1, -1, 2, 2);
+            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            node.setId("clamp");
+            node.setTranslation(-3, cubeSize, 0);
+            this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+        }
+
+
+        {
+            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize, -1, -1, 2, 2);
+            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/color-wheel.png");
+            node.setId("repeat");
+            var sampler = node.getDrawable().getMaterial().getParameter("u_diffuseTexture").getSampler();
+            if (sampler)
+            {
+                sampler.setWrapMode(egret3d.Texture.REPEAT, egret3d.Texture.REPEAT);
+            }
+            node.setTranslation(8, cubeSize, 0);
+            this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+        }
+
+        {
+            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize);
+            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/logo.png", false);
+            node.setId("mipmap off");
+            node.setTranslation(-25.5, -2.5, 0);
+            this._scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+        }
+
+
+        {
+            node = this.addQuadModelAndNode(this._scene, 0, 0, cubeSize, cubeSize);
+            this.setTextureUnlitMaterial(node.getDrawable(), "res/png/logo.png");
+            node.setId("mipmap on");
+            node.setTranslation(-5.5, -2.5, 0);
+            _scene.getActiveCamera().project(egret3d.getViewport(), node.getTranslationWorld(), x, y);
+
+        }
         //////////
         egret.Ticker.getInstance().register( this._render_1, this );
     };
 
     TextureSample.prototype.finalize = function () {
         this._font.release();
-        this._meshBatch = null;
+        this._scene.release();
 
         egret.Ticker.getInstance().unregister( this._render_1, this );
     };
 
     TextureSample.prototype.update = function( elapsedTime )
     {
-
-    }
+        var n1 = this._scene.findNode( "mipmap on");
+        var n2 = this._scene.findNode( "mipmap off");
+        var z = -(Math.sin((egret3d.getAbsoluteTime()/ 1500) * egret3d.MATH_PI) + 1) * 900.0 / 2.0;
+        n1.setTranslationZ(z);
+        n2.setTranslationZ(z);
+    };
 
     TextureSample.prototype._render_1 = function ( dt )
     {
         this.update( dt );
 
-        this._meshBatch.start();
-        this._meshBatch.add( this._vertices, this._vertices.length / 6 );
-        this._meshBatch.finish();
-        this._meshBatch.getMaterial().getParameter("u_worldViewProjectionMatrix").setValue(this._worldViewProjectionMatrix);
-        this._meshBatch.draw();
+        this._scene.visit( this, this.VisitDrawNode);
     };
 
-    TextureSample.prototype.addTriangle = function( x, y )
+    TextureSample.prototype.visitDrawNode( node )
     {
-        var a = egret3d.MATH_RANDOM_0_1() *  80.0 + 40.0;
-        var p1 =new egret3d.Vector3( 0.0, a / Math.sqrt(3.0), 0);
-        var p2 =new egret3d.Vector3(-a / 2.0, -a / (2.0 * Math.sqrt(3.0)), 0);
-        var p3 =new egret3d.Vector3(a / 2.0, -a / (2.0 * Math.sqrt(3.0)), 0);
-
-        var m = new egret3d.EGMatrix();
-        m.translate( x, y, 0 );
-        m.rotateZ( egret3d.MATH_RANDOM_MINUS1_1() * egret3d.MATH_PI );
-        m.transformPoint( p1, p1);
-        m.transformPoint( p2, p2);
-        m.transformPoint( p3, p3);
-        console.log("------>x:"+ p1.x + "; y:" + p1.y + "; z:" + p1.z );
-
-        this._vertices.push(p1.x);
-        this._vertices.push(p1.y);
-        this._vertices.push(p1.z);
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
+        var drawable = node.getDrawable();
+        if( drawable )
+            drawable.draw();
+        return true;
+    };
 
 
-        this._vertices.push(p2.x);
-        this._vertices.push(p2.y);
-        this._vertices.push(p2.z);
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-
-        this._vertices.push(p3.x);
-        this._vertices.push(p3.y);
-        this._vertices.push(p3.z);
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-        this._vertices.push(egret3d.MATH_RANDOM_0_1());
-
-        this._lastTriangleAdded = egret3d.getAbsoluteTime();
-
-    }
 
     TextureSample.prototype.onTouchesBegin = function(e)
     {
-        this.addTriangle(e.stageX - egret3d.getWidth() / 2, (egret3d.getHeight() / 2) - e.stageY );
-    }
+
+    };
 
     TextureSample.prototype.onTouchesEnd = function(e) {
 
-    }
+    };
 
     TextureSample.prototype.onTouchesMove  = function(e)
     {
-        if( egret3d.getAbsoluteTime() - this._lastTriangleAdded > 20 )
-        {
-            this.addTriangle(e.stageX - egret3d.getWidth() / 2, (egret3d.getHeight() / 2) - e.stageY );
-        }
-    }
+
+    };
 
     return TextureSample;
 })(egret.DisplayObject);
