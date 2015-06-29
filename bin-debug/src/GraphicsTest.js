@@ -22,8 +22,8 @@ var GraphicsTest = (function (_super) {
         //var fps = egret_native.drawInfo.getFPS();
         //console.msglevel( 3 );
         //console.log( timer + "----" + fps );
-
-        if(egret_native.rastergl) {
+        var ctx = egret_native.rastergl;
+        if(ctx) {
             
             //egret_native.rastergl.rotate(  20 * Math.PI / 180 );
             //egret_native.rastergl.translate( 100, 0, 0 );
@@ -53,12 +53,17 @@ var GraphicsTest = (function (_super) {
             //egret_native.rastergl.fillStyle = my_gradient;
             //egret_native.rastergl.strokeStyle = "ff00ff";
             //egret_native.rastergl.strokeStyle = my_gradient;
-            egret_native.rastergl.strokeStyle = "FFF00FF";
-            egret_native.rastergl.lineWidth = 5;
+            ctx.fillStyle = "#FFFF00";
+            ctx.fillRect(0,0,250,100);
 
-            egret_native.rastergl.moveTo( 10, 310 );
-            egret_native.rastergl.lineTo( 100, 320 );
-            egret_native.rastergl.stroke();
+            ctx.transform(1,0.5,-0.5,1,30,10);
+            ctx.fillStyle="#ff0000";
+            ctx.fillRect(0,0,250,100);
+
+            ctx.transform(1,0.5,-0.5,1,30,10);
+            ctx.fillStyle="#0000ff";
+            ctx.fillRect(0,0,250,100);
+
             //gc();
 
             // egret_native.rastergl.moveTo( -50, 50 );
