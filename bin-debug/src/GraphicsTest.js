@@ -18,8 +18,8 @@ var GraphicsTest = (function (_super) {
     		//egret_native.Graphics.moveTo( 20, 20 );
     		//egret_native.Graphics.lineTo( 20, 40 );
     		//return;
-        var timer = egret_native.timer.getDeltaTime();
-        var fps = egret_native.drawInfo.getFPS();
+        //var timer = egret_native.timer.getDeltaTime();
+        //var fps = egret_native.drawInfo.getFPS();
         //console.msglevel( 3 );
         //console.log( timer + "----" + fps );
 
@@ -53,8 +53,8 @@ var GraphicsTest = (function (_super) {
             //egret_native.rastergl.fillStyle = my_gradient;
             //egret_native.rastergl.strokeStyle = "ff00ff";
             //egret_native.rastergl.strokeStyle = my_gradient;
-            egret_native.rastergl.strokeStyle = "#7FFF00FF";
-            egret_native.rastergl.lineWidth = 2;
+            egret_native.rastergl.strokeStyle = "FFF00FF";
+            egret_native.rastergl.lineWidth = 5;
 
             egret_native.rastergl.moveTo( 10, 310 );
             egret_native.rastergl.lineTo( 100, 320 );
