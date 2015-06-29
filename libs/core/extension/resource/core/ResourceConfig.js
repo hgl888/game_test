@@ -220,5 +220,4 @@ var RES;
         return ResourceConfig;
     })();
     RES.ResourceConfig = ResourceConfig;
-    ResourceConfig.prototype.__class__ = "RES.ResourceConfig";
 })(RES || (RES = {}));

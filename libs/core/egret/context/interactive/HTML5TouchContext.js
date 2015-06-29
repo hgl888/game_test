@@ -203,5 +203,4 @@ var egret;
         return HTML5TouchContext;
     })(egret.TouchContext);
     egret.HTML5TouchContext = HTML5TouchContext;
-    HTML5TouchContext.prototype.__class__ = "egret.HTML5TouchContext";
 })(egret || (egret = {}));

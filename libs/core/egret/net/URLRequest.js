@@ -36,7 +36,9 @@ var egret;
      * @class egret.URLRequest
      * @classdesc URLRequest 类可捕获单个 HTTP 请求中的所有信息。
      * @extends egret.HashObject
-     * @link http://docs.egret-labs.org/post/manual/net/createconnect.html 构建通信请求
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/net/createconnect.html" style="padding-left: 20px" target="_blank" >构建通信请求</a>
+     * </div>
      */
     var URLRequest = (function (_super) {
         __extends(URLRequest, _super);
@@ -76,5 +78,4 @@ var egret;
         return URLRequest;
     })(egret.HashObject);
     egret.URLRequest = URLRequest;
-    URLRequest.prototype.__class__ = "egret.URLRequest";
 })(egret || (egret = {}));

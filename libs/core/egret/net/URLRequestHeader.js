@@ -53,5 +53,4 @@ var egret;
         return URLRequestHeader;
     })();
     egret.URLRequestHeader = URLRequestHeader;
-    URLRequestHeader.prototype.__class__ = "egret.URLRequestHeader";
 })(egret || (egret = {}));

@@ -38,7 +38,9 @@ var egret;
      * @classdesc
      * DisplayObjectContainer 类是可用作显示列表中显示对象容器的所有对象的基类。
      * 该显示列表管理运行时中显示的所有对象。使用 DisplayObjectContainer 类排列显示列表中的显示对象。每个 DisplayObjectContainer 对象都有自己的子级列表，用于组织对象的 Z 轴顺序。Z 轴顺序是由前至后的顺序，可确定哪个对象绘制在前，哪个对象绘制在后等。
-     * @link http://docs.egret-labs.org/post/manual/displaycon/aboutdisplaycon.html 显示容器的概念与实现
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displaycon/aboutdisplaycon.html" style="padding-left: 20px" target="_blank" >显示容器的概念与实现</a>
+     * </div>
      */
     var DisplayObjectContainer = (function (_super) {
         __extends(DisplayObjectContainer, _super);
@@ -68,7 +70,7 @@ var egret;
         });
         Object.defineProperty(DisplayObjectContainer.prototype, "numChildren", {
             /**
-             * 返回此对象的子项数目。
+             * 返回此对象的子项数目。【只读】
              * @member {number} egret.DisplayObjectContainer#numChildren
              */
             get: function () {
@@ -308,37 +310,36 @@ var egret;
                 return;
             }
             if (o._filter) {
-                egret.RenderCommand.push(o._setGlobalFilter, o);
+                egret.RenderCommand.push(this._setGlobalFilter, this);
             }
             if (o._colorTransform) {
-                egret.RenderCommand.push(o._setGlobalColorTransform, o);
+                egret.RenderCommand.push(this._setGlobalColorTransform, this);
             }
             var mask = o.mask || o._scrollRect;
             if (mask) {
-                egret.RenderCommand.push(o._pushMask, o);
+                egret.RenderCommand.push(this._pushMask, this);
             }
             _super.prototype._updateTransform.call(this);
-            if (!o["_cacheAsBitmap"] || !o._texture_to_render) {
-                for (var i = 0, children = o._children, length = children.length; i < length; i++) {
-                    var child = children[i];
+            if (!this["_cacheAsBitmap"] || !this._texture_to_render) {
+                for (var i = 0, length = o._children.length; i < length; i++) {
+                    var child = o._children[i];
                     child._updateTransform();
                 }
             }
             if (mask) {
-                egret.RenderCommand.push(o._popMask, o);
+                egret.RenderCommand.push(this._popMask, this);
             }
             if (o._colorTransform) {
-                egret.RenderCommand.push(o._removeGlobalColorTransform, o);
+                egret.RenderCommand.push(this._removeGlobalColorTransform, this);
             }
             if (o._filter) {
-                egret.RenderCommand.push(o._removeGlobalFilter, o);
+                egret.RenderCommand.push(this._removeGlobalFilter, this);
             }
         };
         DisplayObjectContainer.prototype._render = function (renderContext) {
             if (!egret.MainContext.__use_new_draw) {
-                var o = this;
-                for (var i = 0, children = o._children, length = children.length; i < length; i++) {
-                    var child = children[i];
+                for (var i = 0, length = this._children.length; i < length; i++) {
+                    var child = this._children[i];
                     child._draw(renderContext);
                 }
             }
@@ -349,12 +350,10 @@ var egret;
          * @private
          */
         DisplayObjectContainer.prototype._measureBounds = function () {
-            var o = this;
             var minX = 0, maxX = 0, minY = 0, maxY = 0;
-            var children = o._children;
-            var l = children.length;
+            var l = this._children.length;
             for (var i = 0; i < l; i++) {
-                var child = children[i];
+                var child = this._children[i];
                 if (!child._visible) {
                     continue;
                 }
@@ -392,24 +391,23 @@ var egret;
          */
         DisplayObjectContainer.prototype.hitTest = function (x, y, ignoreTouchEnabled) {
             if (ignoreTouchEnabled === void 0) { ignoreTouchEnabled = false; }
-            var o = this;
             var result;
-            if (!o._visible) {
+            if (!this._visible) {
                 return null;
             }
-            if (o._scrollRect) {
-                if (x < o._scrollRect.x || y < o._scrollRect.y || x > o._scrollRect.x + o._scrollRect.width || y > o._scrollRect.y + o._scrollRect.height) {
+            if (this._scrollRect) {
+                if (x < this._scrollRect.x || y < this._scrollRect.y || x > this._scrollRect.x + this._scrollRect.width || y > this._scrollRect.y + this._scrollRect.height) {
                     return null;
                 }
             }
-            else if (o.mask) {
-                if (o.mask.x > x || x > o.mask.x + o.mask.width || o.mask.y > y || y > o.mask.y + o.mask.height) {
+            else if (this.mask) {
+                if (this.mask.x > x || x > this.mask.x + this.mask.width || this.mask.y > y || y > this.mask.y + this.mask.height) {
                     return null;
                 }
             }
-            var children = o._children;
+            var children = this._children;
             var l = children.length;
-            var touchChildren = o._touchChildren; //这里不用考虑父级的touchChildren，从父级调用下来过程中已经判断过了。
+            var touchChildren = this._touchChildren; //这里不用考虑父级的touchChildren，从父级调用下来过程中已经判断过了。
             for (var i = l - 1; i >= 0; i--) {
                 var child = children[i];
                 var mtx = child._getMatrix();
@@ -422,39 +420,35 @@ var egret;
                 var childHitTestResult = child.hitTest(point.x, point.y, true);
                 if (childHitTestResult) {
                     if (!touchChildren) {
-                        return o;
+                        return this;
                     }
                     if (childHitTestResult._touchEnabled && touchChildren) {
                         return childHitTestResult;
                     }
-                    result = o;
+                    result = this;
                 }
             }
             if (result) {
                 return result;
             }
-            else if (o._texture_to_render) {
+            else if (this._texture_to_render) {
                 return _super.prototype.hitTest.call(this, x, y, ignoreTouchEnabled);
             }
             return null;
         };
         DisplayObjectContainer.prototype._onAddToStage = function () {
-            var o = this;
             _super.prototype._onAddToStage.call(this);
-            var children = o._children;
-            var length = children.length;
+            var length = this._children.length;
             for (var i = 0; i < length; i++) {
                 var child = this._children[i];
                 child._onAddToStage();
             }
         };
         DisplayObjectContainer.prototype._onRemoveFromStage = function () {
-            var o = this;
             _super.prototype._onRemoveFromStage.call(this);
-            var children = o._children;
-            var length = children.length;
+            var length = this._children.length;
             for (var i = 0; i < length; i++) {
-                var child = children[i];
+                var child = this._children[i];
                 child._onRemoveFromStage();
             }
         };
@@ -481,5 +475,4 @@ var egret;
         return DisplayObjectContainer;
     })(egret.DisplayObject);
     egret.DisplayObjectContainer = DisplayObjectContainer;
-    DisplayObjectContainer.prototype.__class__ = "egret.DisplayObjectContainer";
 })(egret || (egret = {}));

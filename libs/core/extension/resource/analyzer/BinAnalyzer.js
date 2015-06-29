@@ -121,5 +121,4 @@ var RES;
         return BinAnalyzer;
     })(RES.AnalyzerBase);
     RES.BinAnalyzer = BinAnalyzer;
-    BinAnalyzer.prototype.__class__ = "RES.BinAnalyzer";
 })(RES || (RES = {}));

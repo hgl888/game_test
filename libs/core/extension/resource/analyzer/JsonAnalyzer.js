@@ -48,5 +48,4 @@ var RES;
         return JsonAnalyzer;
     })(RES.BinAnalyzer);
     RES.JsonAnalyzer = JsonAnalyzer;
-    JsonAnalyzer.prototype.__class__ = "RES.JsonAnalyzer";
 })(RES || (RES = {}));

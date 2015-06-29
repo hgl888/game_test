@@ -27,6 +27,7 @@
 var egret;
 (function (egret) {
     /**
+     * @private
      */
     var ExternalInterface = (function () {
         function ExternalInterface() {
@@ -53,5 +54,4 @@ var egret;
         return ExternalInterface;
     })();
     egret.ExternalInterface = ExternalInterface;
-    ExternalInterface.prototype.__class__ = "egret.ExternalInterface";
 })(egret || (egret = {}));

@@ -204,5 +204,4 @@ var egret;
         return HTML5NetContext;
     })(egret.NetContext);
     egret.HTML5NetContext = HTML5NetContext;
-    HTML5NetContext.prototype.__class__ = "egret.HTML5NetContext";
 })(egret || (egret = {}));

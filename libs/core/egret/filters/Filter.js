@@ -36,5 +36,4 @@ var egret;
         return Filter;
     })();
     egret.Filter = Filter;
-    Filter.prototype.__class__ = "egret.Filter";
 })(egret || (egret = {}));

@@ -79,7 +79,6 @@ var egret;
         return NumberUtils;
     })();
     egret.NumberUtils = NumberUtils;
-    NumberUtils.prototype.__class__ = "egret.NumberUtils";
 })(egret || (egret = {}));
 var egret_sin_map = {};
 var egret_cos_map = {};

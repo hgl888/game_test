@@ -39,7 +39,9 @@ var egret;
      * 在WebGL / OpenGL上，这种做法可以显著提升性能
      * 同时，SpriteSheet可以很方便的进行素材整合，降低HTTP请求数量
      * SpriteSheet 格式的具体规范可以参见此文档  https://github.com/egret-labs/egret-core/wiki/Egret-SpriteSheet-Specification
-     * @link http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/bitmap/textures.html" style="padding-left: 20px" target="_blank" >纹理集的使用</a>
+     * </div>
      */
     var SpriteSheet = (function (_super) {
         __extends(SpriteSheet, _super);
@@ -131,5 +133,4 @@ var egret;
         return SpriteSheet;
     })(egret.HashObject);
     egret.SpriteSheet = SpriteSheet;
-    SpriteSheet.prototype.__class__ = "egret.SpriteSheet";
 })(egret || (egret = {}));

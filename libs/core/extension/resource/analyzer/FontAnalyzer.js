@@ -101,5 +101,4 @@ var RES;
         return FontAnalyzer;
     })(RES.SheetAnalyzer);
     RES.FontAnalyzer = FontAnalyzer;
-    FontAnalyzer.prototype.__class__ = "RES.FontAnalyzer";
 })(RES || (RES = {}));

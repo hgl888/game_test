@@ -59,5 +59,4 @@ var egret;
         return DeviceContext;
     })(egret.HashObject);
     egret.DeviceContext = DeviceContext;
-    DeviceContext.prototype.__class__ = "egret.DeviceContext";
 })(egret || (egret = {}));

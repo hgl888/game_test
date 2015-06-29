@@ -150,5 +150,4 @@ var egret;
         return Profiler;
     })();
     egret.Profiler = Profiler;
-    Profiler.prototype.__class__ = "egret.Profiler";
 })(egret || (egret = {}));

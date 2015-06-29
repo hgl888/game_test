@@ -806,7 +806,6 @@ var egret;
         return WebGLRenderer;
     })(egret.RendererContext);
     egret.WebGLRenderer = WebGLRenderer;
-    WebGLRenderer.prototype.__class__ = "egret.WebGLRenderer";
 })(egret || (egret = {}));
 var egret_webgl_graphics;
 (function (egret_webgl_graphics) {
@@ -890,7 +889,6 @@ var egret_webgl_graphics;
         }
         return Command;
     })();
-    Command.prototype.__class__ = "egret_webgl_graphics.Command";
     function _setStyle(r, g, b, a) {
         this.renderContext.setGraphicsStyle(r, g, b, a);
     }

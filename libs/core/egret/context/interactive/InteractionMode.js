@@ -47,5 +47,4 @@ var egret;
         return InteractionMode;
     })();
     egret.InteractionMode = InteractionMode;
-    InteractionMode.prototype.__class__ = "egret.InteractionMode";
 })(egret || (egret = {}));

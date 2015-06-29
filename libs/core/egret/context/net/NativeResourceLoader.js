@@ -54,29 +54,29 @@ var egret;
                 this.downloadFileError();
                 return;
             }
-            //if (egret_native.isRecordExists(this._path)) {//卡里
-            //    this.loadOver();
-            //    return;
-            //}
-            //else if (egret_native.isFileExists(this._path)){
-            //    this.loadOver();
-            //    return;
-            //}
-            //else {
-            this._downCount++;
-            var promise = egret.PromiseObject.create();
-            var self = this;
-            promise.onSuccessFunc = function () {
-                self.loadOver();
-            };
-            promise.onErrorFunc = function () {
-                self.reload();
-            };
-            promise.downloadingSizeFunc = function (bytesLoaded) {
-                self.downloadingProgress(bytesLoaded);
-            };
-            egret_native.download(this._path, this._path, promise);
-            //}
+            if (egret_native.isRecordExists(this._path)) {
+                this.loadOver();
+                return;
+            }
+            else if (egret_native.isFileExists(this._path)) {
+                this.loadOver();
+                return;
+            }
+            else {
+                this._downCount++;
+                var promise = egret.PromiseObject.create();
+                var self = this;
+                promise.onSuccessFunc = function () {
+                    self.loadOver();
+                };
+                promise.onErrorFunc = function () {
+                    self.reload();
+                };
+                promise.downloadingSizeFunc = function (bytesLoaded) {
+                    self.downloadingProgress(bytesLoaded);
+                };
+                egret_native.download(this._path, this._path, promise);
+            }
         };
         NativeResourceLoader.prototype.downloadingProgress = function (bytesLoaded) {
             egret.ProgressEvent.dispatchProgressEvent(this, egret.ProgressEvent.PROGRESS, bytesLoaded, this._bytesTotal);
@@ -90,5 +90,4 @@ var egret;
         return NativeResourceLoader;
     })(egret.EventDispatcher);
     egret.NativeResourceLoader = NativeResourceLoader;
-    NativeResourceLoader.prototype.__class__ = "egret.NativeResourceLoader";
 })(egret || (egret = {}));

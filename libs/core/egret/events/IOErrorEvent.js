@@ -67,5 +67,4 @@ var egret;
         return IOErrorEvent;
     })(egret.Event);
     egret.IOErrorEvent = IOErrorEvent;
-    IOErrorEvent.prototype.__class__ = "egret.IOErrorEvent";
 })(egret || (egret = {}));

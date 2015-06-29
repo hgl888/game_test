@@ -1,6 +1,3 @@
-declare module egret {
-    var egret_string_code: {};
-}
 /**
  * Copyright (c) 2014,Egret-Labs.org
  * All rights reserved.
@@ -76,6 +73,7 @@ declare module egret {
          */
         private static getTraceCode(type, actionCode, value);
     }
+    var egret_string_code: {};
     function getString(id: number, ...args: any[]): string;
 }
 /**
@@ -407,7 +405,9 @@ declare module egret {
      * Event 类的方法可以在事件侦听器函数中使用以影响事件对象的行为。
      * 某些事件有关联的默认行为，通过调用 preventDefault() 方法，您的事件侦听器可以取消此行为。
      * 可以通过调用 stopPropagation() 或 stopImmediatePropagation() 方法，将当前事件侦听器作为处理事件的最后一个事件侦听器。
-     * @link http://docs.egret-labs.org/post/manual/event/eventclass.html Event类
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/event/eventclass.html" style="padding-left: 20px" target="_blank" >Event类</a>
+     * </div>
      */
     class Event extends HashObject {
         /**
@@ -645,7 +645,7 @@ declare module egret {
         constructor(type: string, bubbles?: boolean, cancelable?: boolean);
         private _status;
         /**
-         * 由服务器返回的 HTTP 状态代码。
+         * 由服务器返回的 HTTP 状态代码。【只读】
          * @type {number}
          * @private
          */
@@ -747,7 +747,9 @@ declare module egret {
      * 当用户与带有触摸屏的移动电话或平板电脑等设备交互时，用户通常使用手指或指针设备接触屏幕。可使用 TouchEvent 类开发响应基本触摸事件（如单个手指点击）的应用程序。
      * 使用此类中定义的事件类型创建事件侦听器。
      * 注意：当对象嵌套在显示列表中时，触摸事件的目标将是显示列表中可见的最深的可能嵌套对象。此对象称为目标节点。要使目标节点的祖代（祖代是一个包含显示列表中所有目标节点的对象，从舞台到目标节点的父节点均包括在内）接收触摸事件的通知，请对祖代节点使用 EventDispatcher.addEventListener() 并将 type 参数设置为要检测的特定触摸事件。
-     * @link http://docs.egret-labs.org/post/manual/event/touchevent.html 触摸事件
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/event/touchevent.html" style="padding-left: 20px" target="_blank" >触摸事件</a>
+     * </div>
      */
     class TouchEvent extends Event {
         /**
@@ -905,7 +907,9 @@ declare module egret {
      * @classdesc
      * 每当 Timer 对象达到由 Timer.delay 属性指定的间隔时，Timer 对象即会调度 TimerEvent 对象。
      * @extends egret.Event
-     * @link http://docs.egret-labs.org/post/manual/timer/timer.html Timer计时器
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/timer/timer.html" style="padding-left: 20px" target="_blank" >Timer计时器</a>
+     * </div>
      */
     class TimerEvent extends Event {
         /**
@@ -1095,7 +1099,9 @@ declare module egret {
      * @class egret.EventPhase
      * @classdesc
      * EventPhase 类可为 Event 类的 eventPhase 属性提供值。
-     * @link http://docs.egret-labs.org/post/manual/event/eventflow.html 事件的执行流程
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/event/eventflow.html" style="padding-left: 20px" target="_blank" >事件的执行流程</a>
+     * </div>
      */
     class EventPhase {
         /**
@@ -1236,7 +1242,10 @@ declare module egret {
      * 引擎会将事件对象调度到从显示列表根开始的事件流中。然后该事件对象在显示列表中前进，直到到达事件目标，
      * 然后从这一点开始其在显示列表中的回程。在概念上，到事件目标的此往返行程被划分为三个阶段：
      * 捕获阶段包括从根到事件目标节点之前的最后一个节点的行程，目标阶段仅包括事件目标节点，冒泡阶段包括回程上遇到的任何后续节点到显示列表的根。
-     * @link http://docs.egret-labs.org/post/manual/event/eventlistener.html 事件侦听器
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/event/eventlistener.html" style="padding-left: 20px" target="_blank" >事件侦听器</a>
+     * </div>
+     *
      */
     class EventDispatcher extends HashObject implements IEventDispatcher {
         /**
@@ -1645,7 +1654,9 @@ declare module egret {
     /**
      * @class egret.HorizontalAlign
      * @classdesc 水平对齐方式
-     * @link http://docs.egret-labs.org/post/manual/text/textlayout.html 文本布局
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/text/textlayout.html" style="padding-left: 20px" target="_blank" >文本布局</a>
+     * </div>
      */
     class HorizontalAlign {
         /**
@@ -1708,7 +1719,9 @@ declare module egret {
     /**
      * @class egret.VerticalAlign
      * @classdesc 垂直对齐方式
-     * @link http://docs.egret-labs.org/post/manual/text/textlayout.html 文本布局
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/text/textlayout.html" style="padding-left: 20px" target="_blank" >文本布局</a>
+     * </div>
      */
     class VerticalAlign {
         /**
@@ -1776,7 +1789,9 @@ declare module egret {
      * 可以创建 Timer 对象以运行一次或按指定间隔重复运行，从而按计划执行代码。
      * 根据 Egret 的帧速率或运行时环境（可用内存和其他因素），运行时调度事件的间隔可能稍有不同。
      * @extends egret.EventDispatcher
-     * @link http://docs.egret-labs.org/post/manual/timer/timer.html Timer计时器
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/timer/timer.html" style="padding-left: 20px" target="_blank" >Timer计时器</a>
+     * </div>
      */
     class Timer extends EventDispatcher {
         /**
@@ -2337,7 +2352,9 @@ declare module egret {
      * Rectangle 类的 x、y、width 和 height 属性相互独立；更改一个属性的值不会影响其他属性。
      * 但是，right 和 bottom 属性与这四个属性是整体相关的。例如，如果更改 right 属性的值，则 width 属性的值将发生变化；如果更改 bottom 属性，则 height 属性的值将发生变化。
      * @extends egret.HashObject
-     * @link http://docs.egret-labs.org/post/manual/graphics/drawrect.html 绘制矩形
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/graphics/drawrect.html" style="padding-left: 20px" target="_blank" >绘制矩形</a>
+     * </div>
      */
     class Rectangle extends HashObject {
         constructor(x?: number, y?: number, width?: number, height?: number);
@@ -2990,7 +3007,9 @@ declare module egret {
      * @class egret.BlendMode
      * @classdesc
      * 提供混合模式可视效果的常量值的类。
-     * @link http://docs.egret-labs.org/as2ts/webglcode/blendMode.html BlendMode实例代码对比
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/as2ts/webglcode/blendMode.html" style="padding-left: 20px" target="_blank" >BlendMode实例代码对比</a>
+     * </div>
      */
     class BlendMode {
         /**
@@ -3005,17 +3024,10 @@ declare module egret {
          */
         static ADD: string;
         /**
-         * 根据显示对象的 Alpha 值擦除背景。Alpha 值不为0的区域将被擦除。
+         * 根据显示对象的 Alpha 值擦除背景。
          * @constant {string} egret.BlendMode.ERASE
-         * @private
          */
         static ERASE: string;
-        /**
-         * 根据显示对象的 Alpha 值擦除背景。Alpha 值为0的区域将被擦除。
-         * 注意：由于 CanvasAPI 的限制，只会保留 Alpha 值不为1的区域。
-         * @constant {string} egret.BlendMode.ERASE
-         */
-        static ERASE_REVERSE: string;
     }
 }
 /**
@@ -3059,7 +3071,10 @@ declare module egret {
      * 不允许重写以下方法
      * _draw();
      * getBounds();
-     * @link http://docs.egret-labs.org/post/manual/displayobj/aboutdisplayobj.html 显示对象的基本概念
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displayobj/aboutdisplayobj.html" style="padding-left: 20px" target="_blank" >显示对象的基本概念</a>
+     * </div>
+     *
      */
     class DisplayObject extends EventDispatcher implements RenderData {
         __hack_local_matrix: any;
@@ -3089,7 +3104,7 @@ declare module egret {
         _texture_to_render: Texture;
         _parent: DisplayObjectContainer;
         /**
-         * 表示包含此显示对象的 DisplayObjectContainer 对象。
+         * 表示包含此显示对象的 DisplayObjectContainer 对象。【只读】
          * 使用 parent 属性可以指定高于显示列表层次结构中当前显示对象的显示对象的相对路径。
          * @member {egret.DisplayObjectContainer} egret.DisplayObject#parent
          */
@@ -3392,7 +3407,7 @@ declare module egret {
         _onRemoveFromStage(): void;
         _stage: Stage;
         /**
-         * 显示对象的舞台。
+         * 显示对象的舞台。【只读】
          * 例如，您可以创建多个显示对象并加载到显示列表中，每个显示对象的 stage 属性是指相同的 Stage 对象。
          * 如果显示对象未添加到显示列表，则其 stage 属性会设置为 null。
          * @member {number} egret.DisplayObject#stage
@@ -3471,7 +3486,9 @@ declare module egret {
      * @classdesc
      * DisplayObjectContainer 类是可用作显示列表中显示对象容器的所有对象的基类。
      * 该显示列表管理运行时中显示的所有对象。使用 DisplayObjectContainer 类排列显示列表中的显示对象。每个 DisplayObjectContainer 对象都有自己的子级列表，用于组织对象的 Z 轴顺序。Z 轴顺序是由前至后的顺序，可确定哪个对象绘制在前，哪个对象绘制在后等。
-     * @link http://docs.egret-labs.org/post/manual/displaycon/aboutdisplaycon.html 显示容器的概念与实现
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displaycon/aboutdisplaycon.html" style="padding-left: 20px" target="_blank" >显示容器的概念与实现</a>
+     * </div>
      */
     class DisplayObjectContainer extends DisplayObject {
         static __EVENT__ADD_TO_STAGE_LIST: Array<DisplayObject>;
@@ -3489,7 +3506,7 @@ declare module egret {
         touchChildren: boolean;
         _children: Array<DisplayObject>;
         /**
-         * 返回此对象的子项数目。
+         * 返回此对象的子项数目。【只读】
          * @member {number} egret.DisplayObjectContainer#numChildren
          */
         numChildren: number;
@@ -3690,7 +3707,9 @@ declare module egret {
      * * Stage 类代表主绘图区，表示显示 Egret 内容的整个区域。
      * 可以以全局方式访问 Stage 对象(egret.MainContext.instance.stage)。也可以利用 DisplayObject 实例的 stage 属性进行访问。
      * Stage 类具有多个祖代类 -- DisplayObjectContainer、DisplayObject 和 EventDispatcher，属性和方法便是从这些类继承而来的。从这些继承的许多属性和方法不适用于 Stage 对象。
-     * @link http://docs.egret-labs.org/jksubj/scalemode.html 理解Egret中的各种屏幕适配策略并做出选择
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/jksubj/scalemode.html" style="padding-left: 20px" target="_blank" >理解Egret中的各种屏幕适配策略并做出选择</a>
+     * </div>
      */
     class Stage extends DisplayObjectContainer {
         static _invalidateRenderFlag: boolean;
@@ -3767,7 +3786,6 @@ declare module egret {
          * @param value {egret.ContentStrategy} 适配模式
          * @param override {boolean} 是否覆盖
          * @method egret.Stage#registerScaleMode
-         * @private
          */
         static registerScaleMode(key: string, value: ContentStrategy, override?: boolean): void;
     }
@@ -4009,7 +4027,9 @@ declare module egret {
      * @classdesc
      * BitmapFillMode 类定义Bitmap的图像填充方式。
      * BitmapFillMode 类定义了调整大小模式的一个枚举，这些模式确定 Bitmap 如何填充由布局系统指定的尺寸。
-     * @link http://docs.egret-labs.org/post/manual/bitmap/bitmapfillmode.html 纹理的填充方式
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/bitmap/bitmapfillmode.html" style="padding-left: 20px" target="_blank" >纹理的填充方式</a>
+     * </div>
      */
     class BitmapFillMode {
         /**
@@ -4057,7 +4077,9 @@ declare module egret {
      * Bitmap 类表示用于表示位图图像的显示对象。这些图像可以是使用 Bitmap() 构造函数创建的图像。
      * 利用 Bitmap() 构造函数，可以创建包含对 Texture 对象的引用的 Bitmap 对象。创建了 Bitmap 对象后，使用父 DisplayObjectContainer 实例的 addChild() 或 addChildAt() 方法将位图放在显示列表中。
      * 一个 Bitmap 对象可在若干 Bitmap 对象之中共享其 Texture 引用，与转换属性或旋转属性无关。由于能够创建引用相同 Texture 对象的多个 Bitmap 对象，因此，多个显示对象可以使用相同的复杂 Texture 对象，而不会因为每个显示对象实例使用一个 Texture 对象而产生内存开销。
-     * @link http://docs.egret-labs.org/post/manual/bitmap/createbitmap.html 创建位图
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/bitmap/createbitmap.html" style="padding-left: 20px" target="_blank" >创建位图</a>
+     * </div>
      * @extends egret.DisplayObject
      */
     class Bitmap extends DisplayObject {
@@ -4152,7 +4174,7 @@ declare module egret {
          * @member {string} egret.BitmapText#text
          */
         text: string;
-        _font: BitmapFont;
+        private _font;
         private _fontChanged;
         /**
          * BitmapFont对象，缓存了所有文本的位图纹理
@@ -4160,7 +4182,7 @@ declare module egret {
          */
         font: BitmapFont;
         _setSizeDirty(): void;
-        static EMPTY_FACTOR: number;
+        private static EMPTY_FACTOR;
         _render(renderContext: RendererContext): void;
         _measureBounds(): egret.Rectangle;
         private _textWidth;
@@ -4169,8 +4191,8 @@ declare module egret {
         private _textOffsetY;
         private textLinesChange;
         private _textLines;
-        _lineHeights: Array<number>;
-        _getTextLines(): Array<string>;
+        private _lineHeights;
+        private getTextLines();
     }
 }
 /**
@@ -4205,7 +4227,9 @@ declare module egret {
      * @classdesc
      * Graphics 类包含一组可用来创建矢量形状的方法。支持绘制的显示对象包括 Sprite 和 Shape 对象。这些类中的每一个类都包括 graphics 属性，该属性是一个 Graphics 对象。
      * 以下是为便于使用而提供的一些辅助函数：drawRect()、drawRoundRect()、drawCircle() 和 drawEllipse()。
-     * @link http://docs.egret-labs.org/post/manual/graphics/drawrect.html  绘制矩形
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/graphics/drawrect.html" style="padding-left: 20px" target="_blank" >绘制矩形</a>
+     * </div>
      */
     class Graphics {
         private canvasContext;
@@ -4214,8 +4238,6 @@ declare module egret {
         private strokeStyleColor;
         private fillStyleColor;
         private _dirty;
-        private lineX;
-        private lineY;
         constructor();
         /**
          * 指定一种简单的单一颜色填充，在绘制时该填充将在随后对其他 Graphics 方法（如 lineTo() 或 drawCircle()）的调用中使用。
@@ -4354,7 +4376,9 @@ declare module egret {
     /**
      * @class egret.Shape
      * @classdesc 此类用于使用 Egret 绘图应用程序编程接口 (API) 创建简单形状。Shape 类包括 graphics 属性，该属性使您可以从 Graphics 类访问方法。
-     * @link http://docs.egret-labs.org/demo/shape.html Shape绘制矢量图
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/demo/shape.html" style="padding-left: 20px" target="_blank" >Shape绘制矢量图</a>
+     * </div>
      */
     class Shape extends egret.DisplayObject {
         /**
@@ -4363,7 +4387,7 @@ declare module egret {
         constructor();
         private _graphics;
         /**
-         * 获取 Shape 中的 Graphics 对象。
+         * 获取 Shape 中的 Graphics 对象。【只读】
          * @member {egret.Graphics} egret.Shape#graphics
          */
         graphics: Graphics;
@@ -4402,7 +4426,9 @@ declare module egret {
      * @extends egret.DisplayObjectContainer
      * @class egret.Sprite
      * @classdesc Sprite 类是基本显示列表构造块：一个可显示图形并且也可包含子项的显示列表节点。Sprite 对象与影片剪辑类似，但没有时间轴。Sprite 是不需要时间轴的对象的相应基类。例如，Sprite 将是通常不使用时间轴的用户界面 (UI) 组件的逻辑基类。
-     * @link http://docs.egret-labs.org/post/manual/displayobj/aboutdisplayobj.html 显示对象的基本概念
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displayobj/aboutdisplayobj.html" style="padding-left: 20px" target="_blank" >显示对象的基本概念</a>
+     * </div>
      */
     class Sprite extends DisplayObjectContainer {
         /**
@@ -4411,7 +4437,7 @@ declare module egret {
         constructor();
         private _graphics;
         /**
-         * 获取 Sprite 中的 Graphics 对象。
+         * 获取 Sprite 中的 Graphics 对象。【只读】
          * 指定属于此 sprite 的 Graphics 对象，在此 sprite 中可执行矢量绘图命令。
          * @member {egret.Graphics} egret.Sprite#graphics
          */
@@ -4454,7 +4480,9 @@ declare module egret {
      * TextField是egret的文本渲染类，采用浏览器/设备的API进行渲染，在不同的浏览器/设备中由于字体渲染方式不一，可能会有渲染差异
      * 如果开发者希望所有平台完全无差异，请使用BitmapText
      * @extends egret.DisplayObject
-     * @link http://docs.egret-labs.org/post/manual/text/createtext.html 创建文本
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/text/createtext.html" style="padding-left: 20px" target="_blank" >创建文本</a>
+     * </div>
      */
     class TextField extends DisplayObject {
         static default_fontFamily: string;
@@ -4607,7 +4635,7 @@ declare module egret {
         _getLineHeight(): number;
         _numLines: number;
         /**
-         * 文本行数。
+         * 文本行数。【只读】
          * @member {number} egret.TextField#numLines
          */
         numLines: number;
@@ -4688,7 +4716,9 @@ declare module egret {
     }
     /**
      * 用于建立多种样式混合文本的基本结构，主要用于设置 textFlow 属性
-     * @link http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html 多种样式文本混合
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html" style="padding-left: 20px" target="_blank" >多种样式文本混合</a>
+     * </div>
      */
     interface ITextElement {
         text: string;
@@ -4739,7 +4769,9 @@ declare module egret {
     /**
      * @class egret.HtmlTextParser
      * @classdesc 将html格式文本转换为可赋值给 egret.TextField#textFlow 属性的对象
-     * @link http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html 多种样式文本混合
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/jkdoc/manual-text-multiformat.html" style="padding-left: 20px" target="_blank" >多种样式文本混合</a>
+     * </div>
      */
     class HtmlTextParser {
         constructor();
@@ -4837,7 +4869,9 @@ declare module egret {
      * 在WebGL / OpenGL上，这种做法可以显著提升性能
      * 同时，SpriteSheet可以很方便的进行素材整合，降低HTTP请求数量
      * SpriteSheet 格式的具体规范可以参见此文档  https://github.com/egret-labs/egret-core/wiki/Egret-SpriteSheet-Specification
-     * @link http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/bitmap/textures.html" style="padding-left: 20px" target="_blank" >纹理集的使用</a>
+     * </div>
      */
     class SpriteSheet extends HashObject {
         /**
@@ -4978,9 +5012,10 @@ declare module egret {
      * @classdesc
      * @class egret.BitmapFont
      * 位图字体,是一个字体的纹理集，通常作为BitmapText.font属性的值。
-     * @link
-     * http://bbs.egret-labs.org/thread-918-1-1.html TextureMerger
-     * http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=251 文本(含位图字体具体用法)
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://bbs.egret-labs.org/thread-918-1-1.html" style="padding-left: 20px" target="_blank" >TextureMerger</a>
+     * <a href="http://bbs.egret-labs.org/forum.php?mod=viewthread&tid=251" style="padding-left: 20px" target="_blank" >文本(含位图字体具体用法)</a>
+     * </div>
      * @extends egret.SpriteSheet
      */
     class BitmapFont extends SpriteSheet {
@@ -5035,7 +5070,9 @@ declare module egret {
      * @class egret.MovieClip
      * @classdesc 影片剪辑，可以通过影片剪辑播放序列帧动画。MovieClip 类从以下类继承而来：DisplayObject 和 EventDispatcher。不同于 DisplayObject 对象，MovieClip 对象拥有一个时间轴。
      * @extends egret.DisplayObject
-     * @link http://docs.egret-labs.org/post/manual/displaycon/movieclip.html  MovieClip序列帧动画
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displaycon/movieclip.html" style="padding-left: 20px" target="_blank" >MovieClip序列帧动画</a>
+     * </div>
      */
     class MovieClip extends DisplayObject {
         private _isAddedToStage;
@@ -5092,7 +5129,7 @@ declare module egret {
         /**
          * 继续播放当前动画
          * @method egret.MovieClip#play
-         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数(MovieClip初始播放次数设置为1)，
+         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数，
          */
         play(playTimes?: number): void;
         /**
@@ -5101,7 +5138,7 @@ declare module egret {
          */
         stop(): void;
         /**
-         * 将播放头移到前一帧并停止
+         * 将播放头移到前帧并停止
          * @method egret.MovieClip#prevFrame
          */
         prevFrame(): void;
@@ -5247,7 +5284,9 @@ declare module egret {
      * @class egret.MovieClipData
      * @classdesc 使用 MovieClipData 类，您可以创建 MovieClip 对象和处理 MovieClip 对象的数据。MovieClipData 一般由MovieClipDataFactory生成
      * @extends egret.HashObject
-     * @link http://docs.egret-labs.org/post/manual/displaycon/movieclip.html MovieClip序列帧动画
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displaycon/movieclip.html" style="padding-left: 20px" target="_blank" >MovieClip序列帧动画</a>
+     * </div>
      */
     class MovieClipData extends HashObject {
         /**
@@ -5342,7 +5381,9 @@ declare module egret {
      * @class egret.MovieClipDataFactory
      * @classdesc 使用 MovieClipDataFactory 类，可以生成 MovieClipData 对象用于创建MovieClip
      * @extends egret.EventDispatcher
-     * @link http://docs.egret-labs.org/post/manual/displaycon/movieclip.html MovieClip序列帧动画
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displaycon/movieclip.html" style="padding-left: 20px" target="_blank" >MovieClip序列帧动画</a>
+     * </div>
      */
     class MovieClipDataFactory extends EventDispatcher {
         /**
@@ -5355,7 +5396,7 @@ declare module egret {
         _mcDataCache: any;
         /**
          * 创建一个 egret.MovieClipDataFactory 对象
-         * @param movieClipDataSet {any} MovieClip数据集，该数据集必须由Egret官方工具生成
+         * @param movieClipDataSet {any} MovieClip数据集
          * @param texture {Texture} 纹理
          */
         constructor(movieClipDataSet?: any, texture?: Texture);
@@ -5513,7 +5554,9 @@ declare module egret {
      * @class egret.URLRequestMethod
      * @classdesc URLRequestMethod 类提供了一些值，这些值可指定在将数据发送到服务器时，
      * URLRequest 对象应使用 POST 方法还是 GET 方法。
-     * @link http://docs.egret-labs.org/post/manual/net/postget.html POST与GET
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/net/postget.html" style="padding-left: 20px" target="_blank" >POST与GET</a>
+     * </div>
      */
     class URLRequestMethod {
         /**
@@ -5558,7 +5601,9 @@ declare module egret {
     /**
      * @class egret.URLLoaderDataFormat
      * @classdesc URLLoaderDataFormat 类提供了一些用于指定如何接收已下载数据的值。
-     * @link http://docs.egret-labs.org/post/manual/net/netformat.html 读取不同数据格式
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/net/netformat.html" style="padding-left: 20px" target="_blank" >读取不同数据格式</a>
+     * </div>
      */
     class URLLoaderDataFormat {
         /**
@@ -5620,7 +5665,9 @@ declare module egret {
      * @classdesc
      * 使用 URLVariables 类可以在应用程序和服务器之间传输变量。
      * 将 URLVariables 对象与 URLLoader 类的方法、URLRequest 类的 data 属性一起使用。
-     * @link http://docs.egret-labs.org/post/manual/net/senddata.html 发送带参数的请求
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/net/senddata.html" style="padding-left: 20px" target="_blank" >发送带参数的请求</a>
+     * </div>
      */
     class URLVariables extends HashObject {
         /**
@@ -5730,7 +5777,9 @@ declare module egret {
      * @class egret.URLRequest
      * @classdesc URLRequest 类可捕获单个 HTTP 请求中的所有信息。
      * @extends egret.HashObject
-     * @link http://docs.egret-labs.org/post/manual/net/createconnect.html 构建通信请求
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/net/createconnect.html" style="padding-left: 20px" target="_blank" >构建通信请求</a>
+     * </div>
      */
     class URLRequest extends HashObject {
         /**
@@ -5805,7 +5854,9 @@ declare module egret {
      * URLLoader 对象会先从 URL 中下载所有数据，然后才将数据用于应用程序中的代码。它会发出有关下载进度的通知，
      * 通过 bytesLoaded 和 bytesTotal 属性以及已调度的事件，可以监视下载进度。
      * @extends egret.EventDispatcher
-     * @link http://docs.egret-labs.org/post/manual/net/createconnect.html 构建通信请求
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/net/createconnect.html" style="padding-left: 20px" target="_blank" >构建通信请求</a>
+     * </div>
      */
     class URLLoader extends EventDispatcher {
         /**
@@ -5879,9 +5930,10 @@ declare module egret {
      * 在HTML5中，资源是一个HTMLElement对象
      * 在OpenGL / WebGL中，资源是一个提交GPU后获取的纹理id
      * Texture类封装了这些底层实现的细节，开发者只需要关心接口即可
-     * @link
-     * http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用
-     * http://docs.egret-labs.org/post/manual/loader/getres.html 获取资源的几种方式
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/bitmap/textures.html" style="padding-left: 20px" target="_blank" >纹理集的使用</a>
+     * <a href="http://docs.egret-labs.org/post/manual/loader/getres.html" style="padding-left: 20px" target="_blank" >获取资源的几种方式</a>
+     * </div>
      */
     class Texture extends HashObject {
         /**
@@ -6379,6 +6431,7 @@ declare module egret {
  */
 declare module egret {
     /**
+     * @private
      */
     class ExternalInterface {
         constructor();
@@ -6538,20 +6591,12 @@ declare module egret {
      * @classdesc
      * XML文件解析工具，它将XML文件解析为标准的JSON对象返回。
      * 用法类似JSON.parse(),传入一个XML字符串给XML.parse()，将能得到一个标准JSON对象。
-     * 示例：
-     *      <root value="abc">
+     * 示例：<root value="abc">
      *          <item value="item0"/>
      *          <item value="item1"/>
-     *      </root>
+     *       </root>
      * 将解析为:
-     *      {
-     *          "name": "root",
-     *          "$value": "abc",
-     *          "children": [
-     *              {"name": "item", "$value": "item0"},
-     *              {"name": "item", "$value": "item1"}
-     *          ]
-     *      }
+     * {"name":"root","$value":"abc","children":[{"name":"item","$value":"item0"},{"name":"item","$value":"item0"}]};
      * 其中XML上的属性节点都使用$+"属性名"的方式表示,子节点都存放在children属性的列表里，name表示节点名称。
      */
     class XML {
@@ -6881,7 +6926,9 @@ declare module egret {
      * @classdesc
      * Tween是Egret的动画缓动类
      * @extends egret.EventDispatcher
-     * @link http://docs.egret-labs.org/post/manual/anim/tween.html Tween缓动动画
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/anim/tween.html" style="padding-left: 20px" target="_blank" >Tween缓动动画</a>
+     * </div>
      */
     class Tween extends EventDispatcher {
         /**
@@ -6921,10 +6968,7 @@ declare module egret {
         private passive;
         /**
          * 激活一个对象，对其添加 Tween 动画
-         * @param target {any} 要激活 Tween 的对象
-         * @param props {any} 参数，例如：{loop:true}
-         * @param pluginData {any} 暂未实现
-         * @param override {boolean} 是否移除对象之前添加的tween，默认值false
+         * @param target 要激活的对象
          */
         static get(target: any, props?: any, pluginData?: any, override?: boolean): Tween;
         /**
@@ -6951,7 +6995,6 @@ declare module egret {
         static removeAllTweens(): void;
         /**
          * 创建一个 egret.Tween 对象
-         * @private
          */
         constructor(target: any, props: any, pluginData: any);
         private initialize(target, props, pluginData);
@@ -7048,7 +7091,9 @@ declare module egret {
 declare module egret {
     /**
      * 缓动函数集合，使用不同的缓动函数使得动画按照对应的方程进行
-     * @link http://bbs.egret-labs.org/thread-392-1-1.html Tween和Ease
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://bbs.egret-labs.org/thread-392-1-1.html" style="padding-left: 20px" target="_blank" >Tween和Ease</a>
+     * </div>
      */
     class Ease {
         constructor();
@@ -7121,7 +7166,9 @@ declare module egret {
     /**
      * @class egret.Sound
      * @classdesc Sound 类允许您在应用程序中使用声音。
-     * @link http://docs.egret-labs.org/post/manual/sound/playsound.html 播放音频
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/sound/playsound.html" style="padding-left: 20px" target="_blank" >播放音频</a>
+     * </div>
      */
     class Sound {
         /**

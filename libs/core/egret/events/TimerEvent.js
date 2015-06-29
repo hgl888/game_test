@@ -38,7 +38,9 @@ var egret;
      * @classdesc
      * 每当 Timer 对象达到由 Timer.delay 属性指定的间隔时，Timer 对象即会调度 TimerEvent 对象。
      * @extends egret.Event
-     * @link http://docs.egret-labs.org/post/manual/timer/timer.html Timer计时器
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/timer/timer.html" style="padding-left: 20px" target="_blank" >Timer计时器</a>
+     * </div>
      */
     var TimerEvent = (function (_super) {
         __extends(TimerEvent, _super);
@@ -77,5 +79,4 @@ var egret;
         return TimerEvent;
     })(egret.Event);
     egret.TimerEvent = TimerEvent;
-    TimerEvent.prototype.__class__ = "egret.TimerEvent";
 })(egret || (egret = {}));

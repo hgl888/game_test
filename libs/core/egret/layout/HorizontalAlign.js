@@ -29,7 +29,9 @@ var egret;
     /**
      * @class egret.HorizontalAlign
      * @classdesc 水平对齐方式
-     * @link http://docs.egret-labs.org/post/manual/text/textlayout.html 文本布局
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/text/textlayout.html" style="padding-left: 20px" target="_blank" >文本布局</a>
+     * </div>
      */
     var HorizontalAlign = (function () {
         function HorizontalAlign() {
@@ -65,5 +67,4 @@ var egret;
         return HorizontalAlign;
     })();
     egret.HorizontalAlign = HorizontalAlign;
-    HorizontalAlign.prototype.__class__ = "egret.HorizontalAlign";
 })(egret || (egret = {}));

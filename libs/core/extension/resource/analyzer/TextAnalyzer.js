@@ -32,5 +32,4 @@ var RES;
         return TextAnalyzer;
     })(RES.BinAnalyzer);
     RES.TextAnalyzer = TextAnalyzer;
-    TextAnalyzer.prototype.__class__ = "RES.TextAnalyzer";
 })(RES || (RES = {}));

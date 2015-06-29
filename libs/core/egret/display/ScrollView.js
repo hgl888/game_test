@@ -306,7 +306,7 @@ var egret;
             }
             var target = event.target;
             while (target != this) {
-                if ("_checkScrollPolicy" in target) {
+                if (target instanceof ScrollView) {
                     canScroll = target._checkScrollPolicy();
                     if (canScroll) {
                         return;
@@ -341,24 +341,27 @@ var egret;
         ScrollView.prototype.dispatchPropagationEvent = function (event) {
             var list = [];
             var target = event._target;
-            var scrollerIndex = 0;
             while (target) {
-                if (target == this)
-                    scrollerIndex = list.length;
                 list.push(target);
                 target = target.parent;
             }
-            var captureList = list.slice(0, scrollerIndex);
-            captureList = captureList.reverse();
-            list = captureList.concat(list);
-            var targetIndex = scrollerIndex;
-            this._dispatchPropagationEvent(event, list, targetIndex);
+            var content = this._content;
+            for (var i = 1;; i += 2) {
+                target = list[i];
+                if (!target || target === content) {
+                    break;
+                }
+                list.unshift(target);
+            }
+            this._dispatchPropagationEvent(event, list);
         };
+        //todo 此处代码是为了兼容之前的实现，应该尽快更优化的实现后删除
         ScrollView.prototype._dispatchPropagationEvent = function (event, list, targetIndex) {
             var length = list.length;
             for (var i = 0; i < length; i++) {
                 var currentTarget = list[i];
                 event._currentTarget = currentTarget;
+                event._target = this;
                 if (i < targetIndex)
                     event._eventPhase = 1;
                 else if (i == targetIndex)
@@ -652,5 +655,4 @@ var egret;
         return ScrollView;
     })(egret.DisplayObjectContainer);
     egret.ScrollView = ScrollView;
-    ScrollView.prototype.__class__ = "egret.ScrollView";
 })(egret || (egret = {}));

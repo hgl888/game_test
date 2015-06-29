@@ -60,8 +60,7 @@ var egret;
             var url = egret.NetContext._getUrl(request);
             if (url.indexOf("http://") == 0) {
                 this.urlData.type = request.method;
-                //写入POST数据
-                if (request.method == egret.URLRequestMethod.POST && request.data) {
+                if (request.method == egret.URLRequestMethod.POST && request.data && request.data instanceof egret.URLVariables) {
                     var urlVars = request.data;
                     this.urlData.data = urlVars.toString();
                 }
@@ -223,5 +222,4 @@ var egret;
         return NativeNetContext;
     })(egret.NetContext);
     egret.NativeNetContext = NativeNetContext;
-    NativeNetContext.prototype.__class__ = "egret.NativeNetContext";
 })(egret || (egret = {}));

@@ -48,5 +48,4 @@ var RES;
         return XMLAnalyzer;
     })(RES.BinAnalyzer);
     RES.XMLAnalyzer = XMLAnalyzer;
-    XMLAnalyzer.prototype.__class__ = "RES.XMLAnalyzer";
 })(RES || (RES = {}));

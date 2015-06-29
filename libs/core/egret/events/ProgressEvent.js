@@ -92,5 +92,4 @@ var egret;
         return ProgressEvent;
     })(egret.Event);
     egret.ProgressEvent = ProgressEvent;
-    ProgressEvent.prototype.__class__ = "egret.ProgressEvent";
 })(egret || (egret = {}));

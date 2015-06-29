@@ -48,5 +48,4 @@ var egret;
         return BlurShader;
     })(egret.EgretShader);
     egret.BlurShader = BlurShader;
-    BlurShader.prototype.__class__ = "egret.BlurShader";
 })(egret || (egret = {}));

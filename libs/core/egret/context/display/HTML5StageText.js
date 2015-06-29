@@ -296,7 +296,6 @@ var egret;
         return HTML5StageText;
     })(egret.StageText);
     egret.HTML5StageText = HTML5StageText;
-    HTML5StageText.prototype.__class__ = "egret.HTML5StageText";
 })(egret || (egret = {}));
 egret.StageText.create = function () {
     return new egret.HTML5StageText();

@@ -109,5 +109,4 @@ var egret;
         return Injector;
     })();
     egret.Injector = Injector;
-    Injector.prototype.__class__ = "egret.Injector";
 })(egret || (egret = {}));

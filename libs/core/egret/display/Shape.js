@@ -35,7 +35,9 @@ var egret;
     /**
      * @class egret.Shape
      * @classdesc 此类用于使用 Egret 绘图应用程序编程接口 (API) 创建简单形状。Shape 类包括 graphics 属性，该属性使您可以从 Graphics 类访问方法。
-     * @link http://docs.egret-labs.org/demo/shape.html Shape绘制矢量图
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/demo/shape.html" style="padding-left: 20px" target="_blank" >Shape绘制矢量图</a>
+     * </div>
      */
     var Shape = (function (_super) {
         __extends(Shape, _super);
@@ -48,7 +50,7 @@ var egret;
         }
         Object.defineProperty(Shape.prototype, "graphics", {
             /**
-             * 获取 Shape 中的 Graphics 对象。
+             * 获取 Shape 中的 Graphics 对象。【只读】
              * @member {egret.Graphics} egret.Shape#graphics
              */
             get: function () {
@@ -75,5 +77,4 @@ var egret;
         return Shape;
     })(egret.DisplayObject);
     egret.Shape = Shape;
-    Shape.prototype.__class__ = "egret.Shape";
 })(egret || (egret = {}));

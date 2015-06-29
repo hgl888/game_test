@@ -172,5 +172,4 @@ var egret;
         return RenderTexture;
     })(egret.Texture);
     egret.RenderTexture = RenderTexture;
-    RenderTexture.prototype.__class__ = "egret.RenderTexture";
 })(egret || (egret = {}));

@@ -187,5 +187,4 @@ var egret;
         return InputController;
     })(egret.HashObject);
     egret.InputController = InputController;
-    InputController.prototype.__class__ = "egret.InputController";
 })(egret || (egret = {}));

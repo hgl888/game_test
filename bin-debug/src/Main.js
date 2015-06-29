@@ -35,12 +35,7 @@ var Main = (function (_super) {
     function Main() {
         _super.call(this);
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-        egret.Profiler.getInstance().run();
     }
-    Main.prototype._onAddToStage = function () {
-        _super.prototype._onAddToStage.call(this);
-        console.log(this);
-    };
     Main.prototype.onAddToStage = function (event) {
         //设置加载进度界面
         this.loadingView = new LoadingUI();
@@ -92,54 +87,84 @@ var Main = (function (_super) {
      * 创建游戏场景
      */
     Main.prototype.createGameScene = function () {
-        //var pgame = new egret_native.EgretGameTriangle();
-        //pgame.initialize();
-        //egret_native.EgretGameTriangle.test();
-
-        //箭头
-        //var shape_38 = new CreateJSGraphics(  );
-        //shape_38.graphics.beginLinearGradientFill(["#00FFEE", "#00AAFF"], [0.494, 1], -28.6, 0, 28.8, 0).beginStroke().moveTo(28.7, -44.7).lineTo(28.7, 44.7).lineTo(-28.7, -0).closePath();
-        //shape_38.setTransform(100 + 27.6, 100);
-        //this.addChild(shape_38);
-
-        var gametri = new MeshPrimitiveSample();
-        //var n = gametri.pgame.num;
-        //gametri.pgame.num = 100;
-        gametri.initialize();
-
-    };
-    Main.prototype.parseRGBA = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var a = parseInt((arr[3] * 255)).toString(16);
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(a) + fill(r) + fill(g) + fill(b);
-        return str;
-    };
-    Main.prototype.parseRGB = function (str) {
-        var index = str.indexOf("(");
-        str = str.slice(index + 1, str.length - 1);
-        var arr = str.split(",");
-        var r = (parseInt(arr[0])).toString(16);
-        var g = (parseInt(arr[1])).toString(16);
-        var b = (parseInt(arr[2])).toString(16);
-        var fill = function (s) {
-            if (s.length < 2) {
-                s = "0" + s;
-            }
-            return s;
-        };
-        str = "#" + fill(r) + fill(g) + fill(b);
-        return str;
+      
+        var sky = this.createBitmapByName("bgImage");
+        this.addChild(sky);
+        var stageW = this.stage.stageWidth;
+        var stageH = this.stage.stageHeight;
+        sky.width = stageW;
+        sky.height = stageH;
+        var a = new GraphicsTest();
+        this.addChild(a);
+        return;
+        var topMask = new egret.Shape();
+        topMask.graphics.beginFill(0x000000, 0.5);
+        topMask.graphics.drawRect(0, 0, stageW, stageH);
+        topMask.graphics.endFill();
+        topMask.width = stageW;
+        topMask.height = stageH;
+        this.addChild(topMask);
+        var icon = this.createBitmapByName("egretIcon");
+        icon.anchorX = icon.anchorY = 0.5;
+        this.addChild(icon);
+        icon.x = stageW / 2;
+        icon.y = stageH / 2 - 60;
+        icon.scaleX = 0.55;
+        icon.scaleY = 0.55;
+        var colorLabel = new egret.TextField();
+        colorLabel.x = stageW / 2;
+        colorLabel.y = stageH / 2 + 50;
+        colorLabel.anchorX = colorLabel.anchorY = 0.5;
+        colorLabel.textColor = 0xffffff;
+        colorLabel.textAlign = "center";
+        colorLabel.text = "Hello Egret";
+        colorLabel.size = 20;
+        this.addChild(colorLabel);
+        var textContainer = new egret.Sprite();
+        textContainer.anchorX = textContainer.anchorY = 0.5;
+        this.addChild(textContainer);
+        textContainer.x = stageW / 2;
+        textContainer.y = stageH / 2 + 100;
+        textContainer.alpha = 0;
+        this.textContainer = textContainer;
+        //根据name关键字，异步获取一个json配置文件，name属性请参考resources/resource.json配置文件的内容。
+        RES.getResAsync("description", this.startAnimation, this);
+        //var b = new egret.ByteArray();
+        //b.writeInt(1);
+        //b.writeInt(2);
+        //b.writeInt(3);
+        //b.position = 0;
+        //
+        //var bb = new egret.ByteArray();
+        //bb.writeBytes(b, 0, 16);
+        //bb.position = 0;
+        //console.log(bb.readInt());
+        //console.log(bb.readInt());
+        //console.log(bb.readInt());
+        sky.touchEnabled = true;
+        this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, function (event) {
+            console.log(event.target);
+        }, this);
+        //this.stage.addEventListener(egret.TouchEvent.TOUCH_MOVE, function (event){
+        //    console.log("move");
+        //}, this);
+        var s = new egret.ScrollView();
+        s.setContent(sky);
+        s.height = 300;
+        this.addChild(s);
+        //var amf = RES.getRes("skeleton_amf3");
+        //var b = new egret.ByteArray(amf);
+        //b.position = 0;
+        //for(var i = 0 ; i < 100 ; i++){
+        //    console.log(b.readByte());
+        //}
+        //var r  = lcj.AMF3.read(b);
+        //console.log(r);
+        var bitmapFont = RES.getRes("bitmapFont");
+        var bitmap1 = new egret.BitmapText();
+        bitmap1.font = bitmapFont;
+        bitmap1.text = "Hello Egret";
+        this.addChild(bitmap1);
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
@@ -149,6 +174,10 @@ var Main = (function (_super) {
         var texture = RES.getRes(name);
         result.texture = texture;
         return result;
+    };
+    Main.prototype.show = function (texture) {
+        var bitmap = new egret.Bitmap(texture);
+        egret.MainContext.instance.stage.addChild(bitmap);
     };
     /**
      * 描述文件加载成功，开始播放动画
@@ -192,4 +221,3 @@ var Main = (function (_super) {
     };
     return Main;
 })(egret.DisplayObjectContainer);
-Main.prototype.__class__ = "Main";

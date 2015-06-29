@@ -359,5 +359,4 @@ var egret;
         return Matrix;
     })(egret.HashObject);
     egret.Matrix = Matrix;
-    Matrix.prototype.__class__ = "egret.Matrix";
 })(egret || (egret = {}));

@@ -60,5 +60,4 @@ var egret;
         return HashObject;
     })();
     egret.HashObject = HashObject;
-    HashObject.prototype.__class__ = "egret.HashObject";
 })(egret || (egret = {}));

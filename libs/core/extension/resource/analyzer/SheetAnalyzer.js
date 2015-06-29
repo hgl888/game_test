@@ -173,5 +173,4 @@ var RES;
         return SheetAnalyzer;
     })(RES.BinAnalyzer);
     RES.SheetAnalyzer = SheetAnalyzer;
-    SheetAnalyzer.prototype.__class__ = "RES.SheetAnalyzer";
 })(RES || (RES = {}));

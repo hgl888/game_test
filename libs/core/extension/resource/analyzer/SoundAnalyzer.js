@@ -55,5 +55,4 @@ var RES;
         return SoundAnalyzer;
     })(RES.BinAnalyzer);
     RES.SoundAnalyzer = SoundAnalyzer;
-    SoundAnalyzer.prototype.__class__ = "RES.SoundAnalyzer";
 })(RES || (RES = {}));

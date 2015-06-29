@@ -48,5 +48,4 @@ var RES;
         return ImageAnalyzer;
     })(RES.BinAnalyzer);
     RES.ImageAnalyzer = ImageAnalyzer;
-    ImageAnalyzer.prototype.__class__ = "RES.ImageAnalyzer";
 })(RES || (RES = {}));

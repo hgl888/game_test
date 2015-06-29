@@ -45,7 +45,6 @@ var egret;
         return NativeTouchContext;
     })(egret.TouchContext);
     egret.NativeTouchContext = NativeTouchContext;
-    NativeTouchContext.prototype.__class__ = "egret.NativeTouchContext";
 })(egret || (egret = {}));
 var egret_native;
 (function (egret_native) {

@@ -38,9 +38,10 @@ var egret;
      * 在HTML5中，资源是一个HTMLElement对象
      * 在OpenGL / WebGL中，资源是一个提交GPU后获取的纹理id
      * Texture类封装了这些底层实现的细节，开发者只需要关心接口即可
-     * @link
-     * http://docs.egret-labs.org/post/manual/bitmap/textures.html 纹理集的使用
-     * http://docs.egret-labs.org/post/manual/loader/getres.html 获取资源的几种方式
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/bitmap/textures.html" style="padding-left: 20px" target="_blank" >纹理集的使用</a>
+     * <a href="http://docs.egret-labs.org/post/manual/loader/getres.html" style="padding-left: 20px" target="_blank" >获取资源的几种方式</a>
+     * </div>
      */
     var Texture = (function (_super) {
         __extends(Texture, _super);
@@ -143,5 +144,4 @@ var egret;
         return Texture;
     })(egret.HashObject);
     egret.Texture = Texture;
-    Texture.prototype.__class__ = "egret.Texture";
 })(egret || (egret = {}));

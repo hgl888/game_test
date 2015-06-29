@@ -50,7 +50,6 @@ var egret;
         return Endian;
     })();
     egret.Endian = Endian;
-    Endian.prototype.__class__ = "egret.Endian";
     /**
      * @class egret.ByteArray
      * @classdesc
@@ -778,5 +777,4 @@ var egret;
         return ByteArray;
     })();
     egret.ByteArray = ByteArray;
-    ByteArray.prototype.__class__ = "egret.ByteArray";
 })(egret || (egret = {}));

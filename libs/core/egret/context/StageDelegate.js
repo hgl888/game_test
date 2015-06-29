@@ -116,7 +116,6 @@ var egret;
         return StageDelegate;
     })(egret.HashObject);
     egret.StageDelegate = StageDelegate;
-    StageDelegate.prototype.__class__ = "egret.StageDelegate";
     /**
      * @private
      */
@@ -146,7 +145,6 @@ var egret;
         return ResolutionPolicy;
     })();
     egret.ResolutionPolicy = ResolutionPolicy;
-    ResolutionPolicy.prototype.__class__ = "egret.ResolutionPolicy";
     /**
      * @private
      */
@@ -193,7 +191,6 @@ var egret;
         return ContainerStrategy;
     })();
     egret.ContainerStrategy = ContainerStrategy;
-    ContainerStrategy.prototype.__class__ = "egret.ContainerStrategy";
     /**
      * @classdesc
      * @extends egret.ContainerStrategy
@@ -210,7 +207,6 @@ var egret;
         return EqualToFrame;
     })(ContainerStrategy);
     egret.EqualToFrame = EqualToFrame;
-    EqualToFrame.prototype.__class__ = "egret.EqualToFrame";
     /**
      * @private
      */
@@ -258,7 +254,6 @@ var egret;
         return ContentStrategy;
     })();
     egret.ContentStrategy = ContentStrategy;
-    ContentStrategy.prototype.__class__ = "egret.ContentStrategy";
     /**
      * @class egret.FixedHeight
      * @classdesc
@@ -300,7 +295,6 @@ var egret;
         return FixedHeight;
     })(ContentStrategy);
     egret.FixedHeight = FixedHeight;
-    FixedHeight.prototype.__class__ = "egret.FixedHeight";
     /**
      * @class egret.FixedWidth
      * @classdesc
@@ -337,7 +331,6 @@ var egret;
         return FixedWidth;
     })(ContentStrategy);
     egret.FixedWidth = FixedWidth;
-    FixedWidth.prototype.__class__ = "egret.FixedWidth";
     /**
      * @class egret.FixedSize
      * @classdesc
@@ -368,7 +361,6 @@ var egret;
         return FixedSize;
     })(ContentStrategy);
     egret.FixedSize = FixedSize;
-    FixedSize.prototype.__class__ = "egret.FixedSize";
     /**
      * @class egret.NoScale
      * @classdesc
@@ -395,7 +387,6 @@ var egret;
         return NoScale;
     })(ContentStrategy);
     egret.NoScale = NoScale;
-    NoScale.prototype.__class__ = "egret.NoScale";
     /**
      * @private
      */
@@ -430,7 +421,6 @@ var egret;
         return ShowAll;
     })(ContentStrategy);
     egret.ShowAll = ShowAll;
-    ShowAll.prototype.__class__ = "egret.ShowAll";
     /**
      * @private
      */
@@ -461,5 +451,4 @@ var egret;
         return FullScreen;
     })(ContentStrategy);
     egret.FullScreen = FullScreen;
-    FullScreen.prototype.__class__ = "egret.FullScreen";
 })(egret || (egret = {}));

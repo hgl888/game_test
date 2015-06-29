@@ -63,5 +63,4 @@ var egret;
         return PrimitiveShader;
     })();
     egret.PrimitiveShader = PrimitiveShader;
-    PrimitiveShader.prototype.__class__ = "egret.PrimitiveShader";
 })(egret || (egret = {}));

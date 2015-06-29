@@ -112,5 +112,4 @@ var RES;
         return ResourceItem;
     })();
     RES.ResourceItem = ResourceItem;
-    ResourceItem.prototype.__class__ = "RES.ResourceItem";
 })(RES || (RES = {}));

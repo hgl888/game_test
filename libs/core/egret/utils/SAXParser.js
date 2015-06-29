@@ -90,5 +90,4 @@ var egret;
         return SAXParser;
     })(egret.HashObject);
     egret.SAXParser = SAXParser;
-    SAXParser.prototype.__class__ = "egret.SAXParser";
 })(egret || (egret = {}));

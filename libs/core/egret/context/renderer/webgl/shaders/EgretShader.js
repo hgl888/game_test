@@ -129,5 +129,4 @@ var egret;
         return EgretShader;
     })();
     egret.EgretShader = EgretShader;
-    EgretShader.prototype.__class__ = "egret.EgretShader";
 })(egret || (egret = {}));

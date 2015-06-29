@@ -122,5 +122,4 @@ var egret;
         return Recycler;
     })(egret.HashObject);
     egret.Recycler = Recycler;
-    Recycler.prototype.__class__ = "egret.Recycler";
 })(egret || (egret = {}));

@@ -190,8 +190,7 @@ var egret;
             this.blendModes = {};
             this.blendModes[egret.BlendMode.NORMAL] = "source-over";
             this.blendModes[egret.BlendMode.ADD] = "lighter";
-            this.blendModes[egret.BlendMode.ERASE] = "destination-out";
-            this.blendModes[egret.BlendMode.ERASE_REVERSE] = "destination-in";
+            this.blendModes[egret.BlendMode.ERASE] = "destination-in";
         };
         HTML5CanvasRenderer.prototype.setupFont = function (textField, style) {
             if (style === void 0) { style = null; }
@@ -293,7 +292,6 @@ var egret;
         return HTML5CanvasRenderer;
     })(egret.RendererContext);
     egret.HTML5CanvasRenderer = HTML5CanvasRenderer;
-    HTML5CanvasRenderer.prototype.__class__ = "egret.HTML5CanvasRenderer";
 })(egret || (egret = {}));
 var egret_h5_graphics;
 (function (egret_h5_graphics) {
@@ -404,6 +402,10 @@ var egret_h5_graphics;
             this.canvasContext.strokeStyle = strokeStyle;
             this.canvasContext.beginPath();
         }, this, [thickness, _colorStr]));
+        if (typeof (this.lineX) === "undefined") {
+            this.lineX = 0;
+            this.lineY = 0;
+        }
         this.moveTo(this.lineX, this.lineY);
     }
     egret_h5_graphics.lineStyle = lineStyle;
@@ -413,7 +415,6 @@ var egret_h5_graphics;
             var canvasContext = this.canvasContext;
             canvasContext.lineTo(rendererContext._transformTx + x, rendererContext._transformTy + y);
         }, this, [x, y]));
-        this.checkPoint(this.lineX, this.lineY);
         this.lineX = x;
         this.lineY = y;
         this.checkPoint(x, y);
@@ -425,7 +426,6 @@ var egret_h5_graphics;
             var canvasContext = this.canvasContext;
             canvasContext.quadraticCurveTo(rendererContext._transformTx + x, rendererContext._transformTy + y, rendererContext._transformTx + ax, rendererContext._transformTy + ay);
         }, this, [controlX, controlY, anchorX, anchorY]));
-        this.checkPoint(this.lineX, this.lineY);
         this.lineX = anchorX;
         this.lineY = anchorY;
         this.checkPoint(controlX, controlY);
@@ -438,6 +438,7 @@ var egret_h5_graphics;
             var canvasContext = this.canvasContext;
             canvasContext.moveTo(rendererContext._transformTx + x, rendererContext._transformTy + y);
         }, this, [x, y]));
+        this.checkPoint(x, y);
     }
     egret_h5_graphics.moveTo = moveTo;
     function clear() {
@@ -451,7 +452,6 @@ var egret_h5_graphics;
         this._minY = 0;
         this._maxX = 0;
         this._maxY = 0;
-        this._firstCheck = true;
     }
     egret_h5_graphics.clear = clear;
     function createEndFillCommand() {
@@ -521,7 +521,6 @@ var egret_h5_graphics;
         }
         return Command;
     })();
-    Command.prototype.__class__ = "egret_h5_graphics.Command";
     function _setStyle(colorStr) {
         this.canvasContext.fillStyle = colorStr;
         this.canvasContext.beginPath();

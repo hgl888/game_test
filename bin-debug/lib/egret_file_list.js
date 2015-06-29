@@ -1,6 +1,6 @@
 var egret_file_list = [
-	"core/egret/i18n/cn.js",
 	"core/egret/utils/Logger.js",
+	"core/egret/utils/IHashObject.js",
 	"core/egret/utils/HashObject.js",
 	"core/egret/utils/Recycler.js",
 	"core/egret/utils/getTimer.js",
@@ -14,6 +14,7 @@ var egret_file_list = [
 	"core/egret/events/TextEvent.js",
 	"core/egret/events/ProgressEvent.js",
 	"core/egret/events/EventPhase.js",
+	"core/egret/events/IEventDispatcher.js",
 	"core/egret/events/EventDispatcher.js",
 	"core/egret/context/MainContext.js",
 	"core/egret/utils/Profiler.js",
@@ -101,6 +102,5 @@ var egret_file_list = [
 	"core/extension/resource/analyzer/FontAnalyzer.js",
 	"core/extension/resource/analyzer/SoundAnalyzer.js",
 	"core/extension/resource/analyzer/XMLAnalyzer.js",
-	"core/extension/resource/Resource.js",
-	"createjs-graphics/Graphics.js"
+	"core/extension/resource/Resource.js"
 ];

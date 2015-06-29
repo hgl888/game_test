@@ -28,7 +28,9 @@ var egret;
 (function (egret) {
     /**
      * 缓动函数集合，使用不同的缓动函数使得动画按照对应的方程进行
-     * @link http://bbs.egret-labs.org/thread-392-1-1.html Tween和Ease
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://bbs.egret-labs.org/thread-392-1-1.html" style="padding-left: 20px" target="_blank" >Tween和Ease</a>
+     * </div>
      */
     var Ease = (function () {
         function Ease() {
@@ -177,5 +179,4 @@ var egret;
         return Ease;
     })();
     egret.Ease = Ease;
-    Ease.prototype.__class__ = "egret.Ease";
 })(egret || (egret = {}));

@@ -201,5 +201,4 @@ var egret;
         return RenderFilter;
     })(egret.HashObject);
     egret.RenderFilter = RenderFilter;
-    RenderFilter.prototype.__class__ = "egret.RenderFilter";
 })(egret || (egret = {}));

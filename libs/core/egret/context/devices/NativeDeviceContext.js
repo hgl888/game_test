@@ -60,12 +60,12 @@ var egret;
             egret_native.executeMainLoop(this.onEnterFrame, this);
         };
         NativeDeviceContext.prototype.onEnterFrame = function (advancedTime) {
+            //console.log( advancedTime );
             this.callback.call(this.thisObject, advancedTime);
         };
         return NativeDeviceContext;
     })(egret.HashObject);
     egret.NativeDeviceContext = NativeDeviceContext;
-    NativeDeviceContext.prototype.__class__ = "egret.NativeDeviceContext";
 })(egret || (egret = {}));
 var egret_native_external_interface;
 (function (egret_native_external_interface) {

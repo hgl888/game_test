@@ -59,5 +59,4 @@ var egret;
         return RenderCommand;
     })();
     egret.RenderCommand = RenderCommand;
-    RenderCommand.prototype.__class__ = "egret.RenderCommand";
 })(egret || (egret = {}));

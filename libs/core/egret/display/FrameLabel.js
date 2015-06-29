@@ -71,5 +71,4 @@ var egret;
         return FrameLabel;
     })(egret.EventDispatcher);
     egret.FrameLabel = FrameLabel;
-    FrameLabel.prototype.__class__ = "egret.FrameLabel";
 })(egret || (egret = {}));

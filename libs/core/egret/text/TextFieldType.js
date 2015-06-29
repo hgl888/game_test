@@ -47,5 +47,4 @@ var egret;
         return TextFieldType;
     })();
     egret.TextFieldType = TextFieldType;
-    TextFieldType.prototype.__class__ = "egret.TextFieldType";
 })(egret || (egret = {}));

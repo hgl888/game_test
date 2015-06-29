@@ -164,7 +164,6 @@ var egret;
         return HTML5DeviceContext;
     })(egret.DeviceContext);
     egret.HTML5DeviceContext = HTML5DeviceContext;
-    HTML5DeviceContext.prototype.__class__ = "egret.HTML5DeviceContext";
 })(egret || (egret = {}));
 var egret_html5_localStorage;
 (function (egret_html5_localStorage) {

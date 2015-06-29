@@ -237,5 +237,4 @@ var egret;
         return VersionController;
     })(egret.EventDispatcher);
     egret.VersionController = VersionController;
-    VersionController.prototype.__class__ = "egret.VersionController";
 })(egret || (egret = {}));

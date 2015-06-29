@@ -209,8 +209,7 @@ var egret;
             RendererContext.blendModesForGL = {};
             RendererContext.blendModesForGL[egret.BlendMode.NORMAL] = [1, 771];
             RendererContext.blendModesForGL[egret.BlendMode.ADD] = [770, 1];
-            RendererContext.blendModesForGL[egret.BlendMode.ERASE] = [0, 771];
-            RendererContext.blendModesForGL[egret.BlendMode.ERASE_REVERSE] = [0, 770];
+            RendererContext.blendModesForGL[egret.BlendMode.ERASE] = [0, 770];
         };
         /**
          * 设置 gl 模式下的blendMode，canvas模式下不会生效
@@ -237,5 +236,4 @@ var egret;
         return RendererContext;
     })(egret.HashObject);
     egret.RendererContext = RendererContext;
-    RendererContext.prototype.__class__ = "egret.RendererContext";
 })(egret || (egret = {}));

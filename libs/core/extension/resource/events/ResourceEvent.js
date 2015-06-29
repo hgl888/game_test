@@ -118,5 +118,4 @@ var RES;
         return ResourceEvent;
     })(egret.Event);
     RES.ResourceEvent = ResourceEvent;
-    ResourceEvent.prototype.__class__ = "RES.ResourceEvent";
 })(RES || (RES = {}));

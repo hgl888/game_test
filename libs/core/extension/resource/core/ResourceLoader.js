@@ -270,5 +270,4 @@ var RES;
         return ResourceLoader;
     })(egret.EventDispatcher);
     RES.ResourceLoader = ResourceLoader;
-    ResourceLoader.prototype.__class__ = "RES.ResourceLoader";
 })(RES || (RES = {}));

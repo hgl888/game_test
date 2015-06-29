@@ -130,5 +130,4 @@ var egret;
         return TouchContext;
     })(egret.HashObject);
     egret.TouchContext = TouchContext;
-    TouchContext.prototype.__class__ = "egret.TouchContext";
 })(egret || (egret = {}));

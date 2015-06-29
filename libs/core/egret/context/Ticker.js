@@ -155,5 +155,4 @@ var egret;
         return Ticker;
     })(egret.EventDispatcher);
     egret.Ticker = Ticker;
-    Ticker.prototype.__class__ = "egret.Ticker";
 })(egret || (egret = {}));

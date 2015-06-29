@@ -1,6 +1,14 @@
 {
 "resources":
 	[
+	  {
+		"name":"bitmapFont",
+		"type":"font",
+		"url":"font.fnt"
+	  },
+	  {"name":"skeleton_amf3","type":"bin","url":"skeleton.amf3"},
+	  {"name":"texture_amf3","type":"bin","url":"texture.amf3"},
+	  {"name":"texture_png","type":"image","url":"texture.png"},
 		{"name":"bgImage","type":"image","url":"assets/bg.jpg"},
 		{"name":"egretIcon","type":"image","url":"assets/egret_icon.png"},
         {"name":"description","type":"json","url":"config/description.json"}
@@ -8,6 +16,6 @@
 
 "groups":
 	[
-        {"name":"preload","keys":"bgImage,egretIcon"}
+        {"name":"preload","keys":"bgImage,egretIcon,skeleton_amf3,texture_amf3,texture_png,bitmapFont"}
 	]
 }

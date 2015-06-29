@@ -57,5 +57,4 @@ var egret;
         return StageScaleMode;
     })();
     egret.StageScaleMode = StageScaleMode;
-    StageScaleMode.prototype.__class__ = "egret.StageScaleMode";
 })(egret || (egret = {}));

@@ -215,7 +215,6 @@ var egret;
         return MainContext;
     })(egret.EventDispatcher);
     egret.MainContext = MainContext;
-    MainContext.prototype.__class__ = "egret.MainContext";
 })(egret || (egret = {}));
 var testDeviceType = function () {
     if (!this["navigator"]) {

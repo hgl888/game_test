@@ -142,5 +142,4 @@ var egret;
         return StageText;
     })(egret.EventDispatcher);
     egret.StageText = StageText;
-    StageText.prototype.__class__ = "egret.StageText";
 })(egret || (egret = {}));

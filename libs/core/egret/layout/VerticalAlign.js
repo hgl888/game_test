@@ -29,7 +29,9 @@ var egret;
     /**
      * @class egret.VerticalAlign
      * @classdesc 垂直对齐方式
-     * @link http://docs.egret-labs.org/post/manual/text/textlayout.html 文本布局
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/text/textlayout.html" style="padding-left: 20px" target="_blank" >文本布局</a>
+     * </div>
      */
     var VerticalAlign = (function () {
         function VerticalAlign() {
@@ -65,5 +67,4 @@ var egret;
         return VerticalAlign;
     })();
     egret.VerticalAlign = VerticalAlign;
-    VerticalAlign.prototype.__class__ = "egret.VerticalAlign";
 })(egret || (egret = {}));

@@ -90,5 +90,4 @@ var egret;
         return WebGLShaderManager;
     })();
     egret.WebGLShaderManager = WebGLShaderManager;
-    WebGLShaderManager.prototype.__class__ = "egret.WebGLShaderManager";
 })(egret || (egret = {}));

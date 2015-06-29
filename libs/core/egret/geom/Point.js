@@ -84,5 +84,4 @@ var egret;
         return Point;
     })(egret.HashObject);
     egret.Point = Point;
-    Point.prototype.__class__ = "egret.Point";
 })(egret || (egret = {}));

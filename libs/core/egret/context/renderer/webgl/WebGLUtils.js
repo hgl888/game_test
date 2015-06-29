@@ -75,5 +75,4 @@ var egret;
         return WebGLUtils;
     })();
     egret.WebGLUtils = WebGLUtils;
-    WebGLUtils.prototype.__class__ = "egret.WebGLUtils";
 })(egret || (egret = {}));

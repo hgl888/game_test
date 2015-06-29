@@ -29,7 +29,9 @@ var egret;
     /**
      * @class egret.Sound
      * @classdesc Sound 类允许您在应用程序中使用声音。
-     * @link http://docs.egret-labs.org/post/manual/sound/playsound.html 播放音频
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/sound/playsound.html" style="padding-left: 20px" target="_blank" >播放音频</a>
+     * </div>
      */
     var Sound = (function () {
         /**
@@ -149,5 +151,4 @@ var egret;
         return Sound;
     })();
     egret.Sound = Sound;
-    Sound.prototype.__class__ = "egret.Sound";
 })(egret || (egret = {}));

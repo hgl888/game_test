@@ -171,5 +171,4 @@ var egret;
         return Browser;
     })(egret.HashObject);
     egret.Browser = Browser;
-    Browser.prototype.__class__ = "egret.Browser";
 })(egret || (egret = {}));

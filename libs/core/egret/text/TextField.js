@@ -38,7 +38,9 @@ var egret;
      * TextField是egret的文本渲染类，采用浏览器/设备的API进行渲染，在不同的浏览器/设备中由于字体渲染方式不一，可能会有渲染差异
      * 如果开发者希望所有平台完全无差异，请使用BitmapText
      * @extends egret.DisplayObject
-     * @link http://docs.egret-labs.org/post/manual/text/createtext.html 创建文本
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/text/createtext.html" style="padding-left: 20px" target="_blank" >创建文本</a>
+     * </div>
      */
     var TextField = (function (_super) {
         __extends(TextField, _super);
@@ -500,7 +502,7 @@ var egret;
         };
         Object.defineProperty(TextField.prototype, "numLines", {
             /**
-             * 文本行数。
+             * 文本行数。【只读】
              * @member {number} egret.TextField#numLines
              */
             get: function () {
@@ -881,9 +883,6 @@ var egret;
                 }
                 lineH += this._lineSpacing;
             }
-            if (line === 0) {
-                return null;
-            }
             var lineElement = lineArr[line - 1];
             var lineW = 0;
             for (i = 0; i < lineElement.elements.length; i++) {
@@ -901,5 +900,4 @@ var egret;
         return TextField;
     })(egret.DisplayObject);
     egret.TextField = TextField;
-    TextField.prototype.__class__ = "egret.TextField";
 })(egret || (egret = {}));

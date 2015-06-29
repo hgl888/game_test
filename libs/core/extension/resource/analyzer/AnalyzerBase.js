@@ -94,5 +94,4 @@ var RES;
         return AnalyzerBase;
     })(egret.HashObject);
     RES.AnalyzerBase = AnalyzerBase;
-    AnalyzerBase.prototype.__class__ = "RES.AnalyzerBase";
 })(RES || (RES = {}));

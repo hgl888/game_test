@@ -36,7 +36,9 @@ var egret;
      * @class egret.MovieClip
      * @classdesc 影片剪辑，可以通过影片剪辑播放序列帧动画。MovieClip 类从以下类继承而来：DisplayObject 和 EventDispatcher。不同于 DisplayObject 对象，MovieClip 对象拥有一个时间轴。
      * @extends egret.DisplayObject
-     * @link http://docs.egret-labs.org/post/manual/displaycon/movieclip.html  MovieClip序列帧动画
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/displaycon/movieclip.html" style="padding-left: 20px" target="_blank" >MovieClip序列帧动画</a>
+     * </div>
      */
     var MovieClip = (function (_super) {
         __extends(MovieClip, _super);
@@ -201,7 +203,7 @@ var egret;
         /**
          * 继续播放当前动画
          * @method egret.MovieClip#play
-         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数(MovieClip初始播放次数设置为1)，
+         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数，
          */
         MovieClip.prototype.play = function (playTimes) {
             if (playTimes === void 0) { playTimes = 0; }
@@ -220,7 +222,7 @@ var egret;
             this.setIsStopped(true);
         };
         /**
-         * 将播放头移到前一帧并停止
+         * 将播放头移到前帧并停止
          * @method egret.MovieClip#prevFrame
          */
         MovieClip.prototype.prevFrame = function () {
@@ -478,5 +480,4 @@ var egret;
         return MovieClip;
     })(egret.DisplayObject);
     egret.MovieClip = MovieClip;
-    MovieClip.prototype.__class__ = "egret.MovieClip";
 })(egret || (egret = {}));

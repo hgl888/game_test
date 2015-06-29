@@ -244,7 +244,6 @@ var egret;
         return NativeStageText;
     })(egret.StageText);
     egret.NativeStageText = NativeStageText;
-    NativeStageText.prototype.__class__ = "egret.NativeStageText";
 })(egret || (egret = {}));
 egret.StageText.create = function () {
     return new egret.NativeStageText();

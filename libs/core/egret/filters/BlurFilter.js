@@ -46,5 +46,4 @@ var egret;
         return BlurFilter;
     })(egret.Filter);
     egret.BlurFilter = BlurFilter;
-    BlurFilter.prototype.__class__ = "egret.BlurFilter";
 })(egret || (egret = {}));

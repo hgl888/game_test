@@ -37,13 +37,14 @@ var egret;
      * @classdesc
      * Tween是Egret的动画缓动类
      * @extends egret.EventDispatcher
-     * @link http://docs.egret-labs.org/post/manual/anim/tween.html Tween缓动动画
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/anim/tween.html" style="padding-left: 20px" target="_blank" >Tween缓动动画</a>
+     * </div>
      */
     var Tween = (function (_super) {
         __extends(Tween, _super);
         /**
          * 创建一个 egret.Tween 对象
-         * @private
          */
         function Tween(target, props, pluginData) {
             _super.call(this);
@@ -65,10 +66,7 @@ var egret;
         }
         /**
          * 激活一个对象，对其添加 Tween 动画
-         * @param target {any} 要激活 Tween 的对象
-         * @param props {any} 参数，例如：{loop:true}
-         * @param pluginData {any} 暂未实现
-         * @param override {boolean} 是否移除对象之前添加的tween，默认值false
+         * @param target 要激活的对象
          */
         Tween.get = function (target, props, pluginData, override) {
             if (props === void 0) { props = null; }
@@ -505,5 +503,4 @@ var egret;
         return Tween;
     })(egret.EventDispatcher);
     egret.Tween = Tween;
-    Tween.prototype.__class__ = "egret.Tween";
 })(egret || (egret = {}));

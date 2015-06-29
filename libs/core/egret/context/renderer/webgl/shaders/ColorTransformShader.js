@@ -49,5 +49,4 @@ var egret;
         return ColorTransformShader;
     })(egret.EgretShader);
     egret.ColorTransformShader = ColorTransformShader;
-    ColorTransformShader.prototype.__class__ = "egret.ColorTransformShader";
 })(egret || (egret = {}));

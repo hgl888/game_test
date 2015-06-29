@@ -70,5 +70,4 @@ var egret;
         return TextEvent;
     })(egret.Event);
     egret.TextEvent = TextEvent;
-    TextEvent.prototype.__class__ = "egret.TextEvent";
 })(egret || (egret = {}));

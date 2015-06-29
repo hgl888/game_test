@@ -88,5 +88,4 @@ var egret;
         return PromiseObject;
     })();
     egret.PromiseObject = PromiseObject;
-    PromiseObject.prototype.__class__ = "egret.PromiseObject";
 })(egret || (egret = {}));

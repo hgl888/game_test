@@ -40,7 +40,9 @@ var egret;
      * 可以创建 Timer 对象以运行一次或按指定间隔重复运行，从而按计划执行代码。
      * 根据 Egret 的帧速率或运行时环境（可用内存和其他因素），运行时调度事件的间隔可能稍有不同。
      * @extends egret.EventDispatcher
-     * @link http://docs.egret-labs.org/post/manual/timer/timer.html Timer计时器
+     * <div style="margin-top: 20px"><b>了解详细信息</b>
+     * <a href="http://docs.egret-labs.org/post/manual/timer/timer.html" style="padding-left: 20px" target="_blank" >Timer计时器</a>
+     * </div>
      */
     var Timer = (function (_super) {
         __extends(Timer, _super);
@@ -125,5 +127,4 @@ var egret;
         return Timer;
     })(egret.EventDispatcher);
     egret.Timer = Timer;
-    Timer.prototype.__class__ = "egret.Timer";
 })(egret || (egret = {}));

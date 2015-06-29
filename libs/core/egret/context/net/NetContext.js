@@ -59,5 +59,4 @@ var egret;
         return NetContext;
     })(egret.HashObject);
     egret.NetContext = NetContext;
-    NetContext.prototype.__class__ = "egret.NetContext";
 })(egret || (egret = {}));
