@@ -53,16 +53,32 @@ var GraphicsTest = (function (_super) {
             //egret_native.rastergl.fillStyle = my_gradient;
             //egret_native.rastergl.strokeStyle = "ff00ff";
             //egret_native.rastergl.strokeStyle = my_gradient;
+
+            var grd=ctx.createLinearGradient(0,0,10,0);
+            grd.addColorStop(0,"#ff0000");
+            grd.addColorStop(1,"#00ff00");
+
+//            ctx.fillStyle=grd;
+//            ctx.transform(43,100,-25,173,50,200);
+//            ctx.beginPath();
+//            ctx.rect(0,0,200,400);
+//            ctx.closePath();
+//            ctx.fill();
+//
             ctx.fillStyle = "#FFFF00";
             ctx.fillRect(0,0,250,100);
-
-            ctx.transform(1,0.5,-0.5,1,30,10);
-            ctx.fillStyle="#ff0000";
-            ctx.fillRect(0,0,250,100);
-
-            ctx.transform(1,0.5,-0.5,1,30,10);
-            ctx.fillStyle="#0000ff";
-            ctx.fillRect(0,0,250,100);
+//
+//            var style = ctx.fillStyle;
+//            style.aa = 34;
+//
+//
+//            ctx.transform(1,0.5,-0.5,1,30,10);
+//            ctx.fillStyle="#ff0000";
+//            ctx.fillRect(0,0,250,100);
+//
+//            ctx.transform(1,0.5,-0.5,1,30,10);
+//            ctx.fillStyle="#0000ff";
+//            ctx.fillRect(0,0,250,100);
 
             //gc();
 
