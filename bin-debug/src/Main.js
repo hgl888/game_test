@@ -13,7 +13,7 @@ var Main = (function (_super) {
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
         egret.Profiler.getInstance().run();
 
-        this.gamesample = new TextureSample();
+        this.gamesample = new MeshPrimitiveSample();
 
     }
     Main.prototype._onAddToStage = function () {
