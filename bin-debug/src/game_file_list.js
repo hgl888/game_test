@@ -1,5 +1,5 @@
 var game_file_list = [
-	"CreateJSGraphics.js",
+	"CircleProgress.js",
 	"LoadingUI.js",
 	"Main.js"
 ];

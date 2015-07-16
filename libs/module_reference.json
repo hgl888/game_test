@@ -1,0 +1,1095 @@
+{
+	"referenceInfoList": {
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/i18n/cn.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Timer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setTimeout.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/BitmapFont.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/extends.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/i18n/cn.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/IHashObject.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/IHashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Recycler.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/RenderCommand.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/player/RenderContext.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Recycler.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/HTTPStatusEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/SoundEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/FocusEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IOErrorEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TouchEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TimerEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TextEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/ProgressEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventPhase.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/IHashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Profiler.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/TouchContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NetContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/DeviceContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/RenderCommand.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Recycler.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Profiler.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setTimeout.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/layout/HorizontalAlign.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/layout/VerticalAlign.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Timer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TimerEvent.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getQualifiedClassName.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getDefinitionByName.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setTimeout.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setInterval.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/hasDefinition.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getDefinitionByName.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/toColorString.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/ColorTransform.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Transform.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/ColorTransform.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/SAXParser.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Injector.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getQualifiedClassName.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/BitmapFilterQuality.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/BlurFilter.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/ColorMatrixFilter.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/GlowFilter.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/DropShadowFilter.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/GlowFilter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/BlendMode.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectProperties.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectPrivateProperties.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/RenderTexture.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectPrivateProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/RenderTexture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/ColorMatrixFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/RenderCommand.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Transform.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/RenderCommand.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/StageScaleMode.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/StageScaleMode.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/ScrollViewProperties.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TouchEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/tween/Tween.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/ScrollView.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/ScrollViewProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Timer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/tween/Tween.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/tween/Ease.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TouchEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TimerEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/BitmapFillMode.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Bitmap.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/BitmapText.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/BitmapFont.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/GradientType.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/player/RenderContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/GradientType.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Shape.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Sprite.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldUtils.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldType.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/layout/HorizontalAlign.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/layout/VerticalAlign.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldProperties.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/InputController.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldType.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TouchEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TextEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/toColorString.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldUtils.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/HtmlTextParser.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldType.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/SpriteSheet.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/InputController.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/StageText.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TouchEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/FocusEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/text/BitmapFont.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/SpriteSheet.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClip.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClipData.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/FrameLabel.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/FrameLabel.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClipData.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/SpriteSheet.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/FrameLabel.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClipDataFactory.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/SpriteSheet.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClipData.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/StageText.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestMethod.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLVariables.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestHeader.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequest.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestMethod.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestHeader.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoader.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequest.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/PromiseObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/display/RenderTexture.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Profiler.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/BlendMode.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/InteractionMode.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/TouchContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/TouchEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NetContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequest.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestMethod.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLVariables.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/DeviceContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/external/ExternalInterface.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/localStorage/localStorage.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/XML.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/SAXParser.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/ByteArray.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getOption.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/tween/Tween.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/tween/Ease.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/media/IAudio.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/media/Sound.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/SoundEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/IAudio.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/PromiseObject.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/IVersionController.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/DeviceContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/HTML5CanvasRenderer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/BlendMode.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/toColorString.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/IWebGLTemplate.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/RenderTexture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/IWebGLTemplate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldType.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/BlendMode.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/WebGLShaderManager.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/HTML5CanvasRenderer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/DropShadowFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Profiler.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/ColorTransformShader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/BlurShader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/BlurFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/ColorMatrixFilter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/WebGLUtils.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/EgretShader.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/WebGLUtils.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/ColorTransformShader.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/EgretShader.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/BlurShader.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/EgretShader.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/PrimitiveShader.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/WebGLUtils.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/WebGLShaderManager.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/EgretShader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/PrimitiveShader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/ColorTransformShader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/BlurShader.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/HTML5NetContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/IVersionController.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setTimeout.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setTimeout.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NetContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequest.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestMethod.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLVariables.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/HTTPStatusEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IOErrorEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/Html5Audio.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/Sound.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/QQAudio.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/WebAudio.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/HTML5TouchContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/TouchContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/HTML5StageText.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/HTML5StageText.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/StageText.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/Html5Audio.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/IAudio.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/WebAudio.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/IAudio.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/QQAudio.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/Sound.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/IAudio.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/Html5Audio.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/QQAudio.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/WebAudio.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/external/ExternalInterface.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/RenderTexture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/NativeRendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getOption.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/NativeRendererContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/BlendMode.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldProperties.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/DropShadowFilter.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/RenderTexture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/filters/ColorMatrixFilter.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/NativeTouchContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/TouchContext.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NativeNetContext.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/IVersionController.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/PromiseObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestHeader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IOErrorEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/Sound.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NetContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequest.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestMethod.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLVariables.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/NativeAudio.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/NativeStageText.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Shape.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/layout/HorizontalAlign.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/StageText.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NativeResourceLoader.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/PromiseObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/ProgressEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IOErrorEvent.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/NativeAudio.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/Sound.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NativeNetContext.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/PromiseObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/IAudio.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/oldVersion/NativeVersionController.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NativeResourceLoader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IOErrorEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/IVersionController.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/events/ResourceEvent.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts": [],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceConfig.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceLoader.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Injector.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/events/ResourceEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/AnalyzerBase.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/AnalyzerBase.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceConfig.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequest.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Recycler.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/IOErrorEvent.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/AnalyzerBase.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/ImageAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/JsonAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/TextAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/SheetAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/AnalyzerBase.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/SpriteSheet.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/FontAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/text/BitmapFont.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/SheetAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/SoundAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/media/Sound.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/XMLAnalyzer.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/XML.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts"
+		],
+		"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts": [
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Injector.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/AnalyzerBase.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceLoader.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/ImageAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/TextAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/JsonAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/SheetAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/FontAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/SoundAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/XMLAnalyzer.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceConfig.ts",
+			"/Library/WebServer/Documents/egret/github/egret/src/extension/resource/events/ResourceEvent.ts"
+		]
+	},
+	"classNameToPath": {
+		"egret.egret_string_code": "/Library/WebServer/Documents/egret/github/egret/src/egret/i18n/cn.ts",
+		"__extends": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/extends.ts",
+		"egret.Logger": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+		"egret.getString": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+		"egret.$error": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+		"egret.$warn": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Logger.ts",
+		"egret.IHashObject": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/IHashObject.ts",
+		"egret.HashObject": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/HashObject.ts",
+		"egret.Recycler": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Recycler.ts",
+		"egret.__START_TIME": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+		"egret.getTimer": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getTimer.ts",
+		"egret.__callLaterFunctionList": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.__callLaterThisList": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.__callLaterArgsList": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.callLater": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.__callAsyncFunctionList": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.__callAsyncThisList": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.__callAsyncArgsList": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.__callAsync": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/callLater.ts",
+		"egret.RenderCommand": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/RenderCommand.ts",
+		"egret.RenderContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/player/RenderContext.ts",
+		"egret.Event": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/Event.ts",
+		"egret.HTTPStatusEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/HTTPStatusEvent.ts",
+		"egret.SoundEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/SoundEvent.ts",
+		"egret.FocusEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/FocusEvent.ts",
+		"egret.IOErrorEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/IOErrorEvent.ts",
+		"egret.TouchEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/TouchEvent.ts",
+		"egret.TimerEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/TimerEvent.ts",
+		"egret.TextEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/TextEvent.ts",
+		"egret.ProgressEvent": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/ProgressEvent.ts",
+		"egret.EventPhase": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventPhase.ts",
+		"egret.IEventDispatcher": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/IEventDispatcher.ts",
+		"egret.EventDispatcher": "/Library/WebServer/Documents/egret/github/egret/src/egret/events/EventDispatcher.ts",
+		"egret.MainContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+		"testDeviceType": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+		"testRuntimeType": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/MainContext.ts",
+		"egret.Profiler": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Profiler.ts",
+		"egret.Ticker": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/Ticker.ts",
+		"egret.HorizontalAlign": "/Library/WebServer/Documents/egret/github/egret/src/egret/layout/HorizontalAlign.ts",
+		"egret.VerticalAlign": "/Library/WebServer/Documents/egret/github/egret/src/egret/layout/VerticalAlign.ts",
+		"egret.Timer": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Timer.ts",
+		"egret.getQualifiedClassName": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getQualifiedClassName.ts",
+		"egret.getQualifiedSuperclassName": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getQualifiedClassName.ts",
+		"egret.getDefinitionByName": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getDefinitionByName.ts",
+		"__global": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getDefinitionByName.ts",
+		"egret.setTimeout": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setTimeout.ts",
+		"egret.clearTimeout": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setTimeout.ts",
+		"egret.setInterval": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setInterval.ts",
+		"egret.clearInterval": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/setInterval.ts",
+		"egret.hasDefinition": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/hasDefinition.ts",
+		"egret.toColorString": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/toColorString.ts",
+		"egret.Matrix": "/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Matrix.ts",
+		"egret.Point": "/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Point.ts",
+		"egret.Rectangle": "/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Rectangle.ts",
+		"egret.ColorTransform": "/Library/WebServer/Documents/egret/github/egret/src/egret/geom/ColorTransform.ts",
+		"egret.Transform": "/Library/WebServer/Documents/egret/github/egret/src/egret/geom/Transform.ts",
+		"egret.SAXParser": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/SAXParser.ts",
+		"egret.StageDelegate": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.ResolutionPolicy": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.ContainerStrategy": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.EqualToFrame": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.ContentStrategy": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.FixedHeight": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.FixedWidth": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.FixedSize": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.NoScale": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.ShowAll": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.FullScreen": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/StageDelegate.ts",
+		"egret.RenderFilter": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+		"egret.RenderData": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RenderFilter.ts",
+		"egret.Injector": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/Injector.ts",
+		"egret.Filter": "/Library/WebServer/Documents/egret/github/egret/src/egret/filters/Filter.ts",
+		"egret.BlurFilter": "/Library/WebServer/Documents/egret/github/egret/src/egret/filters/BlurFilter.ts",
+		"egret.ColorMatrixFilter": "/Library/WebServer/Documents/egret/github/egret/src/egret/filters/ColorMatrixFilter.ts",
+		"egret.GlowFilter": "/Library/WebServer/Documents/egret/github/egret/src/egret/filters/GlowFilter.ts",
+		"egret.DropShadowFilter": "/Library/WebServer/Documents/egret/github/egret/src/egret/filters/DropShadowFilter.ts",
+		"egret.BlendMode": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/BlendMode.ts",
+		"egret.DisplayObjectProperties": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectProperties.ts",
+		"egret.DisplayObjectPrivateProperties": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectPrivateProperties.ts",
+		"egret.DisplayObject": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObject.ts",
+		"egret.DisplayObjectContainer": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/DisplayObjectContainer.ts",
+		"egret.StageScaleMode": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/StageScaleMode.ts",
+		"egret.Stage": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/Stage.ts",
+		"egret.ScrollViewProperties": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/ScrollViewProperties.ts",
+		"egret.ScrollView": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/ScrollView.ts",
+		"egret.BitmapFillMode": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/BitmapFillMode.ts",
+		"egret.Bitmap": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/Bitmap.ts",
+		"egret.BitmapText": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/BitmapText.ts",
+		"egret.GradientType": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/GradientType.ts",
+		"egret.Graphics": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+		"egret.Command": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/Graphics.ts",
+		"egret.Shape": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/Shape.ts",
+		"egret.Sprite": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/Sprite.ts",
+		"egret.TextFieldUtils": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldUtils.ts",
+		"egret.TextFieldProperties": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldProperties.ts",
+		"egret.IHitTextElement": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+		"egret.ITextStyle": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+		"egret.ITextElement": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+		"egret.IWTextElement": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+		"egret.ILineElement": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/ITextElement.ts",
+		"egret.TextField": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextField.ts",
+		"egret.HtmlTextParser": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/HtmlTextParser.ts",
+		"egret.TextFieldType": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/TextFieldType.ts",
+		"egret.SpriteSheet": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/SpriteSheet.ts",
+		"egret.InputController": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/InputController.ts",
+		"egret.BitmapFont": "/Library/WebServer/Documents/egret/github/egret/src/egret/text/BitmapFont.ts",
+		"egret.MovieClip": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClip.ts",
+		"egret.FrameLabel": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/FrameLabel.ts",
+		"egret.MovieClipData": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClipData.ts",
+		"egret.MovieClipDataFactory": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/MovieClipDataFactory.ts",
+		"egret.StageText": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/StageText.ts",
+		"egret.URLRequestMethod": "/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestMethod.ts",
+		"egret.URLLoaderDataFormat": "/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoaderDataFormat.ts",
+		"egret.URLVariables": "/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLVariables.ts",
+		"egret.URLRequestHeader": "/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequestHeader.ts",
+		"egret.URLRequest": "/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLRequest.ts",
+		"egret.URLLoader": "/Library/WebServer/Documents/egret/github/egret/src/egret/net/URLLoader.ts",
+		"egret.Texture": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/Texture.ts",
+		"egret.RenderTexture": "/Library/WebServer/Documents/egret/github/egret/src/egret/display/RenderTexture.ts",
+		"egret.RendererContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/RendererContext.ts",
+		"egret.InteractionMode": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/InteractionMode.ts",
+		"egret.TouchContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/TouchContext.ts",
+		"egret.NetContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NetContext.ts",
+		"egret.DeviceContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/DeviceContext.ts",
+		"egret.ExternalInterface": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/external/ExternalInterface.ts",
+		"egret.Browser": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/Browser.ts",
+		"egret.localStorage.getItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/localStorage/localStorage.ts",
+		"egret.localStorage.setItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/localStorage/localStorage.ts",
+		"egret.localStorage.removeItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/localStorage/localStorage.ts",
+		"egret.localStorage.clear": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/localStorage/localStorage.ts",
+		"egret.XML": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/XML.ts",
+		"egret.Endian": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/ByteArray.ts",
+		"egret.ByteArray": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/ByteArray.ts",
+		"egret.getOption": "/Library/WebServer/Documents/egret/github/egret/src/egret/utils/getOption.ts",
+		"egret.Tween": "/Library/WebServer/Documents/egret/github/egret/src/egret/tween/Tween.ts",
+		"egret.Ease": "/Library/WebServer/Documents/egret/github/egret/src/egret/tween/Ease.ts",
+		"egret.IAudio": "/Library/WebServer/Documents/egret/github/egret/src/egret/media/IAudio.ts",
+		"egret.Sound": "/Library/WebServer/Documents/egret/github/egret/src/egret/media/Sound.ts",
+		"egret.NumberUtils": "/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+		"egret_sin_map": "/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+		"egret_cos_map": "/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+		"NumberUtils_i": "/Library/WebServer/Documents/egret/github/egret/src/jslib/NumberUtils.ts",
+		"egret.PromiseObject": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/PromiseObject.ts",
+		"egret.IVersionController": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/IVersionController.ts",
+		"egret.HTML5DeviceContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts",
+		"egret_html5_localStorage.getItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts",
+		"egret_html5_localStorage.setItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts",
+		"egret_html5_localStorage.removeItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts",
+		"egret_html5_localStorage.clear": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts",
+		"egret_html5_localStorage.init": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/HTML5DeviceContext.ts",
+		"egret.HTML5CanvasRenderer": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/HTML5CanvasRenderer.ts",
+		"originCanvas2DFill": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/HTML5CanvasRenderer.ts",
+		"egret.IWebGLTemplate": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/IWebGLTemplate.ts",
+		"egret.WebGLRenderer": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.beginFill": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.beginGradientFill": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.drawRect": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.drawCircle": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.drawRoundRect": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.drawEllipse": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.lineStyle": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.lineTo": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.curveTo": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.cubicCurveTo": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.moveTo": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.clear": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.endFill": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics._pushCommand": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics._draw": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.Command": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics._setStyle": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret_webgl_graphics.init": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/WebGLRenderer.ts",
+		"egret.WebGLUtils": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/WebGLUtils.ts",
+		"egret.EgretShader": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/EgretShader.ts",
+		"egret.ColorTransformShader": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/ColorTransformShader.ts",
+		"egret.BlurShader": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/BlurShader.ts",
+		"egret.PrimitiveShader": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/shaders/PrimitiveShader.ts",
+		"egret.WebGLShaderManager": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/webgl/WebGLShaderManager.ts",
+		"egret.HTML5NetContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/HTML5NetContext.ts",
+		"egret.HTML5TouchContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/HTML5TouchContext.ts",
+		"egret.HTML5StageText": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/HTML5StageText.ts",
+		"egret.HTMLInput": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/HTML5StageText.ts",
+		"egret.Html5Audio": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/Html5Audio.ts",
+		"egret.WebAudio": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/WebAudio.ts",
+		"AudioBuffer": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/WebAudio.ts",
+		"AudioBufferSourceNode": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/WebAudio.ts",
+		"egret.QQAudio": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/QQAudio.ts",
+		"egret.AudioType": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts",
+		"egret.SystemOSType": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts",
+		"egret.Html5Capatibility": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/Html5Capatibility.ts",
+		"egret.NativeDeviceContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_external_interface.callBackDic": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_external_interface.call": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_external_interface.addCallback": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_external_interface.onReceivedPluginInfo": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_external_interface.init": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_localStorage.filePath": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_localStorage.getItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_localStorage.setItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_localStorage.removeItem": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_localStorage.clear": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_localStorage.save": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret_native_localStorage.init": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/devices/NativeDeviceContext.ts",
+		"egret.NativeRendererContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/NativeRendererContext.ts",
+		"egret_native_graphics": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/renderer/NativeRendererContext.ts",
+		"egret.NativeTouchContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/NativeTouchContext.ts",
+		"egret_native.onTouchesBegin": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/NativeTouchContext.ts",
+		"egret_native.onTouchesMove": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/NativeTouchContext.ts",
+		"egret_native.onTouchesEnd": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/NativeTouchContext.ts",
+		"egret_native.onTouchesCancel": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/NativeTouchContext.ts",
+		"egret_native.executeTouchCallback": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/interactive/NativeTouchContext.ts",
+		"egret.NativeNetContext": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NativeNetContext.ts",
+		"egret.NativeStageText": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/display/NativeStageText.ts",
+		"egret.NativeResourceLoader": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/net/NativeResourceLoader.ts",
+		"egret.NativeAudio": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/NativeAudio.ts",
+		"egret_native_sound.currentPath": "/Library/WebServer/Documents/egret/github/egret/src/egret/context/audio/NativeAudio.ts",
+		"egret.NativeVersionController": "/Library/WebServer/Documents/egret/github/egret/src/extension/oldVersion/NativeVersionController.ts",
+		"RES.ResourceEvent": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/events/ResourceEvent.ts",
+		"RES.ResourceItem": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceItem.ts",
+		"RES.ResourceConfig": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceConfig.ts",
+		"RES.ResourceLoader": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/core/ResourceLoader.ts",
+		"RES.AnalyzerBase": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/AnalyzerBase.ts",
+		"RES.BinAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/BinAnalyzer.ts",
+		"RES.ImageAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/ImageAnalyzer.ts",
+		"RES.JsonAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/JsonAnalyzer.ts",
+		"RES.TextAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/TextAnalyzer.ts",
+		"RES.SheetAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/SheetAnalyzer.ts",
+		"RES.FontAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/FontAnalyzer.ts",
+		"RES.SoundAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/SoundAnalyzer.ts",
+		"RES.XMLAnalyzer": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/analyzer/XMLAnalyzer.ts",
+		"RES.loadConfig": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.loadGroup": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.isGroupLoaded": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.getGroupByName": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.createGroup": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.hasRes": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.parseConfig": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.getRes": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.getResAsync": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.getResByUrl": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.destroyRes": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.setMaxLoadingThread": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.setMaxRetryTimes": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.addEventListener": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.removeEventListener": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts",
+		"RES.Resource": "/Library/WebServer/Documents/egret/github/egret/src/extension/resource/Resource.ts"
+	}
+}
