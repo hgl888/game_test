@@ -1,7 +1,13 @@
-require("launcher/native_require.js");
+/**
+ * runtime_loader.js - Runtime mode loader.
+ * Created by Derek Leng (lengdakun@egret.com)
+ * Copyright (c) 2015, Egret Technologies.
+ */
+console.log("runtime_loader.js");
+require("libs/lib-runtime-support.js");
 
-egret_native.egtMain = function () {
-    egret_native.egretInit();
+(function(egret){
+    egret.engine_name = function() { return "runtime"; };
+})(egret || egret_native);
 
-    egret_native.loadVersion(egret_native.egretStart);
-};
+require("launcher/main.js");
