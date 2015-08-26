@@ -7,7 +7,11 @@ console.log("native_loader.js");
 require("libs/lib-runtime-support.js");
 
 (function(egret){
-    egret.engine_name = function() { return "native"; };
-})(egret || egret_native);
+    egret.engine_name = function() 
+    {
+    	console.log("egret.engine_name");
+     	return "native"; 
+ 	};
+})(egret);
 
 require("launcher/main.js");
